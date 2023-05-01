@@ -3,6 +3,6 @@ let user = [
     {id:1, userName: "thurs", pass: "mokuyobi"}
 ];
 
-export default login() {
+export function login() {
     console.log("logging in");
 }

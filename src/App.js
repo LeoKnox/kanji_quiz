@@ -4,8 +4,9 @@ import { login } from './login/user.js';
 function App() {
   function formSubmit() {
     console.log("form submit");
+    console.log(login);
   }
-  
+
   return (
     <div className="App">
       <h1>Kanji App</h1>

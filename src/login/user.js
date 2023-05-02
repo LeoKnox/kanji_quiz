@@ -5,5 +5,5 @@ let user = [
 
 export function login(event, pass) {
     event.preventDefault();
-    console.log("logging in" + event.target.value);
+    return("logging in" + event.target.value);
 }

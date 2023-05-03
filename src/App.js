@@ -6,7 +6,9 @@ function App() {
   const [user, setUser] = useState("a");
 
   function upDate(event) {
-    console.log(event.target.name);
+    if (event.target.name === "userName") {
+      console.log(event.target.value);
+    }
   }
   function formSubmit() {
     console.log("form submit");

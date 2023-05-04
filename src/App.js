@@ -7,7 +7,7 @@ function App() {
 
   function upDate(event) {
     if (event.target.name === "userName") {
-      console.log(event.target.value);
+      setUser(event.target.value);
     }
   }
   function formSubmit() {
@@ -20,7 +20,7 @@ function App() {
       <h1>Kanji App</h1>
       <form onSubmit={formSubmit}>
         <label>User:</label>
-        <input name="userName" type="text"  onChange={upDate} value="user" />
+        <input name="userName" type="text"  onChange={upDate} value={user} />
         <input type="submit" value="Login" />
       </form>
     </div>

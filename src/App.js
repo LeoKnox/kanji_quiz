@@ -15,7 +15,8 @@ function App() {
     }
   }
 
-  function formSubmit() {
+  function formSubmit(event) {
+    event.preventDefault();
     console.log("form submit");
     console.log(login(pass, user));
   }

@@ -3,11 +3,11 @@ let user = [
     {id:1, userName: "thurs", pass: "mokuyobi"}
 ];
 
-export function login(pass, user) {
-    user.find((u, i) => {
-        if (u.userName === user) {
+export function login(pass, use) {
+    user.find((u) => {
+        if (u.userName === use) {
             console.log("red");
         }
     })
-    return("logging in" + pass + ":" + user);
+    return("logging in" + pass + ":" + use);
 }

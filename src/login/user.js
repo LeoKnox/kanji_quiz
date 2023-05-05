@@ -3,7 +3,7 @@ let user = [
     {id:1, userName: "thurs", pass: "mokuyobi"}
 ];
 
-export function login(event, pass, user) {
+export function login(pass, user, event) {
     event.preventDefault();
     return("logging in" + pass + ":" + user);
 }

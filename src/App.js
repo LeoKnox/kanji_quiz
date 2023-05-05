@@ -14,9 +14,10 @@ function App() {
       setPass(event.target.value);
     }
   }
+
   function formSubmit() {
     console.log("form submit");
-    console.log(login);
+    console.log(login(pass, user));
   }
 
   return (

@@ -4,9 +4,13 @@ let user = [
 ];
 
 export function login(pass, use) {
-    user.find((u) => {
+    user.find((u, i) => {
         if (u.userName === use) {
-            console.log("red");
+            if(u.pass === pass) {
+                return (user[i]);
+            } else {
+                return("wrong");
+            }
         }
     })
     return("logging in" + pass + ":" + use);

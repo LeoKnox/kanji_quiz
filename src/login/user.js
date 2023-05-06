@@ -12,7 +12,9 @@ export function login(pass, use) {
             } else {
                 return("wrong");
             }
+        } else {
+            return("no user");
         }
     })
-    return("logging in" + pass + ":" + use);
+    //return("logging in" + pass + ":" + use);
 }

@@ -5,6 +5,8 @@ let user = [
 ];
 
 export function login(pass, use) {
+    console.log(user.find(u => u["userName"] === use));
+    /*
     user.find((u, i) => {
         console.log("1"+use);
         console.log("2"+u["userName"]);
@@ -17,11 +19,11 @@ export function login(pass, use) {
             } else {
                 return("wrong");
             }
-            */
            u.pass && pass ? console.log("true") : console.log("false");
         } else {
             return("no user");
         }
     })
+        */
     //return("logging in" + pass + ":" + use);
 }

@@ -6,10 +6,10 @@ let user = [
 
 export function login(pass, use) {
     user.find((u, i) => {
-        console.log("1"+JSON.stringify(u));
+        console.log("1"+use);
         console.log("2"+u["userName"]);
         if (u["userName"] === use) {
-            console.log("pass:"+typeof(u.pass)+":"+typeof(pass));
+            console.log("pass:"+u.pass+":"+pass);
             /*
             if(u.pass == pass) {
                 //return (user[i]);

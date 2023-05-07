@@ -5,8 +5,8 @@ let user = [
 ];
 
 export function login(pass, use) {
-    console.log(user.find(u => u["userName"] === use));
-    if (user.find(u => u["userName"] === use)) {
+    let newUser = user.find(u => u["userName"] === use);
+    if (newUser !== -1) {
         console.log("match");
     }
     /*

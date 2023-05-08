@@ -9,6 +9,9 @@ export function login(pass, use) {
     console.log(newUser);
     if (newUser) {
         console.log("match");
+        if  (newUser.pass === pass) {
+            console.log("logged in");
+        }
     }
     /*
     user.find((u, i) => {

@@ -1,4 +1,4 @@
-function confirmPassword() {
+function ConfirmPassword() {
     return(
         <>
             <h1>login here</h1>
@@ -6,4 +6,4 @@ function confirmPassword() {
     )
 }
 
-export default confirmPassword;
+export default ConfirmPassword;

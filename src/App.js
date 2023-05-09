@@ -5,7 +5,11 @@ import ConfirmPassword from './login/password.js';
 import MyHome from './login/myHome.js';
 
 function App() {
-  const [currPage, setCurrPage] = useState(<ConfirmPassword />);
+  const [currPage, setCurrPage] = useState(<ConfirmPassword param={newPage} />);
+
+  function newPage(np) {
+    setCurrPage(np);
+  }
 
   return (
     <div className="App">

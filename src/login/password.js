@@ -1,7 +1,7 @@
 import { login } from './user.js';
 import { useState } from 'react';
 
-function ConfirmPassword() {
+function ConfirmPassword({param}) {
     const [user, setUser] = useState("");
     const [pass, setPass] = useState("");
 
@@ -15,6 +15,7 @@ function ConfirmPassword() {
     }
 
     function formSubmit(event) {
+        param("red");
         event.preventDefault();
         console.log("form submit");
         console.log(login(pass, user));

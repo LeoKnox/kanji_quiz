@@ -18,7 +18,7 @@ function ConfirmPassword({param}) {
         param("red");
         event.preventDefault();
         console.log("form submit");
-        param(login(pass, user));
+        param("<"+login(pass, user)+" />");
     }
 
     return(

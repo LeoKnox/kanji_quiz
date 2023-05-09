@@ -1,4 +1,5 @@
-import { login } from './login/user.js';
+import { login } from './user.js';
+import { useState } from 'react';
 
 function ConfirmPassword() {
     const [user, setUser] = useState("");

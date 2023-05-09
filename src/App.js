@@ -2,6 +2,7 @@ import './App.css';
 import { useState } from 'react';
 import { login } from './login/user.js';
 import ConfirmPassword from './login/password.js';
+import MyHome from './login/myHome.js';
 
 function App() {
   return (

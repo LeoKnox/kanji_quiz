@@ -1,3 +1,5 @@
+import MyHome from './myHome.js';
+
 let user = [
     {id:1, userName: "mon", pass: "getsuyobi"},
     {id:2, userName: "thurs", pass: "mokuyobi"},

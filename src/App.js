@@ -5,10 +5,12 @@ import ConfirmPassword from './login/password.js';
 import MyHome from './login/myHome.js';
 
 function App() {
+  const [currPage, setCurrPage] = useState(<ConfirmPassword />);
+
   return (
     <div className="App">
       <h1>Kanji App</h1>
-      <ConfirmPassword />
+      {currPage}
     </div>
   );
 }

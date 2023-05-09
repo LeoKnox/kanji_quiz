@@ -11,6 +11,7 @@ export function login(pass, use) {
         console.log("match");
         if  (newUser.pass === pass) {
             console.log("logged in");
+            return("blue");
         } else {
             console.log("failed password");
         }

@@ -10,9 +10,7 @@ function MyHome() {
         <>
         <h2>My home page</h2>
         <p>Welcome {currUser.userName}</p>
-        {currUser.practiceKanji.map((x, i) => {
-            {x}
-        })}
+        {currUser.practiceKanji.map(k => ({k}))}
         </>
     )
 }

@@ -24,9 +24,16 @@ function ConfirmPassword({param}) {
     return(
         <>
             <form onSubmit={formSubmit}>
-                <label>User:</label>
-                <input name="userName" type="text"  onChange={upDate} value={user} />
-                <input name="pass" type="text"  onChange={upDate} value={pass} />
+                <table>
+                    <tr>
+                        <td>User: </td>
+                        <td><input name="userName" type="text"  onChange={upDate} value={user} /></td>
+                    </tr>
+                    <tr>
+                        <td>Password: </td>
+                        <td><input name="pass" type="text"  onChange={upDate} value={pass} /></td>
+                    </tr>
+                </table>
                 <input type="submit" value="Login" />
             </form>
         </>

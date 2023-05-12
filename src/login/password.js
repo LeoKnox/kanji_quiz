@@ -24,7 +24,7 @@ function ConfirmPassword({param}) {
     return(
         <>
             <form onSubmit={formSubmit}>
-                <table style={{justifyItems: "center"}}>
+                <table style={{justifyContent: "center"}}>
                     <tr>
                         <td>User: </td>
                         <td><input name="userName" type="text"  onChange={upDate} value={user} /></td>

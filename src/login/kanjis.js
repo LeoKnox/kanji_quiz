@@ -10,5 +10,5 @@ export function findKanji(kanjiId) {
     console.log(":"+kanjiId);
     let newKanji = allKanji.find(k => k["id"] === kanjiId);
     console.log(newKanji);
-    return(newKanji);
+    return(<p>{newKanji.japanese}</p>);
 }

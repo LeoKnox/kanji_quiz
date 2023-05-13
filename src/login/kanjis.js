@@ -6,7 +6,8 @@ const allKanji = [
     {id: 27, japanese: "akai", english: "red"},
 ]
 
-function findKanji(KanjiId) {
+export function findKanji(KanjiId) {
+    console.log(":"+kanjiId);
     let newKanji = allKanji.find(k => k["id"] === kanjiId);
     console.log(newKanji);
 }

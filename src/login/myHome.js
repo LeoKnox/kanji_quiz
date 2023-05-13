@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { findKanji } from './kanjis.js';
 
 function MyHome() {
     const [currUser, setCurrUser] = useState({
@@ -10,7 +11,7 @@ function MyHome() {
         <>
         <h2>My home page</h2>
         <p>Welcome {currUser.userName}</p>
-        {currUser.practiceKanji.map(k => (<p>{k}</p>))}
+        {currUser.practiceKanji.map(k => (<p>{findKanji(k)}</p>))}
         </>
     )
 }

@@ -11,9 +11,9 @@ export function findKanji(kanjiId) {
     let newKanji = allKanji.find(k => k["id"] === kanjiId);
     console.log(newKanji);
     return(
-        <>
+        <tr>
         <td>{newKanji.japanese}</td>
         <td>{newKanji.english}</td>
-        </>
+        </tr>
     );
 }

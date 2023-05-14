@@ -11,7 +11,13 @@ function MyHome() {
         <>
         <h2>My home page</h2>
         <p>Welcome {currUser.userName}</p>
-        {currUser.practiceKanji.map(k => (<p>{findKanji(k)}</p>))}
+        <table>
+            <tr>
+                <th>Japanese</th>
+                <th>English</th>
+            </tr>
+            {currUser.practiceKanji.map(k => (<>{findKanji(k)}</>))}
+        </table>
         </>
     )
 }

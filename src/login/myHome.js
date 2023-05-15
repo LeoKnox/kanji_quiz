@@ -8,10 +8,16 @@ function MyHome() {
     })
     const [testGame, setTestGame] = useState(false);
 
+    function runQuiz() {
+        console.log("running quiz");
+        setTestGame(true);
+    }
+
     return (testGame ? <p>wrong</p> :
         <>
         <h2>My home page</h2>
         <p>Welcome {currUser.userName}</p>
+        <button onClick={runQuiz}>Quiz</button>
         <table style={{marginLeft:"auto", marginRight:"auto"}}>
             <tr>
                 <th>Japanese</th>

@@ -6,8 +6,9 @@ function MyHome() {
         userName:"kuruma car",
         practiceKanji: [1,3,9, 18, 27]
     })
+    const [testGame, setTestGame] = useState(false);
 
-    return (
+    return (testGame ? <p>wrong</p> :
         <>
         <h2>My home page</h2>
         <p>Welcome {currUser.userName}</p>

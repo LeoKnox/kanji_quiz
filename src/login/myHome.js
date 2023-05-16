@@ -14,7 +14,7 @@ function MyHome() {
         setTestGame(<Quiz />);
     }
 
-    return (testGame ? <p>wrong</p> :
+    return (testGame ? <>{ testGame }</> :
         <>
         <h2>My home page</h2>
         <p>Welcome {currUser.userName}</p>

@@ -11,7 +11,7 @@ function MyHome() {
 
     function runQuiz() {
         console.log("running quiz");
-        setTestGame(<Quiz />);
+        setTestGame(<Quiz practiceKanji={currUser.practiceKanji} />);
     }
 
     return (testGame ? <>{ testGame }</> :

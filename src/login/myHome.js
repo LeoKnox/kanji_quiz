@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { findKanji } from './kanjis.js';
+import Quiz from './quiz.js';
 
 function MyHome() {
     const [currUser, setCurrUser] = useState({
@@ -10,7 +11,7 @@ function MyHome() {
 
     function runQuiz() {
         console.log("running quiz");
-        setTestGame(true);
+        setTestGame(<Quiz />);
     }
 
     return (testGame ? <p>wrong</p> :

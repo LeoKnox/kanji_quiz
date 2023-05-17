@@ -11,7 +11,9 @@ function MyHome() {
 
     function runQuiz() {
         console.log("running quiz");
-        setTestGame(<Quiz practiceKanji={{k:currUser.practiceKanji, a:currUser.practiceKanji[Math.floor(Math.random()*currUser.practiceKanji.length())]}} />);
+        let o = Math.floor(Math.random()*currUser.practiceKanji.length);
+        console.log(o)
+        setTestGame(<Quiz practiceKanji={{k:currUser.practiceKanji, a:currUser.practiceKanji[o]}} />);
     }
 
     return (testGame ? <>{ testGame }</> :

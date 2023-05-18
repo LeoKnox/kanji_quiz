@@ -6,7 +6,9 @@ function Quiz({practiceKanji}) {
     return (
         <>
         <p>Building quiz...</p>
-        <p>{practiceKanji.k}</p>
+        {practiceKanji.k.map(p => (
+            <p>{p}</p>
+        ))}
         </>
     )
 }

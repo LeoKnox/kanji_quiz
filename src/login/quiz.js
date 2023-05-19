@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { findQ } from './kanjis.js';
 
 function Quiz({practiceKanji}) {
     console.log(practiceKanji.k);
@@ -8,7 +9,7 @@ function Quiz({practiceKanji}) {
         <p>Building quiz...</p>
         <p>{ans}</p>
         {practiceKanji.k.map(p => (
-            <p>{p}</p>
+            <p>{findQ(p)}</p>
         ))}
         </>
     )

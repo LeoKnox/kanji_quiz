@@ -17,3 +17,7 @@ export function findKanji(kanjiId) {
         </tr>
     );
 }
+
+export function findQ(kanjiId) {
+    console.log(kanjiId);
+}

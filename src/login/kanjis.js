@@ -20,5 +20,6 @@ export function findKanji(kanjiId) {
 
 export function findQ(kanjiId) {
     console.log(kanjiId);
-    return(<p>{allKanji[kanjiId].japanese}</p>);
+    let t= allKanji[kanjiId];
+    return(<p>{t.japanese}</p>);
 }

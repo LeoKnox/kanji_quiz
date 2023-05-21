@@ -18,6 +18,10 @@ export function findKanji(kanjiId) {
     );
 }
 
+function checkAns() {
+    console.log('ans');
+}
+
 export function findQ(kanjiId) {
     for (let i = 0; i < allKanji.length; i++) {
         if (allKanji[i].id === kanjiId) {

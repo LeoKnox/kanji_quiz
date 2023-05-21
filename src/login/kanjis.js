@@ -19,7 +19,9 @@ export function findKanji(kanjiId) {
 }
 
 export function findQ(kanjiId) {
-    console.log(kanjiId);
-    let t= allKanji[kanjiId];
-    return(<p>{t.japanese}</p>);
+    for (let i = 0; i < allKanji.length; i++) {
+        if (allKanji[i].id === kanjiId) {
+            return(<p><button value={allKanji[i].kanjiId}>{allKanji[i].japanese}</button></p>)
+        }
+    }
 }

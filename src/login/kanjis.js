@@ -25,7 +25,7 @@ function checkAns() {
 export function findQ(kanjiId) {
     for (let i = 0; i < allKanji.length; i++) {
         if (allKanji[i].id === kanjiId) {
-            return(<p><button onClick={chackAns} value={allKanji[i].kanjiId}>{allKanji[i].japanese}</button></p>)
+            return(<p><button onClick={checkAns} value={allKanji[i].kanjiId}>{allKanji[i].japanese}</button></p>)
         }
     }
 }

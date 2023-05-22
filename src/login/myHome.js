@@ -16,8 +16,12 @@ function MyHome() {
         setTestGame(<Quiz practiceKanji={{k:currUser.practiceKanji, a:currUser.practiceKanji[o]}} />);
     }
 
-    function checkAns() {
-        console.log('ans');
+    function checkAns(event) {
+        if ('ichi' === event.target.value) {
+            console.log('correct');
+        } else {
+            console.log('not working');
+        }
     }
 
     return (testGame ? <>{ testGame }</> :

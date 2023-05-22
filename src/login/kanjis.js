@@ -18,8 +18,13 @@ export function findKanji(kanjiId) {
     );
 }
 
-function checkAns() {
-    console.log('ans');
+function checkAns(event) {
+    console.log(event.target.value);
+    if ('ichi' === event.target.value) {
+        console.log('correct');
+    } else {
+        console.log('not working');
+    }
 }
 
 export function findQ(kanjiId) {

@@ -11,17 +11,9 @@ function MyHome() {
 
     function runQuiz() {
         console.log("running quiz");
-        let o = Math.floor(Math.random()*currUser.practiceKanji.length);
+        let o = Math.floor(Math.random()*3);
         console.log(o)
         setTestGame(<Quiz practiceKanji={{k:currUser.practiceKanji, a:currUser.practiceKanji[o]}} />);
-    }
-
-    function checkAns(event) {
-        if ('ichi' === event.target.value) {
-            console.log('correct');
-        } else {
-            console.log('not working');
-        }
     }
 
     return (testGame ? <>{ testGame }</> :

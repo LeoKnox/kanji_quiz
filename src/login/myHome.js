@@ -15,7 +15,7 @@ function MyHome() {
         console.log(o)
         setTestGame(<Quiz practiceKanji={{k:currUser.practiceKanji, a:currUser.practiceKanji[o]}} />);
     }
-    
+
     function checkAns() {
         console.log('ans');
     }

@@ -7,7 +7,6 @@ let allKanji = [
     {id: 18, japanese: "midori", english: "green"},
     {id: 27, japanese: "akai", english: "red"},
 ];
-const [ans, setAns] = useState(Math.Floor(Math.random()*allKanji.length));
 
 export function findKanji(kanjiId) {
     console.log(":"+kanjiId);
@@ -22,6 +21,7 @@ export function findKanji(kanjiId) {
 }
 
 export function createAns() {
+    const [ans, setAns] = useState(Math.Floor(Math.random()*allKanji.length));
     setAns(allKanji[Math.floor(Math.random()*allKanji.length)]);
 }
 

@@ -21,6 +21,10 @@ export function findKanji(kanjiId) {
     );
 }
 
+export function createAns() {
+    setAns(allKanji[Math.floor(Math.random()*allKanji.length)]);
+}
+
 function checkAns(event) {
     console.log(event.target.value);
     if ('ichi' === event.target.value) {

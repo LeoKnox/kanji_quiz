@@ -21,11 +21,11 @@ export function findKanji(kanjiId) {
 }
 
 export function createAns() {
-    const [ans, setAns] = useState(Math.Floor(Math.random()*allKanji.length));
     setAns(allKanji[Math.floor(Math.random()*allKanji.length)]);
 }
 
 function checkAns(event) {
+    const [ans, setAns] = useState(Math.Floor(Math.random()*allKanji.length));
     console.log(event.target.value);
     if ('ichi' === event.target.value) {
         console.log('correct');

@@ -22,7 +22,8 @@ export function findKanji(kanjiId) {
     );
 }
 
-function HiddenAns(x=-1) {
+function HiddenAns(x=-1,event) {
+    event.preventDefault();
     const [ans, setAns] = useState(Math.floor(Math.random()*allKanji.length));
     console.log(x);
     setAns(x);

@@ -9,6 +9,7 @@ let allKanji = [
 ];
 
 export function findKanji(kanjiId) {
+    event.preventDefault();
     console.log(":"+kanjiId);
     let newKanji = allKanji.find(k => k["id"] === kanjiId);
     console.log(newKanji);
@@ -22,8 +23,7 @@ export function findKanji(kanjiId) {
     );
 }
 
-function HiddenAns(x=-1,event) {
-    event.preventDefault();
+function HiddenAns(x=-1) {
     const [ans, setAns] = useState(Math.floor(Math.random()*allKanji.length));
     console.log(x);
     setAns(x);

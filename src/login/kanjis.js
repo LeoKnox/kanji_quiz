@@ -12,6 +12,8 @@ export function findKanji(kanjiId) {
     console.log(":"+kanjiId);
     let newKanji = allKanji.find(k => k["id"] === kanjiId);
     console.log(newKanji);
+    HiddenAns(1);
+    console.log('hidden');
     return(
         <tr>
         <td>{newKanji.japanese}</td>
@@ -21,7 +23,7 @@ export function findKanji(kanjiId) {
 }
 
 function HiddenAns(x=-1) {
-    const [ans, setAns] = useState(Math.Floor(Math.random()*allKanji.length));
+    const [ans, setAns] = useState(Math.floor(Math.random()*allKanji.length));
     console.log(x);
     setAns(x);
     console.log(ans);

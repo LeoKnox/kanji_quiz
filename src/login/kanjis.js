@@ -20,12 +20,15 @@ export function findKanji(kanjiId) {
     );
 }
 
-function HiddenAns() {
+function HiddenAns(x=-1) {
     const [ans, setAns] = useState(Math.Floor(Math.random()*allKanji.length));
+    console.log(x);
+    setAns(x);
+    console.log(ans);
 }
 
 export function createAns() {
-    setAns(allKanji[Math.floor(Math.random()*allKanji.length)]);
+    HiddenAns(allKanji[Math.floor(Math.random()*allKanji.length)]);
 }
 
 function checkAns(event) {

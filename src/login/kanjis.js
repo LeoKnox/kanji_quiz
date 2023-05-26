@@ -27,6 +27,7 @@ function HiddenAns(x=-1) {
     console.log(x);
     setAns(x);
     console.log(ans);
+    return("red");
 }
 
 export function createAns() {

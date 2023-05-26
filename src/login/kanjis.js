@@ -9,7 +9,6 @@ let allKanji = [
 ];
 
 export function findKanji(kanjiId) {
-    event.preventDefault();
     console.log(":"+kanjiId);
     let newKanji = allKanji.find(k => k["id"] === kanjiId);
     console.log(newKanji);

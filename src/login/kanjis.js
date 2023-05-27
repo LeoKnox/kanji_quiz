@@ -7,7 +7,8 @@ let allKanji = [
     {id: 18, japanese: "midori", english: "green"},
     {id: 27, japanese: "akai", english: "red"},
 ];
-let ans = -1;
+let xans = -1;
+let [ans, setAns] = useState(3);
 
 export function findKanji(kanjiId) {
     console.log(":"+kanjiId);
@@ -24,12 +25,11 @@ export function findKanji(kanjiId) {
 }
 
 const HiddenAns = (x=-1) => {
-    let [ans, setAns] = useState(3);
     ans = x+1;
     //const [ans, setAns] = useState(Math.floor(Math.random()*allKanji.length));
     console.log("+"+ans);
     //setAns(x);
-    //console.log(ans);
+    console.log(ans);
     return("red");
 }
 

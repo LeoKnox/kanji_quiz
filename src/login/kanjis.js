@@ -23,10 +23,10 @@ export function findKanji(kanjiId) {
 }
 
 function HiddenAns(x=-1) {
-    const [ans, setAns] = useState(Math.floor(Math.random()*allKanji.length));
+    //const [ans, setAns] = useState(Math.floor(Math.random()*allKanji.length));
     console.log(x);
-    setAns(x);
-    console.log(ans);
+    //setAns(x);
+    //console.log(ans);
     return("red");
 }
 

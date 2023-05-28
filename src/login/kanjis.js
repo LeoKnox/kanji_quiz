@@ -34,9 +34,9 @@ function HiddenAns(x=-1) {
     console.log("+"+ans);
     useEffect(() => {
         setAns(x);
+        console.log(ans);
+        return("red");
     }, []);
-    console.log(ans);
-    return("red");
 }
 
 function checkAns(event) {

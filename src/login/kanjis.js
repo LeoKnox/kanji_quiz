@@ -24,6 +24,10 @@ export function findKanji(kanjiId) {
     );
 }
 
+export function createAns() {
+    HiddenAns(allKanji[Math.floor(Math.random()*allKanji.length)]);
+}
+
 function HiddenAns(x=-1) {
     ans = x+1;
     //const [ans, setAns] = useState(Math.floor(Math.random()*allKanji.length));
@@ -31,10 +35,6 @@ function HiddenAns(x=-1) {
     //setAns(x);
     console.log(ans);
     return("red");
-}
-
-export function createAns() {
-    HiddenAns(allKanji[Math.floor(Math.random()*allKanji.length)]);
 }
 
 function checkAns(event) {

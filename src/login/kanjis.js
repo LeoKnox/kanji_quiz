@@ -32,9 +32,9 @@ function HiddenAns(x=-1) {
     //ans = x+1;
     const [ans, setAns] = useState(Math.floor(Math.random()*allKanji.length));
     console.log("+"+ans);
-    //setAns(x);
+    setAns(x);
     console.log(ans);
-    return("red");
+    //return("red");
 }
 
 function checkAns(event) {

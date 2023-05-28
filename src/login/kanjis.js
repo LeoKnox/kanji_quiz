@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 let allKanji = [
     {id: 1, japanese: "ichi", english: "one"},
@@ -32,9 +32,11 @@ function HiddenAns(x=-1) {
     //ans = x+1;
     const [ans, setAns] = useState(Math.floor(Math.random()*allKanji.length));
     console.log("+"+ans);
-    setAns(x);
+    useEffect(() => {
+        setAns(x);
+    }, []);
     console.log(ans);
-    //return("red");
+    return("red");
 }
 
 function checkAns(event) {

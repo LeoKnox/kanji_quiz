@@ -1,7 +1,11 @@
 import { useSate } from 'react';
 
-function Answer() {
-    return("set answer here");
+let answer = null;
+
+export function setAnswer(newAns) {
+    answer = newAns;
 }
 
-export default Answer;
+export function getAnswer() {
+    return(answer);
+}

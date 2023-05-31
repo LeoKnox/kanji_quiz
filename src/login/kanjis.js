@@ -30,13 +30,13 @@ export function createAns() {
 
 function HiddenAns(x=-1) {
     //ans = x+1;
-    const [ans, setAns] = useState(Math.floor(Math.random()*allKanji.length));
-    console.log("+"+ans);
-    useEffect(() => {
+    //const [ans, setAns] = useState(Math.floor(Math.random()*allKanji.length));
+    console.log("+");
+    /*useEffect(() => {
         setAns(x);
         console.log(ans);
         return("red");
-    }, [ans]);
+    }, [ans]);*/
 }
 
 function checkAns(event) {

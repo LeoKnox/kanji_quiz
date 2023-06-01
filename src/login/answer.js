@@ -11,5 +11,5 @@ export function getAnswer() {
 }
 
 export function confirmAnswer(checkAns="blue") {
-    return(checkAns === "red" ? "correct" : "wrong");
+    return(checkAns === "red" ? "Icorrect" : "Iwrong");
 }

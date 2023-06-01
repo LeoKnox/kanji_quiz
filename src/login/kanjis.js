@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import {setAnswer, getAnswer} from './answer.js';
+import {setAnswer, confirmAnswer} from './answer.js';
 
 let allKanji = [
     {id: 1, japanese: "ichi", english: "one"},
@@ -35,7 +35,7 @@ function HiddenAns(x=-1) {
     console.log("+");
     console.log("new answers");
     setAnswer("funky");
-    console.log(getAnswer());
+    console.log(confirmAnswer("red"));
     /*useEffect(() => {
         setAns(x);
         console.log(ans);

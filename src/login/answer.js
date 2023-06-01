@@ -9,3 +9,7 @@ export function setAnswer(newAns) {
 export function getAnswer() {
     return(answer);
 }
+
+export function confirmAnswer(checkAns="blue") {
+    return(checkAns === "red" ? "correct" : "wrong");
+}

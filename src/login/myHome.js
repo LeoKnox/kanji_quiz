@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { findKanji } from './kanjis.js';
+import { HideKanji } from './hideKanji.js';
 import {setAnswer, getAnswer} from './answer.js';
 import Quiz from './quiz.js';
 
@@ -9,6 +10,7 @@ function MyHome() {
         practiceKanji: [1,3,9, 18, 27]
     })
     const [testGame, setTestGame] = useState(false);
+    console.log(HideKanji("hide me"));
 
     function runQuiz() {
         console.log("running quiz");

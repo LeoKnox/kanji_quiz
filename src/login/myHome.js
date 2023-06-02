@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { findKanji } from './kanjis.js';
-import { HideKanji } from './hideKanji.js';
+import { HideKanji } from './Hidekanji.js';
 import {setAnswer, getAnswer} from './answer.js';
 import Quiz from './quiz.js';
 
@@ -21,7 +21,7 @@ function MyHome() {
     return (testGame ? <>{ testGame }</> :
         <>
         <h2>My home page</h2>
-        <HideKanji testkanji="hide me" />
+        {HideKanji}
         <p>Welcome {currUser.userName}</p>
         <button onClick={runQuiz}>Quiz</button>
         <table style={{marginLeft:"auto", marginRight:"auto"}}>

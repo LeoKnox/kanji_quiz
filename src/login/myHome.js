@@ -21,8 +21,8 @@ function MyHome() {
     return (testGame ? <>{ testGame }</> :
         <>
         <h2>My home page</h2>
-        {hidekanji}
         <p>Welcome {currUser.userName}</p>
+        <hidekanji />
         <button onClick={runQuiz}>Quiz</button>
         <table style={{marginLeft:"auto", marginRight:"auto"}}>
             <tr>

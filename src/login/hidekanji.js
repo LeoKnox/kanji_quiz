@@ -1,6 +1,6 @@
-import { useState } from ' react';
+import { useState } from 'react';
 
-function HideKanji() {
+function hidekanji(testKanji=3) {
     let allKanji = [
         {id: 1, japanese: "ichi", english: "one"},
         {id: 3, japanese: "ni", english: "two"},
@@ -16,4 +16,4 @@ function HideKanji() {
     )
 }
 
-export default HideKanji;
+export default hidekanji;

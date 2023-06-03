@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+//import { useState, useEffect } from 'react';
 import {setAnswer, confirmAnswer} from './answer.js';
 
 let allKanji = [

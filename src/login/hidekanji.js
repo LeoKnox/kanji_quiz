@@ -16,4 +16,4 @@ function Hidekanji(testKanji=3) {
     )
 }
 
-export default hidekanji;
+export default Hidekanji;

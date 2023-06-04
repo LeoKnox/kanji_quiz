@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { findKanji } from './kanjis.js';
-import { Hidekanji } from './Hidekanji.js';
+import Hidekanji from './hidekanji.js';
 import {setAnswer, getAnswer} from './answer.js';
 import Quiz from './quiz.js';
 
@@ -22,7 +22,7 @@ function MyHome() {
         <>
         <h2>My home page</h2>
         <p>Welcome {currUser.userName}</p>
-        <Hidekanji testKanji="9" />
+        {Hidekanji(9)}
         <button onClick={runQuiz}>Quiz</button>
         <table style={{marginLeft:"auto", marginRight:"auto"}}>
             <tr>

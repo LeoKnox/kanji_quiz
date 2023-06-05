@@ -8,10 +8,13 @@ function Hidekanji(testKanji=3) {
         {id: 18, japanese: "midori", english: "green"},
         {id: 27, japanese: "akai", english: "red"},
     ];
+    const [iHidden, setiHidden] = useState('hidden');
+
+
 
     return(
         <>
-            <p>yes, hide kanji {testKanji}</p>
+            <p>yes, {iHidden} kanji {testKanji}</p>
         </>
     )
 }

@@ -15,7 +15,7 @@ export function findKanji(kanjiId) {
     console.log(":"+kanjiId);
     let newKanji = allKanji.find(k => k["id"] === kanjiId);
     console.log(newKanji);
-    HiddenAns(1);
+    //HiddenAns(1);
     console.log('hidden');
     return(
         <tr>
@@ -35,7 +35,7 @@ function HiddenAns(x=-1) {
     console.log("+");
     console.log("new answers");
     setAnswer("funky");
-    console.log(confirmAnswer("red"));
+    //console.log(confirmAnswer("red"));
     /*useEffect(() => {
         setAns(x);
         console.log(ans);

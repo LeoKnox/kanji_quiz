@@ -45,7 +45,7 @@ function HiddenAns(x=-1) {
 
 function checkAns(event) {
     console.log(event.target.value);
-    HiddenAns(1);
+    //HiddenAns(1);
     if ('ichi' === event.target.value) {
         console.log('correct');
     } else {

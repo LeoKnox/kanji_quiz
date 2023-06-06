@@ -8,19 +8,19 @@ function Hidekanji(testKanji=3) {
         {id: 18, japanese: "midori", english: "green"},
         {id: 27, japanese: "akai", english: "red"},
     ];
-    const [iHidden, setiHidden] = useState('hidden');
+    const [iHidden, setiHidden] = useState('testone');
 
     function testone() {
         return (
             <>
-                <p>yes, {iHidden} kanjis {testKanji}</p>
+                <p>yes, nnn kanjis {testKanji}</p>
             </>
         )
     }
 
     return(
         <>
-        {testone()}
+        {iHidden}
         </>
     )
 }

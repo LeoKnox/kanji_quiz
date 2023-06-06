@@ -10,11 +10,17 @@ function Hidekanji(testKanji=3) {
     ];
     const [iHidden, setiHidden] = useState('hidden');
 
-
+    function testone() {
+        return (
+            <>
+                <p>yes, {iHidden} kanjis {testKanji}</p>
+            </>
+        )
+    }
 
     return(
         <>
-            <p>yes, {iHidden} kanji {testKanji}</p>
+        {testone()}
         </>
     )
 }

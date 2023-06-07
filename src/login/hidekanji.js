@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function Hidekanji(testKanji=3) {
     let allKanji = [
@@ -9,9 +9,11 @@ function Hidekanji(testKanji=3) {
         {id: 27, japanese: "akai", english: "red"},
     ];
     const [iHidden, setiHidden] = useState(testone);
-    if (testKanji === "testtwo") {
-        setiHidden(testtwo);
-    }
+    useEffect(() => {
+        if (testKanji === "testtwo") {
+            setiHidden(testtwo);
+        }
+    },[])
 
     function testtwo() {
         return (

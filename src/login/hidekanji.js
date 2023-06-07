@@ -12,6 +12,8 @@ function Hidekanji(testKanji=3) {
     useEffect(() => {
         if (testKanji === "testtwo") {
             setiHidden(testtwo);
+        } else {
+            setiHidden(testone);
         }
     })
 

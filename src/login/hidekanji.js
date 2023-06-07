@@ -13,7 +13,7 @@ function Hidekanji(testKanji=3) {
         if (testKanji === "testtwo") {
             setiHidden(testtwo);
         }
-    },[iHidden])
+    })
 
     function testtwo() {
         return (

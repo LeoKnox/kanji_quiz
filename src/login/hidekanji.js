@@ -9,6 +9,17 @@ function Hidekanji(testKanji=3) {
         {id: 27, japanese: "akai", english: "red"},
     ];
     const [iHidden, setiHidden] = useState(testone);
+    if (testKanji === "testtwo") {
+        setiHidden(testtwo);
+    }
+
+    function testtwo() {
+        return (
+            <>
+                <p>yes, two hidden kanjis {testKanji}</p>
+            </>
+        )
+    }
 
     function testone() {
         return (

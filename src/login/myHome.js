@@ -26,7 +26,7 @@ function MyHome() {
         <>
         <h2>My home page</h2>
         <p>Welcome {currUser.userName}</p>
-        {Hidekanji("teston")}
+        {Hidekanji("testone")}
         <button onClick={runQuiz}>Quiz</button>
         <button onClick={changeHidden}>change</button>
         <table style={{marginLeft:"auto", marginRight:"auto"}}>

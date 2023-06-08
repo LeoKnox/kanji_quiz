@@ -18,13 +18,17 @@ function MyHome() {
         setTestGame(<Quiz practiceKanji={{k:currUser.practiceKanji, a:currUser.practiceKanji[o]}} />);
     }
 
+    function changeHidden() {
+        console.log("change Hidden");
+    }
+
     return (testGame ? <>{ testGame }</> :
         <>
         <h2>My home page</h2>
         <p>Welcome {currUser.userName}</p>
         {Hidekanji("teston")}
         <button onClick={runQuiz}>Quiz</button>
-        <button onClick={Hidekanji("testtwo")}>change</button>
+        <button onClick={changeHidden}>change</button>
         <table style={{marginLeft:"auto", marginRight:"auto"}}>
             <tr>
                 <th>Japanese</th>

@@ -10,6 +10,7 @@ function MyHome() {
         practiceKanji: [1,3,9, 18, 27]
     })
     const [testGame, setTestGame] = useState(false);
+    const [hiddenKanji, setHiddenKanji] = useState("testone");
 
     function runQuiz() {
         console.log("running quiz");
@@ -20,13 +21,14 @@ function MyHome() {
 
     function changeHidden() {
         console.log("change Hidden");
+        setHiddenKanji("testtwo");
     }
 
     return (testGame ? <>{ testGame }</> :
         <>
         <h2>My home page</h2>
         <p>Welcome {currUser.userName}</p>
-        {Hidekanji("testone")}
+        {hiddenKanji}
         <button onClick={runQuiz}>Quiz</button>
         <button onClick={changeHidden}>change</button>
         <table style={{marginLeft:"auto", marginRight:"auto"}}>

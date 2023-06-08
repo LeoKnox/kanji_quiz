@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-function Hidekanji(testKanji=3) {
+function Hidekanji({testKanji}=3) {
     let allKanji = [
         {id: 1, japanese: "ichi", english: "one"},
         {id: 3, japanese: "ni", english: "two"},

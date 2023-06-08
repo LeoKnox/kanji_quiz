@@ -8,14 +8,7 @@ function Hidekanji(testKanji=3) {
         {id: 18, japanese: "midori", english: "green"},
         {id: 27, japanese: "akai", english: "red"},
     ];
-    const [iHidden, setiHidden] = useState(testone);
-    useEffect(() => {
-        if (testKanji === "testtwo") {
-            setiHidden(testtwo);
-        } else {
-            setiHidden(testone);
-        }
-    })
+    const [iHidden, setiHidden] = useState(testKanji);
 
     function testtwo() {
         return (

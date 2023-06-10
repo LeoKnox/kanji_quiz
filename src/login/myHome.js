@@ -28,9 +28,6 @@ function MyHome() {
         <>
         <h2>My home page</h2>
         <p>Welcome {currUser.userName}</p>
-        {hiddenKanji}
-        <button onClick={runQuiz}>Quiz</button>
-        <button onClick={changeHidden}>change</button>
         <table style={{marginLeft:"auto", marginRight:"auto"}}>
             <tr>
                 <th>Japanese</th>

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function newKanji() {
+function NewKanji() {
     let allKanji = [
         {id: 1, japanese: "ichi", english: "one"},
         {id: 3, japanese: "ni", english: "two"},
@@ -16,4 +16,4 @@ function newKanji() {
     )
 }
 
-export default newKanji;
+export default NewKanji;

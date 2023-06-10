@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { findKanji } from './kanjis.js';
 import testone from './hidekanji.js';
-import newKanji from './newKanji.js';
+import NewKanji from './newKanji.js';
 import {setAnswer, getAnswer} from './answer.js';
 import Quiz from './quiz.js';
 
@@ -29,6 +29,7 @@ function MyHome() {
         <>
         <h2>My home page</h2>
         <p>Welcome {currUser.userName}</p>
+        <NewKanji />
         <table style={{marginLeft:"auto", marginRight:"auto"}}>
             <tr>
                 <th>Japanese</th>

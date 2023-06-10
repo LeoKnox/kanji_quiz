@@ -8,10 +8,12 @@ function newKanji() {
         {id: 18, japanese: "midori", english: "green"},
         {id: 27, japanese: "akai", english: "red"},
     ];
-    
+
     return (
         <>
         <h1>New Kanji List</h1>
         </>
     )
 }
+
+export default newKanji;

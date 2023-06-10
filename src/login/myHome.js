@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { findKanji } from './kanjis.js';
 import testone from './hidekanji.js';
+import newKanji from './newKanji.js';
 import {setAnswer, getAnswer} from './answer.js';
 import Quiz from './quiz.js';
 

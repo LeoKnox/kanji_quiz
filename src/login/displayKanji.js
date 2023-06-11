@@ -4,7 +4,7 @@ function DisplayKanji({kanjis}) {
     const [answer, setAnswer] = useState(99);
     function checkAnswer() {
         if (answer === 99) {
-            alert("red");
+            setAnswer(5);
         }
     }
     return (

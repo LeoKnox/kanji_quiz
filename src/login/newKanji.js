@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import DisplayKanji from './displayKanji.js';
 
 function NewKanji() {
     let allKanji = [
@@ -16,7 +17,7 @@ function NewKanji() {
     return (
         <>
         <h1>New Kanji List</h1>
-        <p>{selectKanji()}</p>
+        <DisplayKanji kanjis={selectKanji()} />
         </>
     )
 }

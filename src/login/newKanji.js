@@ -9,9 +9,14 @@ function NewKanji() {
         {id: 27, japanese: "akai", english: "red"},
     ];
 
+    function selectKanji() {
+        return ([0,2,4]);
+    }
+
     return (
         <>
         <h1>New Kanji List</h1>
+        <p>{selectKanji()}</p>
         </>
     )
 }

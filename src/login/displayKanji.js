@@ -9,7 +9,7 @@ function DisplayKanji({kanjis}) {
     }
     return (
         <>
-        <p>{kanjis}</p>
+        {kanjis.map(k => (<p>>{k}</p>))}
         <p>{answer}</p>
         <button onClick={checkAnswer}>click</button>
         </>

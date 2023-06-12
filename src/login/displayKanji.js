@@ -14,7 +14,7 @@ function DisplayKanji({kanjis}) {
             <button>>{k}</button>
         ))}
         <KanjiAnswer answer={answer}/>
-        <p>{answer}</p>
+        <p onClick={checkAnswer}>{answer}</p>
         </>
     )
 }

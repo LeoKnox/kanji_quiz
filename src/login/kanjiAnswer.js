@@ -1,11 +1,12 @@
 function KanjiAnswer({answer}) {
+    let newAnswer = answer[Math.floor(Math.random()*3)];
     if (answer === 0) {
-        alert("0")
+        alert("correct");
     }
     return (
         <>
         <p>Kanji Answer:</p>
-        <p>{answer}</p>
+        <p>{newAnswer}</p>
         </>
     )
 }

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import KanjiAnswer from './kanjiAnswer.js';
 
 function DisplayKanji({kanjis}) {
     const [answer, setAnswer] = useState(99);
@@ -12,6 +13,7 @@ function DisplayKanji({kanjis}) {
         {kanjis.map(k => (
             <button>>{k}</button>
         ))}
+        <KanjiAnswer />
         <p>{answer}</p>
         </>
     )

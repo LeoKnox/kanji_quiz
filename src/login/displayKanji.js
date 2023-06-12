@@ -13,7 +13,7 @@ function DisplayKanji({kanjis}) {
         {kanjis.map(k => (
             <button>>{k}</button>
         ))}
-        <KanjiAnswer />
+        <KanjiAnswer answer={answer}/>
         <p>{answer}</p>
         </>
     )

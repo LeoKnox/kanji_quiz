@@ -1,6 +1,9 @@
-function KanjiAnswer() {
+function KanjiAnswer({answer}) {
     return (
+        <>
         <p>Kanji Answer:</p>
+        <p>{answer}</p>
+        </>
     )
 }
 

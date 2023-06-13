@@ -1,4 +1,4 @@
-function KanjiAnswer({answer}) {
+function KanjiAnswer({answer, question}) {
     let newAnswer = answer[Math.floor(Math.random()*3)];
     if (answer === 0) {
         alert("correct");
@@ -10,7 +10,7 @@ function KanjiAnswer({answer}) {
     return (
         <>
         <p>Kanji Answer:</p>
-        <p>{newAnswer}</p>
+        <p>{question}</p>
         </>
     )
 }

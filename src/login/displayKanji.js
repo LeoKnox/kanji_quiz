@@ -13,7 +13,7 @@ function DisplayKanji({kanjis}) {
         {kanjis.map(k => (
             <button onClick={() => setAnswer(k)}>:>{k}</button>
         ))}
-        <KanjiAnswer answer={kanjis}/>
+        <KanjiAnswer answer={kanjis} question={77} />
         <p onClick={checkAnswer}>!{answer}!</p>
         </>
     )

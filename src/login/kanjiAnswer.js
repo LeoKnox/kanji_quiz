@@ -3,6 +3,10 @@ function KanjiAnswer({answer}) {
     if (answer === 0) {
         alert("correct");
     }
+
+    function alertFun() {
+        alert("fun!");
+    }
     return (
         <>
         <p>Kanji Answer:</p>

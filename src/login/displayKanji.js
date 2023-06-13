@@ -5,10 +5,8 @@ import alertFun from './kanjiAnswer.js';
 function DisplayKanji({kanjis}) {
     const [answer, setAnswer] = useState(99);
     function checkAnswer() {
+        console.log('alert');
         alertFun();
-        if (answer === 99) {
-            setAnswer(5);
-        }
     }
     return (
         <>

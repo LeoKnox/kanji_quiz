@@ -3,7 +3,7 @@ import KanjiAnswer from './kanjiAnswer.js';
 import alertFun from './kanjiAnswer.js';
 
 function DisplayKanji({kanjis}) {
-    const [answer, setAnswer] = useState(99);
+    const [answer, setAnswer] = useState(Math.floor(Math.random()*kanjis.length));
     function checkAnswer() {
         console.log('alert');
         alertFun();

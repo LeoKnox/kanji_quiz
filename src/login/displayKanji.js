@@ -4,14 +4,15 @@ import alertFun from './kanjiAnswer.js';
 
 function DisplayKanji({kanjis}) {
     const [answer, setAnswer] = useState(Math.floor(Math.random()*kanjis.length));
-    function checkAnswer() {
-        console.log('alert');
-        alertFun();
+    function checkAnswer(t) {
+        if (t === answer) {
+            console.log('alert'+t);
+            setAnswer(Math.floor(Math.random()*kanjis.lenth));
+        }
     }
     
     function newComp() {
-        console.log(kanjis[1]);
-        return(<>{kanjis.map(t => (<p onClick={() => setAnswer(t)}>{t}</p>))}</>)
+        return(<>{kanjis.map(t => (<p onClick={() => checkAnswer(t)}>{t}</p>))}</>)
     }
     return (
         <>

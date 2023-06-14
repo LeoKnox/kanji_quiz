@@ -8,6 +8,10 @@ function DisplayKanji({kanjis}) {
         console.log('alert');
         alertFun();
     }
+    
+    function newComp() {
+        return(<p>comp</p>)
+    }
     return (
         <>
         {kanjis.map(k => (
@@ -15,6 +19,7 @@ function DisplayKanji({kanjis}) {
         ))}
         <KanjiAnswer answer={kanjis} question={77} />
         <p onClick={checkAnswer}>!{answer}!</p>
+        {newComp()}
         </>
     )
 }

@@ -1,5 +1,8 @@
 import { useState } from 'react';
 import { findKanji } from './kanjis.js';
+import testone from './hidekanji.js';
+import NewKanji from './newKanji.js';
+import {setAnswer, getAnswer} from './answer.js';
 import Quiz from './quiz.js';
 
 function MyHome() {
@@ -8,6 +11,7 @@ function MyHome() {
         practiceKanji: [1,3,9, 18, 27]
     })
     const [testGame, setTestGame] = useState(false);
+    const [hiddenKanji, setHiddenKanji] = useState(testone());
 
     function runQuiz() {
         console.log("running quiz");
@@ -16,19 +20,16 @@ function MyHome() {
         setTestGame(<Quiz practiceKanji={{k:currUser.practiceKanji, a:currUser.practiceKanji[o]}} />);
     }
 
-    function checkAns(event) {
-        if ('ichi' === event.target.value) {
-            console.log('correct');
-        } else {
-            console.log('not working');
-        }
+    function changeHidden() {
+        console.log("change Hidden");
+        setHiddenKanji("testtwo");
     }
 
     return (testGame ? <>{ testGame }</> :
         <>
         <h2>My home page</h2>
         <p>Welcome {currUser.userName}</p>
-        <button onClick={runQuiz}>Quiz</button>
+        <NewKanji />
         <table style={{marginLeft:"auto", marginRight:"auto"}}>
             <tr>
                 <th>Japanese</th>

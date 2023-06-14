@@ -10,7 +10,7 @@ function DisplayKanji({kanjis}) {
     }
     
     function newComp() {
-        return(<p>comp</p>)
+        return(<>{kanjis.map(t => (<p>{t}</p>))}</>)
     }
     return (
         <>

@@ -10,7 +10,7 @@ function DisplayKanji({kanjis}) {
     }
     
     function newComp() {
-        return(<>{kanjis.map(t => (<p>{t}</p>))}</>)
+        return(<>{kanjis.map(t => (<p onClick={() => setAnswer({t})}>{t}</p>))}</>)
     }
     return (
         <>

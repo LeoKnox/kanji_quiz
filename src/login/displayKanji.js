@@ -3,11 +3,11 @@ import KanjiAnswer from './kanjiAnswer.js';
 import alertFun from './kanjiAnswer.js';
 
 function DisplayKanji({kanjis}) {
-    const [answer, setAnswer] = useState(Math.floor(Math.random()*kanjis.length));
+    const [answer, setAnswer] = useState(kanjis[Math.floor(Math.random()*kanjis.length)]);
     function checkAnswer(t) {
         if (t === answer) {
             console.log('alert'+t);
-            setAnswer(Math.floor(Math.random()*kanjis.lenth));
+            setAnswer(kanjis[Math.floor(Math.random()*kanjis.length)]);
         }
     }
     

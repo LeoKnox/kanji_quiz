@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import DisplayKanji from './displayKanji.js';
 
+import { useState } from 'react';
+
 function NewKanji() {
     let allKanji = [
         {id: 1, japanese: "ichi", english: "one"},
@@ -9,6 +11,8 @@ function NewKanji() {
         {id: 18, japanese: "midori", english: "green"},
         {id: 27, japanese: "akai", english: "red"},
     ];
+    let values = [0,1,2];
+    const [selectedKanji, setSelectedKanji] = useState(values);
 
     function selectKanji() {
         return ([0,2,4]);

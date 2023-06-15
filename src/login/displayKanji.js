@@ -2,7 +2,8 @@ import { useState } from 'react';
 import KanjiAnswer from './kanjiAnswer.js';
 import alertFun from './kanjiAnswer.js';
 
-function DisplayKanji({kanjis}) {
+function DisplayKanji({kanjis, allKanji}) {
+    console.log("all kanji:"+allKanji);
     const [answer, setAnswer] = useState(kanjis[Math.floor(Math.random()*kanjis.length)]);
     function checkAnswer(t) {
         if (t === answer) {

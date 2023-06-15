@@ -13,7 +13,7 @@ function DisplayKanji({kanjis, allKanji}) {
     }
     
     function newComp() {
-        return(<>{kanjis.map(t => (<p onClick={() => checkAnswer(t)}>{t}</p>))}</>)
+        return(<>{kanjis.map(t => (<button onClick={() => checkAnswer(t)}>{t}</button>))}</>)
     }
     return (
         <>

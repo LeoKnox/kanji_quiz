@@ -11,8 +11,8 @@ function DisplayKanji({kanjis, allKanji}) {
         if (t === answer) {
             console.log('alert'+t);
             poolKanji = allKanji.map(x=>({x, r:Math.random() })).sort((a, b) => a.r - b.r).map(a => a.x).slice(0, 3);
-            setAnswer(poolKanji[Math.floor(Math.random()*kanjis.length)].english);
             setError("");
+            setAnswer(poolKanji[Math.floor(Math.random()*kanjis.length)].english);
         } else {
             setError("wrong answer");
         }
@@ -20,7 +20,6 @@ function DisplayKanji({kanjis, allKanji}) {
     
     function newComp() {
         return(<>{poolKanji.map(t => (<button onClick={() => checkAnswer(t.english)}>{t.japanese}</button>))}</>)
-        //return(<>{allKanji.map(t => (<button onClick={() => checkAnswer(t.english)}>{t.japanese}</button>))}</>)
     }
     return (
         <>

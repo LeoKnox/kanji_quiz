@@ -5,10 +5,14 @@ import alertFun from './kanjiAnswer.js';
 function DisplayKanji({kanjis, allKanji}) {
     console.log("all kanji:"+allKanji.map(x=>({x, r:Math.random() })).sort((a, b) => a.r - b.r).map(a => a.x).slice(0, 3));
     const [answer, setAnswer] = useState(kanjis[Math.floor(Math.random()*kanjis.length)]);
+    const [error, setError] = useState("");
     function checkAnswer(t) {
         if (t === answer) {
             console.log('alert'+t);
             setAnswer(kanjis[Math.floor(Math.random()*kanjis.length)]);
+            setError("");
+        } else {
+            setError("wrong answer");
         }
     }
     
@@ -19,6 +23,7 @@ function DisplayKanji({kanjis, allKanji}) {
         <>
         <p>Answer: {answer}</p>
         {newComp()}
+        <p><b>{error}</b></p>
         </>
     )
 }

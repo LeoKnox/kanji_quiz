@@ -11,7 +11,8 @@ function DisplayKanji({kanjis, allKanji}) {
     function checkAnswer(t) {
         if (t === answer) {
             console.log('alert'+t);
-            setAnswer(kanjis[Math.floor(Math.random()*kanjis.length)]);
+            setAnswer(poolKanji[Math.floor(Math.random()*kanjis.length)].english);
+            //setAnswer(kanjis[Math.floor(Math.random()*kanjis.length)]);
             setError("");
         } else {
             setError("wrong answer");

@@ -4,18 +4,18 @@ import alertFun from './kanjiAnswer.js';
 
 function DisplayKanji({kanjis, allKanji}) {
     //let poolKanji = allKanji.map(x=>({x, r:Math.random() })).sort((a, b) => a.r - b.r).map(a => a.x).slice(0, 3);
-    const [poolKanji, setPoolKanji] = useState(allKanji.map(x=>({x, r:Math.random() })).sort((a, b) => a.r - b.r).map(a => a.x).slice(0, 3));
-    console.log("one"+poolKanji);
+    const [poolKanji, setPoolKanji] = useState(allKanji.map(x=>({x, r:Math.random() })).sort((a, b) => a.r - b.r).map(a => a.x).slice(0, 3))
     const [answer, setAnswer] = useState(poolKanji[Math.floor(Math.random()*poolKanji.length)].english);
+    console.log(poolKanji);
     console.log(answer);
     const [error, setError] = useState("");
     function checkAnswer(t) {
         if (t === answer) {
             console.log('alert'+t);
-            setPoolKanji(allKanji.map(x=>({x, r:Math.random() })).sort((a, b) => a.r - b.r).map(a => a.x).slice(0, 3));
+            setPoolKanji(allKanji.map(x=>({x, r:Math.random() })).sort((a, b) => a.r - b.r).map(a => a.x).slice(0, 3)).then(
+            setAnswer(poolKanji[Math.floor(Math.random()*kanjis.length)].english));
             //poolKanji = allKanji.map(x=>({x, r:Math.random() })).sort((a, b) => a.r - b.r).map(a => a.x).slice(0, 3);
             setError("");
-            setAnswer(poolKanji[Math.floor(Math.random()*kanjis.length)].english);
         } else {
             setError("wrong answer");
         }

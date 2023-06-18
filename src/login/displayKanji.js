@@ -12,10 +12,9 @@ function DisplayKanji({kanjis, allKanji}) {
     function checkAnswer(t) {
         if (t === answer) {
             console.log('alert'+t);
-            setPoolKanji(allKanji.map(x=>({x, r:Math.random() })).sort((a, b) => a.r - b.r).map(a => a.x).slice(0, 3))
-            if (poolKanji) {
+            setPoolKanji(allKanji.map(x=>({x, r:Math.random() })).sort((a, b) => a.r - b.r).map(a => a.x).slice(0, 3)).then(() => {
                 setAnswer(poolKanji[Math.floor(Math.random()*kanjis.length)].english);
-            }
+            })
             //poolKanji = allKanji.map(x=>({x, r:Math.random() })).sort((a, b) => a.r - b.r).map(a => a.x).slice(0, 3);
             setError("");
         } else {

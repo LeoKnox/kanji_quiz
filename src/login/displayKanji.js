@@ -26,7 +26,7 @@ function DisplayKanji({kanjis, allKanji}) {
     }
     return (
         <>
-        <p>Answer: {poolKanji[answer]}</p>
+        <p>Answer: {poolKanji[answer].english}</p>
         {newComp()}
         <p><b>{error}</b></p>
         </>

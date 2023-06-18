@@ -11,10 +11,10 @@ function DisplayKanji({kanjis, allKanji}) {
     console.log(answer);
     const [error, setError] = useState("");
     function checkAnswer(t) {
-        if (t === answer.english) {
+        if (t === poolKanji[answer].english) {
             console.log('alert'+t);
             setPoolKanji(allKanji.map(x=>({x, r:Math.random() })).sort((a, b) => a.r - b.r).map(a => a.x).slice(0, 3));
-            setAnswer(poolKanji[Math.floor(Math.random()*kanjis.length)]);
+            setAnswer(Math.floor(Math.random()*kanjis.length));
             //poolKanji = allKanji.map(x=>({x, r:Math.random() })).sort((a, b) => a.r - b.r).map(a => a.x).slice(0, 3);
             setError("");
         } else {

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import DisplayKanji from './displayKanji.js';
+import './NewKanji.css';
 
 function NewKanji() {
     let allKanji = [

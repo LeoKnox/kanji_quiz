@@ -2,3 +2,8 @@ button {
     background-color: purple;
     color: white;
 }
+
+.ks_button {
+    min-width: 8%;
+    max-height: 5%;
+}

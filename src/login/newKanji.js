@@ -19,8 +19,8 @@ function NewKanji() {
 
     return (
         <>
-        <button>Nihon</button>
-        <button>Eigo</button>
+        <button>Practice</button>
+        <button>Quiz</button>
         <DisplayKanji kanjis={selectKanji()} allKanji={allKanji} />
         </>
     )

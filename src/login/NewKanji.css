@@ -4,6 +4,6 @@ button {
 }
 
 .ks_button {
-    min-width: 8%;
-    min-height: 60px;
+    display: grid;
+    justify-content: center;
 }

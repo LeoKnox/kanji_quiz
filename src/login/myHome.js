@@ -10,8 +10,8 @@ function MyHome() {
     const [testGame, setTestGame] = useState(false);
     const [currComponent, setCurrComponent] = useState(<NewKanji />);
 
-    function handleClick() {
-        console.log("quiz button clicked");
+    function handleClick(event) {
+        console.log("quiz button clicked " + event.target.value);
     }
 
     return (testGame ? <>{ testGame }</> :

@@ -12,6 +12,8 @@ function MyHome() {
     return (testGame ? <>{ testGame }</> :
         <>
         <p>Welcome {currUser.userName}</p>
+        <button>Practice</button>
+        <button>Quiz</button>
         <NewKanji />
         <table style={{marginLeft:"auto", marginRight:"auto"}}>
             <tr>

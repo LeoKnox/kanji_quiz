@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { findKanji } from './kanjis.js';
 import NewKanji from './newKanji.js';
+import QuizKanji from './quizKanji.js';
 
 function MyHome() {
     const [currUser, setCurrUser] = useState({
@@ -12,7 +13,9 @@ function MyHome() {
 
     function handleClick(event) {
         console.log("quiz button clicked " + event.target.value);
-        setCurrComponent(event.target.value);
+        if (event.target.value === "QuizKanji") {
+            setCurrComponent(<QuizKanji />);
+        }
     }
 
     return (testGame ? <>{ testGame }</> :

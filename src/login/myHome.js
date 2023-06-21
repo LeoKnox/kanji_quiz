@@ -10,11 +10,15 @@ function MyHome() {
     const [testGame, setTestGame] = useState(false);
     const [currComponent, setCurrComponent] = useState(<NewKanji />);
 
+    function handleClick() {
+        console.log("quiz button clicked");
+    }
+
     return (testGame ? <>{ testGame }</> :
         <>
         <p>Welcome {currUser.userName}</p>
         <button>Practice</button>
-        <button>Quiz</button>
+        <button onClick={handleClick} value="QuizKanji">Quiz</button>
         {currComponent}
         <table style={{marginLeft:"auto", marginRight:"auto"}}>
             <tr>

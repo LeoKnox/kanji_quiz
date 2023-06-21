@@ -20,7 +20,7 @@ function MyHome() {
         <>
         <p>Welcome {currUser.userName}</p>
         <button>Practice</button>
-        <button onClick={handleClick} value="QuizKanji">Quiz</button>
+        <button onClick={() => setCurrComponent(<QuizKanji />)} value="QuizKanji">Quiz</button>
         {<currComponent />}
         <table style={{marginLeft:"auto", marginRight:"auto"}}>
             <tr>

@@ -1,9 +1,6 @@
 import { useState } from 'react';
 import { findKanji } from './kanjis.js';
-import testone from './hidekanji.js';
 import NewKanji from './newKanji.js';
-import {setAnswer, getAnswer} from './answer.js';
-import Quiz from './quiz.js';
 
 function MyHome() {
     const [currUser, setCurrUser] = useState({
@@ -11,23 +8,9 @@ function MyHome() {
         practiceKanji: [1,3,9, 18, 27]
     })
     const [testGame, setTestGame] = useState(false);
-    const [hiddenKanji, setHiddenKanji] = useState(testone());
-
-    function runQuiz() {
-        console.log("running quiz");
-        let o = Math.floor(Math.random()*currUser.practiceKanji.length);
-        console.log(o)
-        setTestGame(<Quiz practiceKanji={{k:currUser.practiceKanji, a:currUser.practiceKanji[o]}} />);
-    }
-
-    function changeHidden() {
-        console.log("change Hidden");
-        setHiddenKanji("testtwo");
-    }
 
     return (testGame ? <>{ testGame }</> :
         <>
-        <h2>My home page</h2>
         <p>Welcome {currUser.userName}</p>
         <NewKanji />
         <table style={{marginLeft:"auto", marginRight:"auto"}}>

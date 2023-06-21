@@ -14,6 +14,7 @@ function MyHome() {
     function handleClick(event) {
         console.log("quiz button clicked " + event.target.value);
         if (event.target.value === "QuizKanji") {
+            let v = <QuizKanji />;
             setCurrComponent(<QuizKanji />);
         }
     }

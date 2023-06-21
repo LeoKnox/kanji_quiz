@@ -12,14 +12,14 @@ function MyHome() {
 
     function handleClick(event) {
         console.log("quiz button clicked " + event.target.value);
-        setCurrComponent("<event.target.value />");
+        setCurrComponent(event.target.value);
     }
 
     return (testGame ? <>{ testGame }</> :
         <>
         <p>Welcome {currUser.userName}</p>
         <button>Practice</button>
-        <button onClick={handleClick} value="QuizKanji">Quiz</button>
+        <button onClick={handleClick} value="<QuizKanji />">Quiz</button>
         {currComponent}
         <table style={{marginLeft:"auto", marginRight:"auto"}}>
             <tr>

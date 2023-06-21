@@ -8,13 +8,14 @@ function MyHome() {
         practiceKanji: [1,3,9, 18, 27]
     })
     const [testGame, setTestGame] = useState(false);
+    const [currComponent, setCurrComponent] = useState(<NewKanji />);
 
     return (testGame ? <>{ testGame }</> :
         <>
         <p>Welcome {currUser.userName}</p>
         <button>Practice</button>
         <button>Quiz</button>
-        <NewKanji />
+        {currComponent}
         <table style={{marginLeft:"auto", marginRight:"auto"}}>
             <tr>
                 <th>Japanese</th>

@@ -9,7 +9,7 @@ function MyHome() {
         practiceKanji: [1,3,9, 18, 27]
     })
     const [testGame, setTestGame] = useState(false);
-    const [currComponent, setCurrComponent] = useState("NewKanji");
+    const [currComponent, setCurrComponent] = useState(<NewKanji />);
 
     function handleClick(event) {
         console.log("quiz button clicked " + event.target.value);

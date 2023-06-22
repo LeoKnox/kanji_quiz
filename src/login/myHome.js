@@ -16,15 +16,15 @@ function MyHome() {
         console.log("quiz button clicked " + event.target.value);
         //myComponent = {event.target.value};
         let x = event.target.value;
-        setCurrComponent(JSON.stringify(x));
+        setCurrComponent({x});
     }
 
     return (testGame ? <>{ testGame }</> :
         <>
         <p>Welcome {currUser.userName}</p>
-        <button onClick={handleClick} value="<NewKanji />">Practice</button>
+    <button onClick={handleClick} value={<NewKanji />}>Practice</button>
         <button onClick={() => setCurrComponent(<QuizKanji />)} value="QuizKanji">Quiz</button>
-        {myComponent}
+        {currComponent}
         <table style={{marginLeft:"auto", marginRight:"auto"}}>
             <tr>
                 <th>Japanese</th>

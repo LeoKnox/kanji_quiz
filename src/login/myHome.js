@@ -16,10 +16,7 @@ function MyHome() {
         let x = event.target.value;
         console.log("quiz button clicked " + JSON.stringify(event.target.value));
         //myComponent = {event.target.value};
-        x.map((key) => {
-            console.log(event.target.value[key]);
-        })
-        setCurrComponent(x);
+        return(setCurrComponent(x));
     }
 
     return (testGame ? <>{ testGame }</> :

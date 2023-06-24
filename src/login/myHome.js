@@ -16,7 +16,7 @@ function MyHome() {
         console.log("quiz button clicked " + event.target.value);
         //myComponent = {event.target.value};
         let x = event.target.value;
-        setCurrComponent(x);
+        setCurrComponent({x});
     }
 
     return (testGame ? <>{ testGame }</> :

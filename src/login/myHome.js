@@ -14,16 +14,19 @@ function MyHome() {
 
     function handleClick(event) {
         let x = event.target.value;
-        console.log("quiz button clicked " + JSON.stringify(event.target.value));
+        console.log("quiz button clicked " + typeof(event.target.value));
         //myComponent = {event.target.value};
-        return(setCurrComponent(x));
+        setCurrComponent(x);
+        if (event.target.value === "NewKanji") {
+            setCurrComponent(<NewKanji />);
+        }
     }
 
     return (testGame ? <>{ testGame }</> :
         <>
         <p>Welcome {currUser.userName}</p>
-        <button onClick={handleClick} value={<NewKanji />}>Practice</button>
-        <button onClick={handleClick} value={<QuizKanji />}>Quiz</button>
+        <button onClick={handleClick} value={NewKanji}>Practice</button>
+        <button onClick={handleClick} value={QuizKanji}>Quiz</button>
         {currComponent}
         <table style={{marginLeft:"auto", marginRight:"auto"}}>
             <tr>

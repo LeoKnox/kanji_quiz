@@ -13,10 +13,10 @@ function MyHome() {
     let myComponent = <NewKanji />;
 
     function handleClick(event) {
-        console.log("quiz button clicked " + event.target.value);
+        console.log("quiz button clicked " + JSON.stringify(event.target.value));
         //myComponent = {event.target.value};
         let x = event.target.value;
-        setCurrComponent({x});
+        setCurrComponent(x);
     }
 
     return (testGame ? <>{ testGame }</> :

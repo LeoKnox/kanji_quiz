@@ -13,9 +13,12 @@ function MyHome() {
     let myComponent = <NewKanji />;
 
     function handleClick(event) {
+        let x = event.target.value;
         console.log("quiz button clicked " + JSON.stringify(event.target.value));
         //myComponent = {event.target.value};
-        let x = event.target.value;
+        x.map((key) => {
+            console.log(event.target.value[key]);
+        })
         setCurrComponent(x);
     }
 

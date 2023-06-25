@@ -10,7 +10,7 @@ function QuizKanji({practiceKanji}) {
     return (
         <>
         <h3>Quiz Kanji</h3>
-        {findKanji(1)}
+        {findKanji(practiceKanji[0])}
         <StartQuiz />
         </>
     )

@@ -10,22 +10,11 @@ function MyHome() {
     })
     const [testGame, setTestGame] = useState(false);
     const [currComponent, setCurrComponent] = useState(<NewKanji />);
-    let myComponent = <NewKanji />;
-
-    function handleClick(event) {
-        let x = event.target.value;
-        console.log("quiz button clicked " + typeof(event.target.value));
-        //myComponent = {event.target.value};
-        setCurrComponent(x);
-        if (event.target.value === "NewKanji") {
-            setCurrComponent(<NewKanji />);
-        }
-    }
 
     return (testGame ? <>{ testGame }</> :
         <>
         <p>Welcome {currUser.userName}</p>
-        <button onClick={handleClick} value={NewKanji}>Practice</button>
+        <button onClick={() => setCurrComponent(<NewKanji />)} value={NewKanji}>Practice</button>
         <button onClick={() => setCurrComponent(<QuizKanji />)} value={QuizKanji}>Quiz</button>
         {currComponent}
         <table style={{marginLeft:"auto", marginRight:"auto"}}>

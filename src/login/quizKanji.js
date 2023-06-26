@@ -2,7 +2,6 @@ import StartQuiz from './startQuiz.js';
 import {findKanji} from './kanjis.js';
 
 function QuizKanji({practiceKanji}) {
-    //let newKanjiList = practiceKanji
     practiceKanji = practiceKanji
         .map(x => ({ x, sort: Math.random() }))
         .sort((i, j) => i.sort - j.sort)

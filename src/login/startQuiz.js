@@ -1,4 +1,6 @@
-function StartQuiz() {
+function StartQuiz({practiceKanji}) {
+    console.log(practiceKanji);
+    
     return (
         <p>Start new quiz</p>
     )

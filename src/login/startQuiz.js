@@ -5,7 +5,9 @@ function StartQuiz({practiceKanji}) {
     return (
         <>
         <p>Start new quiz</p>
-        {practiceKanji.map(k => (<p>{k}</p>))}
+        {practiceKanji.map(k => 
+            (<p>{k}</p>)
+        )}
         </>
     )
 }

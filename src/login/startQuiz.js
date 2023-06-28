@@ -1,3 +1,5 @@
+import {findKanji} from './kanjis.js';
+
 function StartQuiz({practiceKanji}) {
     console.log(practiceKanji);
     let answer = practiceKanji.length -1;
@@ -10,8 +12,7 @@ function StartQuiz({practiceKanji}) {
     return (
         <>
         <p>Start new quiz</p>
-    <h4>{practiceKanji[answer]}</h4>
-    <h4>{answer}</h4>
+        <b>{findKanji(practiceKanji[answer])}</b>
         {practiceKanji.map(k => 
             (<p onClick={buttonClick}>{k}</p>)
         )}

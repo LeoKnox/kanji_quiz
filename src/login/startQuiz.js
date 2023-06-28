@@ -3,7 +3,8 @@ function StartQuiz({practiceKanji}) {
     let answer = practiceKanji.length -1;
     console.log(answer);
     function buttonClick() {
-        answer -= 1;
+        answer--;
+        console.log(answer);
         console.log("on click function");
     }
     return (

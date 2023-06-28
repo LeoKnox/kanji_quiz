@@ -3,7 +3,7 @@ import {useState} from 'react';
 
 function StartQuiz({practiceKanji}) {
     console.log(practiceKanji);
-    const [myAns, setMyans] = useState(3);
+    const [myAns, setMyans] = useState(findKanji(3));
     let answer = practiceKanji.length -1;
     console.log(answer);
     function buttonClick() {

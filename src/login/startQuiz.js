@@ -2,11 +2,14 @@ function StartQuiz({practiceKanji}) {
     console.log(practiceKanji);
     let answer = practiceKanji.length -1;
     console.log(answer);
+    function buttonClick() {
+        console.log("on click function");
+    }
     return (
         <>
         <p>Start new quiz</p>
         {practiceKanji.map(k => 
-            (<p>{k}</p>)
+            (<p onClick={buttonClick}>{k}</p>)
         )}
         </>
     )

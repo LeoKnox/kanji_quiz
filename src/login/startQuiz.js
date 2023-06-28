@@ -10,7 +10,8 @@ function StartQuiz({practiceKanji}) {
     return (
         <>
         <p>Start new quiz</p>
-        {answer}
+    <h4>{practiceKanji[answer]}</h4>
+    <h4>{answer}</h4>
         {practiceKanji.map(k => 
             (<p onClick={buttonClick}>{k}</p>)
         )}

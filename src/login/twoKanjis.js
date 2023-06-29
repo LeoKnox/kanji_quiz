@@ -12,6 +12,6 @@ export function findKanji(kanjiId) {
     //HiddenAns(1);
     console.log('hidden');
     return(
-        {newKanji}
+        newKanji
     );
 }

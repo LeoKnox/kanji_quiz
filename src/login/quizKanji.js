@@ -1,5 +1,6 @@
 import StartQuiz from './startQuiz.js';
-import {findKanji} from './kanjis.js';
+//import {findKanji} from './kanjis.js';
+import {findKanji} from './twoKanjis.js';
 
 function QuizKanji({practiceKanji}) {
     practiceKanji = practiceKanji
@@ -10,7 +11,7 @@ function QuizKanji({practiceKanji}) {
     return (
         <>
         <h3>Quiz Kanji</h3>
-        {findKanji(practiceKanji[0])}
+        {() => findKanji(practiceKanji[0])}
         <StartQuiz practiceKanji={practiceKanji} />
         </>
     )

@@ -8,7 +8,7 @@ function QuizKanji({practiceKanji}) {
         .sort((i, j) => i.sort - j.sort)
         .map(({x}) => x);
     console.log("quizKanji " + practiceKanji);
-    console.log(findKanji(practiceKanji[0]));
+    //console.log(findKanji(practiceKanji[0]));
     return (
         <>
         <h3>Quiz Kanji</h3>

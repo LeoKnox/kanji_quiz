@@ -1,4 +1,5 @@
-import {findKanji} from './kanjis.js';
+//import {findKanji} from './kanjis.js';
+import {findKanji} from './twoKanjis.js';
 import {useState} from 'react';
 
 function StartQuiz({practiceKanji}) {
@@ -13,7 +14,7 @@ function StartQuiz({practiceKanji}) {
     }
     return (
         <>
-        <p>Start new quiz {myAns}</p>
+        <p>Start new quiz {answer}</p>
         <b>{findKanji(practiceKanji[answer])}</b>
         {practiceKanji.map(k => 
             (<p onClick={buttonClick}>{k}</p>)

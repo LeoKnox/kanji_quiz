@@ -4,9 +4,9 @@ import {useState} from 'react';
 
 function StartQuiz({practiceKanji}) {
     console.log(practiceKanji);
-    const [myAns, setMyans] = useState(findKanji(3));
     let answer = practiceKanji.length -1;
-    console.log(answer);
+    const [myAns, setMyans] = useState(findKanji(answer));
+    console.log("x"+myAns);
             //(<p onClick={buttonClick}>{findKanji(practiceKanji[k]).english}</p>)
             //(<p onClick={buttonClick}>{k}</p>)
     function buttonClick() {
@@ -16,7 +16,7 @@ function StartQuiz({practiceKanji}) {
     }
     return (
         <>
-        <p>Start new quiz {answer}</p>
+        <p>Start new quiz {myAns}</p>
         <b>{findKanji(practiceKanji[answer]).japanese}</b>
         {practiceKanji.map(k => 
             (<p onClick={buttonClick} value=

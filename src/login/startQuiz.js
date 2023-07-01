@@ -19,7 +19,8 @@ function StartQuiz({practiceKanji}) {
         <p>Start new quiz {answer}</p>
         <b>{findKanji(practiceKanji[answer]).japanese}</b>
         {practiceKanji.map(k => 
-            (<p onClick={buttonClick}>{findKanji(k).english}</p>)
+            (<p onClick={buttonClick} value=
+                {k}>{findKanji(k).english}</p>)
         )}
         <b>{findKanji(practiceKanji[3]).english}</b>
         </>

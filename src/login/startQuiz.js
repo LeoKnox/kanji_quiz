@@ -7,6 +7,8 @@ function StartQuiz({practiceKanji}) {
     const [myAns, setMyans] = useState(findKanji(3));
     let answer = practiceKanji.length -1;
     console.log(answer);
+            //(<p onClick={buttonClick}>{findKanji(practiceKanji[k]).english}</p>)
+            //(<p onClick={buttonClick}>{k}</p>)
     function buttonClick() {
         answer--;
         console.log(answer);
@@ -19,6 +21,7 @@ function StartQuiz({practiceKanji}) {
         {practiceKanji.map(k => 
             (<p onClick={buttonClick}>{findKanji(practiceKanji[k]).japanese}</p>)
         )}
+        <b>{findKanji(practiceKanji[3]).english}</b>
         </>
     )
 }

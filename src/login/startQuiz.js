@@ -5,12 +5,12 @@ import {useState} from 'react';
 function StartQuiz({practiceKanji}) {
     console.log(practiceKanji);
     let answer = practiceKanji.length -1;
-    const [myAns, setMyans] = useState(practiceKanji[practiceKanji.length-1]);
+    let [myAns, setMyAns] = useState(practiceKanji[practiceKanji.length-1]);
     console.log("x"+myAns);
             //(<p onClick={buttonClick}>{findKanji(practiceKanji[k]).english}</p>)
             //(<p onClick={buttonClick}>{k}</p>)
     function buttonClick() {
-        answer--;
+        setMyAns(myAns--);
         console.log(answer);
         console.log("on click function");
     }

@@ -10,7 +10,7 @@ function StartQuiz({practiceKanji}) {
             //(<p onClick={buttonClick}>{findKanji(practiceKanji[k]).english}</p>)
             //(<p onClick={buttonClick}>{k}</p>)
     function buttonClick() {
-        setMyAns(myAns--);
+        setMyAns(myAns-1);
         console.log(answer);
         console.log("on click function");
     }

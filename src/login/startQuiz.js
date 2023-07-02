@@ -6,13 +6,10 @@ function StartQuiz({practiceKanji}) {
     console.log(practiceKanji);
     let answer = practiceKanji.length -1;
     let [myAns, setMyAns] = useState(practiceKanji[practiceKanji.length-1]);
-    console.log("x"+myAns);
-            //(<p onClick={buttonClick}>{findKanji(practiceKanji[k]).english}</p>)
-            //(<p onClick={buttonClick}>{k}</p>)
     function buttonClick() {
-        setMyAns(practiceKanji[answer-1]);
         answer--;
-        console.log(answer);
+        setMyAns(practiceKanji[answer]);
+        console.log(myAns);
         console.log("on click function");
     }
     return (

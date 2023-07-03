@@ -6,7 +6,9 @@ function StartQuiz({practiceKanji}) {
     console.log(practiceKanji);
     let answer = 0;
     let [myAns, setMyAns] = useState(practiceKanji[0]);
-    let newArray = practiceKanji.shift();
+    let newArray = practiceKanji.slice(1);
+    console.log("ttt");
+    console.log(newArray);
     function buttonClick() {
         answer++;
         setMyAns(practiceKanji[answer]);

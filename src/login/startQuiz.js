@@ -5,7 +5,7 @@ import {useState} from 'react';
 function StartQuiz({practiceKanji}) {
     console.log(practiceKanji);
     let answer = 0;
-    let [myAns, setMyAns] = useState(practiceKanji[Math.floor(Math.random()*practiceKanji.length-1)+1]);
+    let [myAns, setMyAns] = useState(practiceKanji[Math.floor(Math.random()*practiceKanji.length-2)]);
     console.log("t"+myAns);
     let newArray = practiceKanji.slice(1);
     newArray = newArray

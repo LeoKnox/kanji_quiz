@@ -5,8 +5,8 @@ import {useState} from 'react';
 function StartQuiz({practiceKanji}) {
     console.log(practiceKanji);
     let answer = 0;
-    let [myAns, setMyAns] = useState(practiceKanji[Math.floor(Math.random()*practiceKanji.length-2)]);
-    console.log("t"+myAns);
+    let [myAns, setMyAns] = useState(practiceKanji[Math.floor(Math.random()*practiceKanji.length-1)]);
+    console.log("t"+Math.floor(Math.random()*practiceKanji.length-2)+1);
     let newArray = practiceKanji.slice(1);
     newArray = newArray
         .map(x => ({ x, sort: Math.random() }))
@@ -23,7 +23,7 @@ function StartQuiz({practiceKanji}) {
     }
     return (
         <>
-        <p>Start new quiz {myAns}</p>
+        <p>Start new quiz {myAns || "t"}</p>
         <b>{findKanji(practiceKanji[answer]).japanese}</b>
         {newArray.map(k => 
             (<p onClick={buttonClick} value=

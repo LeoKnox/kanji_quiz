@@ -4,12 +4,14 @@ import {useState} from 'react';
 
 function StartQuiz({practiceKanji}) {
     console.log(practiceKanji);
-    let answer = practiceKanji.length -1;
-    let [myAns, setMyAns] = useState(practiceKanji[practiceKanji.length-1]);
+    let answer = 0;
+    let [myAns, setMyAns] = useState(practiceKanji[0]);
+    let newArray = practiceKanji.shift();
     function buttonClick() {
-        answer--;
+        answer++;
         setMyAns(practiceKanji[answer]);
         console.log(myAns);
+        console.log(newArray);
         console.log("on click function");
     }
     return (

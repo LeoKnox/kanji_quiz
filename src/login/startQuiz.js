@@ -7,6 +7,10 @@ function StartQuiz({practiceKanji}) {
     let answer = 0;
     let [myAns, setMyAns] = useState(practiceKanji[0]);
     let newArray = practiceKanji.slice(1);
+    newArray = newArray
+        .map(x => ({ x, sort: Math.random() }))
+        .sort((i, j) => i.sort - j.sort)
+        .map(({x}) => x);
     console.log("ttt");
     console.log(newArray);
     function buttonClick() {
@@ -20,7 +24,7 @@ function StartQuiz({practiceKanji}) {
         <>
         <p>Start new quiz {myAns}</p>
         <b>{findKanji(practiceKanji[answer]).japanese}</b>
-        {practiceKanji.map(k => 
+        {newArray.map(k => 
             (<p onClick={buttonClick} value=
                 {k}>{findKanji(k).english}</p>)
         )}

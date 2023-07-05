@@ -8,7 +8,7 @@ function StartQuiz({practiceKanji}) {
     let [myAns, setMyAns] = useState(findKanji(practiceKanji[0]).english);
     //let [myAns, setMyAns] = useState(practiceKanji[Math.floor(Math.random()*practiceKanji.length-1)]);
     console.log(Math.floor(Math.random()*practiceKanji.length-2)+1);
-    let newArray = practiceKanji.slice(0,1) + practiceKanji.slice(3);
+    let newArray = practiceKanji.slice(0,1).push(practiceKanji.slice(3));
     newArray = newArray
         .map(x => ({ x, sort: Math.random() }))
         .sort((i, j) => i.sort - j.sort)

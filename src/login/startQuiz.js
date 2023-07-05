@@ -18,8 +18,9 @@ function StartQuiz({practiceKanji}) {
     console.log(myAns);
     function buttonClick() {
         answer++;
+        let x = newArray.unShift();
+        newArray.splice(3,0,x);
         setMyAns(practiceKanji[answer]);
-        console.log(myAns);
         console.log(newArray);
         console.log("on click function");
     }

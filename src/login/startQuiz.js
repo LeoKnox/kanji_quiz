@@ -7,12 +7,14 @@ function StartQuiz({practiceKanji}) {
     let answer = 0;
     let [myAns, setMyAns] = useState(findKanji(practiceKanji[0]).english);
     //let [myAns, setMyAns] = useState(practiceKanji[Math.floor(Math.random()*practiceKanji.length-1)]);
+    let [stateArray, setStateArray] = useState(
+        practiceKanji
+            .map(x => ({ x, sort: Math.random() }))
+            .sort((i, j) => i.sort - j.sort)
+            .map(({x}) => x)
+    )
     console.log(Math.floor(Math.random()*practiceKanji.length-2)+1);
     let newArray = practiceKanji.slice(0,4);
-    newArray = newArray
-        .map(x => ({ x, sort: Math.random() }))
-        .sort((i, j) => i.sort - j.sort)
-        .map(({x}) => x);
     console.log("ttt");
     console.log(newArray);
     console.log(myAns);
@@ -24,7 +26,7 @@ function StartQuiz({practiceKanji}) {
             .map(x => ({ x, sort: Math.random() }))
             .sort((i, j) => i.sort - j.sort)
             .map(({x}) => x);
-        console.log(temp);
+        console.log(stateArray);
         console.log(newArray);
         console.log("on click function");
     }

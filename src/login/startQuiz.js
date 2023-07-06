@@ -26,9 +26,10 @@ function StartQuiz({practiceKanji}) {
             .map(x => ({ x, sort: Math.random() }))
             .sort((i, j) => i.sort - j.sort)
             .map(({x}) => x);
+        newArray[Math.floor(Math.random()*newArray.length)] = temp;
         setStateArray(newArray);
         console.log(stateArray);
-        console.log(newArray);
+        console.log(temp);
         console.log("on click function");
     }
     return (

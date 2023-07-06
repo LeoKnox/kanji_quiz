@@ -17,11 +17,14 @@ function StartQuiz({practiceKanji}) {
     console.log(newArray);
     console.log(myAns);
     function buttonClick() {
-        console.log("on click function");
         answer++;
-        let x = practiceKanji[answer];
-        newArray.sort((a) => {return a!=x})
-        console.log(x);
+        let temp = practiceKanji.slice(answer, answer+1);
+        //newArray.sort((a) => {return a!=temp})
+        newArray = newArray
+            .map(x => ({ x, sort: Math.random() }))
+            .sort((i, j) => i.sort - j.sort)
+            .map(({x}) => x);
+        console.log(temp);
         console.log(newArray);
         console.log("on click function");
     }

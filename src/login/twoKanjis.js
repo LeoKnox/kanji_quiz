@@ -8,9 +8,7 @@ let allKanji = [
 
 export function findKanji(kanjiId) {
     let newKanji = allKanji.find(k => k["id"] === kanjiId);
-    console.log(newKanji);
     //HiddenAns(1);
-    console.log('hidden');
     return(
         newKanji
     );

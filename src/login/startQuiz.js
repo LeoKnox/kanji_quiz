@@ -17,8 +17,9 @@ function StartQuiz({practiceKanji}) {
     console.log(newArray);
     console.log(myAns);
     function buttonClick() {
+        console.log("on click function");
         answer++;
-        let x = newArray.unShift();
+        let x = practiceKanji[answer];
         newArray.sort((a) => {return a!=x})
         console.log(x);
         console.log(newArray);

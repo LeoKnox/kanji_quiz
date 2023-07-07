@@ -27,7 +27,7 @@ function StartQuiz({practiceKanji}) {
             .map(x => ({ x, sort: Math.random() }))
             .sort((i, j) => i.sort - j.sort)
             .map(({x}) => x);
-        testArray[Math.floor(Math.random()*newArray.length)] = temp;
+        testArray[Math.floor(Math.random()*newArray.length)] = temp[0];
         setStateArray(testArray);
         console.log(stateArray);
         console.log(temp);
@@ -37,7 +37,7 @@ function StartQuiz({practiceKanji}) {
         <>
         <p>Start new quiz {myAns || "t"}</p>
         <b>{findKanji(practiceKanji[answer]).japanese}</b>
-        {newArray.map(k => 
+        {stateArray.map(k => 
             (<p onClick={buttonClick} value=
                 {k}>{findKanji(k).english}</p>)
         )}

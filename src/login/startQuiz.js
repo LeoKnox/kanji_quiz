@@ -9,10 +9,10 @@ function StartQuiz({practiceKanji}) {
     //let [myAns, setMyAns] = useState(practiceKanji[Math.floor(Math.random()*practiceKanji.length-1)]);
     let [stateArray, setStateArray] = useState(
         practiceKanji
-            .slice(0, 4)
             .map(x => ({ x, sort: Math.random() }))
             .sort((i, j) => i.sort - j.sort)
             .map(({x}) => x)
+            .slice(0, 4)
     )
     console.log(Math.floor(Math.random()*practiceKanji.length-2)+1);
     let newArray = practiceKanji.slice(0,4);
@@ -21,10 +21,11 @@ function StartQuiz({practiceKanji}) {
         if (answer >= practiceKanji.length) { alert("done")}
         let temp = practiceKanji.slice(answer, answer+1);
         //newArray.sort((a) => {return a!=temp})
-        let testArray = newArray
+        let testArray = practiceKanji
             .map(x => ({ x, sort: Math.random() }))
             .sort((i, j) => i.sort - j.sort)
-            .map(({x}) => x);
+            .map(({x}) => x)
+            .slice(0, 4)
         testArray[Math.floor(Math.random()*newArray.length)] = temp[0];
         setStateArray(testArray);
         console.log(stateArray);

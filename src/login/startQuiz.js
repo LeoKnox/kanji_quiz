@@ -41,7 +41,7 @@ function StartQuiz({practiceKanji}) {
             (<p onClick={buttonClick} value=
                 {k}>{findKanji(k).english}</p>)
         )}
-        <b>{findKanji(practiceKanji[3]).english}</b>
+        <b>{findKanji(stateArray[3]).english}</b>
         </>
     )
 }

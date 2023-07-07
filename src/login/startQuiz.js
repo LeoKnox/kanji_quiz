@@ -9,7 +9,7 @@ function StartQuiz({practiceKanji}) {
     //let [myAns, setMyAns] = useState(practiceKanji[Math.floor(Math.random()*practiceKanji.length-1)]);
     let [stateArray, setStateArray] = useState(
         practiceKanji
-            .slice(0,-1)
+            .slice(0, 4)
             .map(x => ({ x, sort: Math.random() }))
             .sort((i, j) => i.sort - j.sort)
             .map(({x}) => x)

@@ -30,7 +30,7 @@ function StartQuiz({practiceKanji}) {
         testArray[Math.floor(Math.random()*newArray.length)] = temp;
         setStateArray(testArray);
         console.log(stateArray);
-        console.log(temp[0]);
+        console.log(temp);
         console.log("on click function");
     }
     return (

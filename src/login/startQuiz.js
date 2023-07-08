@@ -20,16 +20,16 @@ function StartQuiz({practiceKanji}) {
         answer++;
         if (answer >= practiceKanji.length) { alert("done")}
         let temp = practiceKanji.slice(answer, answer+1);
-        //newArray.sort((a) => {return a!=temp})
+        console.log(`temp: ${temp}`);
         let testArray = practiceKanji
             .map(x => ({ x, sort: Math.random() }))
             .sort((i, j) => i.sort - j.sort)
             .map(({x}) => x)
             .slice(0, 4)
+        console.log(`test array ${testArray}`)
         testArray[Math.floor(Math.random()*newArray.length)] = temp[0];
+        console.log(`test array ${testArray}`)
         setStateArray(testArray);
-        console.log(stateArray);
-        console.log(temp);
         console.log("on click function");
     }
     return (

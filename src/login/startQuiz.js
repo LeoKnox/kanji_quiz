@@ -4,8 +4,8 @@ import {useState} from 'react';
 
 function StartQuiz({practiceKanji}) {
     console.log(practiceKanji);
-    let answer = 0;
     let [myAns, setMyAns] = useState(findKanji(practiceKanji[0]).english);
+    let [answer, incAnswer] = useState(0);
     //let [myAns, setMyAns] = useState(practiceKanji[Math.floor(Math.random()*practiceKanji.length-1)]);
     let [stateArray, setStateArray] = useState(
         practiceKanji
@@ -16,12 +16,9 @@ function StartQuiz({practiceKanji}) {
     )
     console.log(Math.floor(Math.random()*practiceKanji.length-2)+1);
     let newArray = practiceKanji.slice(0,4);
-    function addAnswer() {
-        answer++;
-    }
     function buttonClick() {
         console.log(`answer: ${answer}`);
-        addAnswer();
+        incAnswer(answer+1);
         console.log(`answer: ${answer}`);
         if (answer >= practiceKanji.length) { alert("done")}
         let temp = practiceKanji.slice(answer, answer+1);

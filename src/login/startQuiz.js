@@ -15,7 +15,7 @@ function StartQuiz({practiceKanji}) {
             .slice(0, 4)
     )
     console.log(Math.floor(Math.random()*practiceKanji.length-2)+1);
-    let newArray = practiceKanji.slice(0,4);
+    let newArray = practiceKanji;
     function buttonClick() {
         console.log(`answer: ${answer}`);
         incAnswer(answer+1);

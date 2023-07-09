@@ -19,9 +19,10 @@ function StartQuiz({practiceKanji}) {
         incAnswer(answer+1);
         console.log(`answer: ${answer}`);
         if (answer >= practiceKanji.length) { alert("done")}
-        let temp = practiceKanji.slice(answer, answer+1);
+        let holdArray = practiceKanji;
+        let temp = holdArray.slice(answer, answer+1);
         console.log(`temp: ${temp}`);
-        let testArray = practiceKanji
+        let testArray = holdArray 
             .map(x => ({ x, sort: Math.random() }))
             .sort((i, j) => i.sort - j.sort)
             .map(({x}) => x)

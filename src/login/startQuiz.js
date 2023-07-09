@@ -14,8 +14,6 @@ function StartQuiz({practiceKanji}) {
             .map(({x}) => x)
             .slice(0, 4)
     )
-    console.log(Math.floor(Math.random()*practiceKanji.length-2)+1);
-    let newArray = practiceKanji;
     function buttonClick() {
         console.log(`answer: ${answer}`);
         incAnswer(answer+1);
@@ -29,7 +27,7 @@ function StartQuiz({practiceKanji}) {
             .map(({x}) => x)
             .slice(0, 4)
         console.log(`test array ${testArray}`)
-        testArray[Math.floor(Math.random()*newArray.length)] = temp[0];
+        testArray[Math.floor(Math.random()*testArray.length)] = temp[0];
         console.log(`test array ${testArray}`)
         setStateArray(testArray);
         console.log("on click function");

@@ -15,12 +15,12 @@ function StartQuiz({practiceKanji}) {
             .slice(0, 4)
     )
     function buttonClick() {
-        console.log(`answer: ${answer}`);
         incAnswer(answer+1);
-        console.log(`answer: ${answer}`);
         if (answer >= practiceKanji.length) { alert("done")}
         let holdArray = practiceKanji;
         let temp = holdArray.slice(answer, answer+1);
+        console.log(`practice kanji ${practiceKanji}`);
+        console.log(`hold array ${holdArray}`);
         console.log(`temp: ${temp}`);
         let testArray = holdArray 
             .map(x => ({ x, sort: Math.random() }))

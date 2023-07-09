@@ -16,9 +16,12 @@ function StartQuiz({practiceKanji}) {
     )
     console.log(Math.floor(Math.random()*practiceKanji.length-2)+1);
     let newArray = practiceKanji.slice(0,4);
+    function addAnswer() {
+        answer++;
+    }
     function buttonClick() {
         console.log(`answer: ${answer}`);
-        answer++;
+        addAnswer();
         console.log(`answer: ${answer}`);
         if (answer >= practiceKanji.length) { alert("done")}
         let temp = practiceKanji.slice(answer, answer+1);

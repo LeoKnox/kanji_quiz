@@ -22,15 +22,14 @@ function StartQuiz({practiceKanji}) {
         console.log(`practice kanji ${practiceKanji}`);
         console.log(`hold array ${holdArray}`);
         console.log(`temp: ${temp}`);
-        let testArray = temp 
+        temp = temp 
             .map(x => ({ x, sort: Math.random() }))
             .sort((i, j) => i.sort - j.sort)
             .map(({x}) => x)
             .slice(0, 4)
-        console.log(`test array ${testArray}`)
-        testArray[Math.floor(Math.random()*testArray.length)] = temp[0];
-        console.log(`test array ${testArray}`)
-        setStateArray(testArray);
+        temp[Math.floor(Math.random()*temp.length)] = temp[0];
+        console.log(`temp: ${temp}`);
+        setStateArray(temp);
         console.log("on click function");
     }
     return (

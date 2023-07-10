@@ -18,8 +18,7 @@ function StartQuiz({practiceKanji}) {
         incAnswer(answer+1);
         if (answer >= practiceKanji.length) { alert("done")}
         let holdArray = practiceKanji;
-        let temp = holdArray.slice(answer, answer+1);
-        temp = temp.shift(answer, answer+1);
+        let temp = holdArray.slice(answer);
         console.log(`practice kanji ${practiceKanji}`);
         console.log(`hold array ${holdArray}`);
         console.log(`temp: ${temp}`);

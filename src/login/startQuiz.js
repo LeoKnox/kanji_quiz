@@ -22,7 +22,7 @@ function StartQuiz({practiceKanji}) {
         console.log(`practice kanji ${practiceKanji}`);
         console.log(`hold array ${holdArray}`);
         console.log(`temp: ${temp}`);
-        let testArray = holdArray 
+        let testArray = temp 
             .map(x => ({ x, sort: Math.random() }))
             .sort((i, j) => i.sort - j.sort)
             .map(({x}) => x)

@@ -17,10 +17,11 @@ function StartQuiz({practiceKanji}) {
     function buttonClick() {
         incAnswer(answer+1);
         if (answer >= practiceKanji.length) { alert("done")}
-        let holdArray = practiceKanji;
-        let temp = holdArray.filter((i, j) => j !== answer);
+        let temp = practiceKanji;
+        //console.log(`hold array ${holdArray}`);
+        //let temp = holdArray.filter((i, j) => j !== answer);
         console.log(`practice kanji ${practiceKanji}`);
-        console.log(`hold array ${holdArray}`);
+        //console.log(`hold array ${holdArray}`);
         console.log(`temp: ${temp}`);
         temp = temp 
             .map(x => ({ x, sort: Math.random() }))

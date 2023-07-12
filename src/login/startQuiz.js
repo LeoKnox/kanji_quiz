@@ -28,7 +28,7 @@ function StartQuiz({practiceKanji}) {
             .sort((i, j) => i.sort - j.sort)
             .map(({x}) => x)
             .slice(0, 4)
-        temp[Math.floor(Math.random()*temp.length)] = temp[0];
+        temp[Math.floor(Math.random()*temp.length)] = answer;
         console.log(`temp: ${temp}`);
         setStateArray(temp);
         console.log("on click function");

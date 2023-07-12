@@ -20,6 +20,7 @@ function StartQuiz({practiceKanji}) {
         //let temp = practiceKanji;
         //console.log(`hold array ${holdArray}`);
         let temp = practiceKanji.filter((i, j) => j !== answer);
+        console.log(`answer ${answer}`);
         console.log(`practice kanji ${practiceKanji}`);
         //console.log(`hold array ${holdArray}`);
         console.log(`temp: ${temp}`);
@@ -28,7 +29,7 @@ function StartQuiz({practiceKanji}) {
             .sort((i, j) => i.sort - j.sort)
             .map(({x}) => x)
             .slice(0, 4)
-        temp[Math.floor(Math.random()*temp.length)] = answer;
+        temp[Math.floor(Math.random()*temp.length)] = practiceKanji[answer];
         console.log(`temp: ${temp}`);
         setStateArray(temp);
         console.log("on click function");

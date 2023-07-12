@@ -16,7 +16,7 @@ function StartQuiz({practiceKanji}) {
     )
     function buttonClick() {
         incAnswer(answer+1);
-        if (answer >= practiceKanji.length) { alert("done")}
+        if (answer >= practiceKanji.length-1) { alert("done")}
         //let temp = practiceKanji;
         //console.log(`hold array ${holdArray}`);
         let temp = practiceKanji.filter((i, j) => j !== answer);

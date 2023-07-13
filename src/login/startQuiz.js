@@ -13,17 +13,21 @@ function StartQuiz({practiceKanji}) {
     )
     function buttonClick() {
         incAnswer(answer+1);
+        console.log(`answer ${answer}`);
         if (answer >= practiceKanji.length-1) {
             alert("done")
             incAnswer(0);
         }
         let temp = practiceKanji.filter((i, j) => j !== answer);
+        console.log(`temp ${temp}`);
         temp = temp 
             .map(x => ({ x, sort: Math.random() }))
             .sort((i, j) => i.sort - j.sort)
             .map(({x}) => x)
             .slice(0, 4)
+        console.log(`temp ${temp}`);
         temp[Math.floor(Math.random()*temp.length)] = practiceKanji[answer];
+        console.log(`temp ${temp}`);
         setStateArray(temp);
     }
     return (

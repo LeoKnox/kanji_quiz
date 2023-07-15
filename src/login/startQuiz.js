@@ -19,7 +19,7 @@ function StartQuiz({practiceKanji}) {
             incAnswer(0);
         }
         let temp = practiceKanji.filter((i, j) => j !== answer);
-        console.log(`temp ${temp}`);
+        console.log(`temp ${findKanji(temp)}`);
         temp = temp 
             .map(x => ({ x, sort: Math.random() }))
             .sort((i, j) => i.sort - j.sort)
@@ -32,7 +32,7 @@ function StartQuiz({practiceKanji}) {
     }
     return (
         <>
-        <p>Start new quiz {practiceKanji[answer] || "t"}</p>
+        <p>Start new quiz {stateArray[answer] || "t"}</p>
         <b>{findKanji(practiceKanji[answer]).japanese}</b>
         {stateArray.map(k => 
             (<p onClick={buttonClick} value=

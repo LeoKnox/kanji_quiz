@@ -26,6 +26,7 @@ function StartQuiz({practiceKanji}) {
             .map(({x}) => x)
             .slice(0, 4)
         console.log(`temp ${temp}`);
+        console.log(`practice kanji id ${findKanji(answer)}`);
         temp[Math.floor(Math.random()*temp.length)] = practiceKanji[answer];
         console.log(`temp ${temp}`);
         setStateArray(temp);

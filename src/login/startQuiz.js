@@ -18,7 +18,7 @@ function StartQuiz({practiceKanji}) {
             alert("done")
             incAnswer(0);
         }
-        let temp = practiceKanji.filter((i, j) => j !== answer);
+        let temp = practiceKanji.filter((i, j) => findKanji(j).id !== answer);
         console.log(`temp ${findKanji(temp)}`);
         temp = temp 
             .map(x => ({ x, sort: Math.random() }))
@@ -26,7 +26,7 @@ function StartQuiz({practiceKanji}) {
             .map(({x}) => x)
             .slice(0, 4)
         console.log(`temp ${temp}`);
-        console.log(`practice kanji id ${findKanji(answer).japanese}`);
+        console.log(`practice kanji id ${findKanji(answer)}`);
         temp[Math.floor(Math.random()*temp.length)] = practiceKanji[answer];
         console.log(`temp ${temp}`);
         setStateArray(temp);

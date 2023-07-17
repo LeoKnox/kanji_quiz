@@ -35,7 +35,7 @@ function StartQuiz({practiceKanji}) {
     return (
         <>
         <p>Start new quiz {stateArray[answer] || "t"}</p>
-        <b>{findKanji(practiceKanji[answer]).japanese}</b>
+        <b>{answer} + {findKanji(practiceKanji[answer]).japanese}</b>
         {stateArray.map(k => 
             (<p onClick={buttonClick} value=
                 {k}>{findKanji(k).english}</p>)

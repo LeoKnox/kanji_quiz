@@ -18,7 +18,7 @@ function StartQuiz({practiceKanji}) {
             alert("done")
             incAnswer(0);
         }
-        let temp = practiceKanji.filter((i, j) => findKanji(practiceKanji[j]).id !== answer);
+        let temp = practiceKanji.filter((i, j) => findKanji(practiceKanji[j]).id === answer);
         console.log(`temp ${findKanji(temp)}`);
         console.log(`temp: ${temp}`);
         temp = temp 

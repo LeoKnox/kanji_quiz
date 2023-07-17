@@ -20,6 +20,7 @@ function StartQuiz({practiceKanji}) {
         }
         let temp = practiceKanji.filter((i, j) => findKanji(practiceKanji[j]).id !== answer);
         console.log(`temp ${findKanji(temp)}`);
+        console.log(`temp: ${temp}`);
         temp = temp 
             .map(x => ({ x, sort: Math.random() }))
             .sort((i, j) => i.sort - j.sort)

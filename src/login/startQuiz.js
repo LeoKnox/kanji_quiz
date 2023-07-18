@@ -28,7 +28,6 @@ function StartQuiz({practiceKanji}) {
         if (answer >= practiceKanji.length-1) {
             alert("done")
             incAnswer(0);
-            /*
             temp = practiceKanji.filter((i, j) => findKanji(practiceKanji[j]).id !== practiceKanji[answer]);
             temp = temp 
                 .map(x => ({ x, sort: Math.random() }))
@@ -37,7 +36,6 @@ function StartQuiz({practiceKanji}) {
                 .slice(0, 4)
             temp[Math.floor(Math.random()*temp.length)] = practiceKanji[answer];
             setStateArray(temp);
-            */
         }
         console.log(`temp ${temp}`);
         setStateArray(temp);

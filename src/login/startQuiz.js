@@ -28,14 +28,13 @@ function StartQuiz({practiceKanji}) {
         if (answer >= practiceKanji.length-1) {
             alert("done")
             incAnswer(0);
-            temp = practiceKanji.filter((i, j) => findKanji(practiceKanji[j]).id !== practiceKanji[answer]);
-            temp = temp 
-                .map(x => ({ x, sort: Math.random() }))
-                .sort((i, j) => i.sort - j.sort)
-                .map(({x}) => x)
-                .slice(0, 4)
-            temp[Math.floor(Math.random()*temp.length)] = practiceKanji[answer];
-            setStateArray(temp);
+            setStateArray(
+                practiceKanji
+                    .map(x => ({ x, sort: Math.random() }))
+                    .sort((i, j) => i.sort - j.sort)
+                    .map(({x}) => x)
+                    .slice(0, 4)
+            );
         }
         console.log(`temp ${temp}`);
         setStateArray(temp);

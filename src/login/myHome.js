@@ -22,7 +22,7 @@ function MyHome() {
                 <th>Japanese</th>
                 <th>English</th>
             </tr>
-            {currUser.practiceKanji.map(k => (<>{findKanji(k)}</>))}
+            {currUser.practiceKanji.map(k => (<>{k} : {findKanji(k)}</>))}
         </table>
         </>
     )

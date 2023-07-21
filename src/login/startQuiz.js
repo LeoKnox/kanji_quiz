@@ -12,6 +12,9 @@ function StartQuiz({practiceKanji}) {
             .slice(0, 4)
     )
     console.log(generateQuiz().answer);
+    useEffect(() => {
+        setStateArray(generateQuiz().quiz)
+    },[answer])
     function buttonClick() {
         incAnswer(answer+1);
         console.log(`answer ${answer}`);

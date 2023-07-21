@@ -16,6 +16,6 @@ export function findKanji(kanjiId) {
 
 export function generateQuiz() {
     return (
-        {answer:99, quiz:[1,3,9,27]}
+        {answer:1, quiz:[1,3,9,27]}
     )
 }

@@ -13,6 +13,7 @@ function StartQuiz({practiceKanji}) {
     )
     console.log(generateQuiz().answer);
     useEffect(() => {
+        console.log(generateQuiz().answer);
         setStateArray(generateQuiz().quiz)
     },[answer])
     function buttonClick() {

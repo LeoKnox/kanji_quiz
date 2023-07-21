@@ -16,6 +16,6 @@ export function findKanji(kanjiId) {
 
 export function generateQuiz() {
     return (
-        {answer:1, quiz:[1,3,9,27]}
+        {answer:allKanji[Math.floor(Math.random()*allKanji.length)].id, quiz:[1,3,9,27]}
     )
 }

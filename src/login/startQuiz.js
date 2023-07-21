@@ -1,6 +1,6 @@
 //import {findKanji} from './kanjis.js';
-import {findKanji} from './twoKanjis.js';
-import {useState} from 'react';
+import {findKanji, generateQuiz} from './twoKanjis.js';
+import {useState, useEffect} from 'react';
 
 function StartQuiz({practiceKanji}) {
     let [answer, incAnswer] = useState(1);
@@ -11,6 +11,7 @@ function StartQuiz({practiceKanji}) {
             .map(({x}) => x)
             .slice(0, 4)
     )
+    console.log(generateQuiz().answer);
     function buttonClick() {
         incAnswer(answer+1);
         console.log(`answer ${answer}`);

@@ -13,3 +13,9 @@ export function findKanji(kanjiId) {
         newKanji
     );
 }
+
+export function generateQuiz() {
+    return (
+        {answer:1, quiz:[1,3,9,27]}
+    )
+}

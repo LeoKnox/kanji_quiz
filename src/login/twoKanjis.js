@@ -20,7 +20,7 @@ export function generateQuiz() {
         .sort((i, j) => i.sort - j.sort)
         .map(({x}) => x)
         .slice(0, 4)
-    console.log(`x + ${x}`)
+    console.log(x)
     return (
         {answer:allKanji[Math.floor(Math.random()*allKanji.length)].id, quiz:x}
     )

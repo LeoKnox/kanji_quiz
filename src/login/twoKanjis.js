@@ -15,7 +15,12 @@ export function findKanji(kanjiId) {
 }
 
 export function generateQuiz() {
+    let x = allKanji
+        .map(x => ({ x, sort: Math.random() }))
+        .sort((i, j) => i.sort - j.sort)
+        .map(({x}) => x)
+        .slice(0, 4)
     return (
-        {answer:allKanji[Math.floor(Math.random()*allKanji.length)].id, quiz:[1,3,9,27]}
+        {answer:allKanji[Math.floor(Math.random()*allKanji.length)].id, quiz:x}
     )
 }

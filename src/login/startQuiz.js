@@ -11,6 +11,8 @@ function StartQuiz({practiceKanji}) {
             .map(({x}) => x)
             .slice(0, 4)
     )
+    console.log("sa");
+    console.log(stateArray);
     console.log(generateQuiz().answer);
     useEffect(() => {
         console.log(generateQuiz().answer);

@@ -23,6 +23,6 @@ export function generateQuiz() {
     console.log(x);
     console.log("x");
     return (
-        {answer:allKanji[Math.floor(Math.random()*allKanji.length)].id, quiz:x}
+        {answer:x[Math.floor(Math.random()*x.length)].id, quiz:x}
     )
 }

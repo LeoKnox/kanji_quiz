@@ -5,11 +5,14 @@ import {useState, useEffect} from 'react';
 function StartQuiz({practiceKanji}) {
     let [answer, incAnswer] = useState(1);
     let [stateArray, setStateArray] = useState(
+        /*
         practiceKanji
             .map(x => ({ x, sort: Math.random() }))
             .sort((i, j) => i.sort - j.sort)
             .map(({x}) => x)
             .slice(0, 4)
+        */
+       generateQuiz()
     )
     console.log("sa");
     console.log(stateArray);
@@ -52,7 +55,7 @@ function StartQuiz({practiceKanji}) {
         <b>{answer} + {findKanji(practiceKanji[answer]).japanese}</b>
         {stateArray.map(k => 
             (<p onClick={buttonClick} value=
-                {k}>{findKanji(k)}</p>)
+                {k}>{findKanji(k).english}</p>)
         )}
         </>
     )

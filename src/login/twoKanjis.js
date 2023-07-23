@@ -18,7 +18,7 @@ export function generateQuiz() {
     let x = allKanji
         .map(x => ({ x, sort: Math.random() }))
         .sort((i, j) => i.sort - j.sort)
-        .map(({x}) => x)
+        .map(({x}) => x.id)
         .slice(0, 4)
     console.log(x);
     console.log("x");

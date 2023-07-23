@@ -12,7 +12,7 @@ function StartQuiz({practiceKanji}) {
             .map(({x}) => x)
             .slice(0, 4)
         */
-       generateQuiz()
+       generateQuiz().quiz
     )
     console.log("sa");
     console.log(stateArray);

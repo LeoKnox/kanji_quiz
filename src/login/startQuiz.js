@@ -16,6 +16,9 @@ function StartQuiz({practiceKanji}) {
     )
     console.log("sa");
     console.log(stateArray);
+    console.log("pk");
+    console.log(practiceKanji);
+
     console.log(generateQuiz().answer);
     useEffect(() => {
         console.log(generateQuiz().answer);

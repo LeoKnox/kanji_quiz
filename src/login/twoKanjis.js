@@ -23,6 +23,6 @@ export function generateQuiz() {
     let randAns = x[Math.floor(Math.random()*x.length)]
     console.log(`randAns ${randAns}`);
     return (
-        {answer:x[Math.floor(Math.random()*x.length)].id, quiz:x}
+        {answer:randAns.id, quiz:x}
     )
 }

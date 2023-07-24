@@ -20,6 +20,8 @@ export function generateQuiz() {
         .sort((i, j) => i.sort - j.sort)
         .map(({x}) => x.id)
         .slice(0, 4)
+    let randAns = x[Math.floor(Math.random()*x.length)]
+    console.log(`randAns ${randAns}`);
     return (
         {answer:x[Math.floor(Math.random()*x.length)].id, quiz:x}
     )

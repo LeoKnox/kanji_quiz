@@ -16,7 +16,7 @@ function StartQuiz({practiceKanji}) {
         setStateArray(generateQuiz.quiz);
     },[answer])
     function buttonClick() {
-        incAnswer(answer+1);
+        //incAnswer(answer+1);
         let temp = practiceKanji.filter((i, j) => findKanji(practiceKanji[j]).id !== practiceKanji[answer]);
         temp = temp 
             .map(x => ({ x, sort: Math.random() }))

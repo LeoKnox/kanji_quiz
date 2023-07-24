@@ -11,7 +11,7 @@ function StartQuiz({practiceKanji}) {
         console.log(generateQuiz().answer);
         let genQuiz = generateQuiz();
         console.log("genquiz");
-        console.log(genQuiz);
+        console.log(genQuiz.answer);
         incAnswer(generateQuiz.answer);
         setStateArray(generateQuiz.quiz);
     },[answer])
@@ -39,7 +39,7 @@ function StartQuiz({practiceKanji}) {
     }
     return (
         <>
-        <p>Start new quiz {stateArray[answer] || "t"}</p>
+        <p>Start new quiz {answer || "t"}</p>
         <b>{answer} + {findKanji(practiceKanji[answer]).japanese}</b>
         {stateArray.map(k => 
             (<p onClick={buttonClick} value=

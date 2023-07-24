@@ -5,38 +5,22 @@ import {useState, useEffect} from 'react';
 function StartQuiz({practiceKanji}) {
     let [answer, incAnswer] = useState(1);
     let [stateArray, setStateArray] = useState(
-        /*
-        practiceKanji
-            .map(x => ({ x, sort: Math.random() }))
-            .sort((i, j) => i.sort - j.sort)
-            .map(({x}) => x)
-            .slice(0, 4)
-        */
        generateQuiz().quiz
     )
-    console.log("sa");
-    console.log(stateArray);
-    console.log("pk");
-    console.log(practiceKanji);
-
-    console.log(generateQuiz().answer);
     useEffect(() => {
         console.log(generateQuiz().answer);
-        setStateArray(generateQuiz().quiz)
+        let genQuiz = generateQuiz();
+        incAnswer(genQuiz.answer);
+        setStateArray(genQuiz.quiz);
     },[answer])
     function buttonClick() {
         incAnswer(answer+1);
-        console.log(`answer ${answer}`);
         let temp = practiceKanji.filter((i, j) => findKanji(practiceKanji[j]).id !== practiceKanji[answer]);
-        console.log(`temp ${findKanji(temp)}`);
-        console.log(`temp: ${temp}`);
         temp = temp 
             .map(x => ({ x, sort: Math.random() }))
             .sort((i, j) => i.sort - j.sort)
             .map(({x}) => x)
             .slice(0, 4)
-        console.log(`answer ${answer}`);
-        console.log(`practice kanji id ${practiceKanji[answer]}`);
         temp[Math.floor(Math.random()*temp.length)] = practiceKanji[answer];
         if (answer >= practiceKanji.length-1) {
             alert("done")
@@ -49,7 +33,6 @@ function StartQuiz({practiceKanji}) {
                     .slice(0, 4)
             );
         }
-        console.log(`temp ${temp}`);
         setStateArray(temp);
     }
     return (

@@ -11,7 +11,7 @@ function StartQuiz({practiceKanji}) {
         console.log(generateQuiz().answer);
         let genQuiz = generateQuiz();
         console.log("genquiz");
-        console.log(genQuiz.answer);
+        console.log(genQuiz.quiz);
         incAnswer(generateQuiz.answer);
         setStateArray(generateQuiz.quiz);
     },[answer])

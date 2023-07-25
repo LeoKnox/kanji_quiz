@@ -20,7 +20,7 @@ export function generateQuiz() {
         .sort((i, j) => i.sort - j.sort)
         .map(({x}) => x.id)
         .slice(0, 4)
-    let randAns = x[Math.floor(Math.random()*x.length)]
+    let randAns = x[Math.floor(Math.random()*x.length)].id
     console.log(`randAns ${randAns.id}`);
     return (
         {answer:randAns.id, quiz:x}

@@ -40,7 +40,7 @@ function StartQuiz({practiceKanji}) {
     return (
         <>
         <p>Start new quiz {answer || "t"}</p>
-        <b>{answer} + {findKanji(practiceKanji[answer]).japanese}</b>
+        <b>{answer} + {findKanji(practiceKanji[answer])}</b>
         {stateArray}
         </>
     )

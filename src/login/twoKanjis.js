@@ -21,8 +21,8 @@ export function generateQuiz() {
         .map(({x}) => x.id)
         .slice(0, 4)
     let randAns = x[Math.floor(Math.random()*x.length-1)].id
-    console.log(`randAns ${randAns.id}`);
+    console.log(`randAns ${randAns}`);
     return (
-        {answer:randAns.id, quiz:x}
+        {answer:randAns, quiz:x}
     )
 }

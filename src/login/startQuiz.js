@@ -8,13 +8,39 @@ function StartQuiz({practiceKanji}) {
        generateQuiz().quiz
     )
     useEffect(() => {
+        console.log(generateQuiz().answer);
         let genQuiz = generateQuiz();
-        incAnswer(genQuiz.answer);
-        setStateArray(genQuiz.quiz);
+        console.log("genquiz");
+        console.log(genQuiz.quiz);
+        incAnswer(generateQuiz.answer);
+        setStateArray(generateQuiz.quiz);
     },[answer])
+    function buttonClick() {
+        //incAnswer(answer+1);
+        let temp = practiceKanji.filter((i, j) => findKanji(practiceKanji[j]).id !== practiceKanji[answer]);
+        temp = temp 
+            .map(x => ({ x, sort: Math.random() }))
+            .sort((i, j) => i.sort - j.sort)
+            .map(({x}) => x)
+            .slice(0, 4)
+        temp[Math.floor(Math.random()*temp.length)] = practiceKanji[answer];
+        if (answer >= practiceKanji.length-1) {
+            alert("done")
+            incAnswer(0);
+            setStateArray(
+                practiceKanji
+                    .map(x => ({ x, sort: Math.random() }))
+                    .sort((i, j) => i.sort - j.sort)
+                    .map(({x}) => x)
+                    .slice(0, 4)
+            );
+        }
+        setStateArray(temp);
+    }
     return (
         <>
         <p>Start new quiz {answer || "t"}</p>
+        <b>{answer} + {findKanji(practiceKanji[answer])}</b>
         {stateArray}
         </>
     )

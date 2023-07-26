@@ -41,7 +41,9 @@ function StartQuiz({practiceKanji}) {
         <>
         <p>Start new quiz {answer || "t"}</p>
         <b>{answer} + {findKanji(practiceKanji[answer])}</b>
-        {stateArray}
+        {stateArray.map((k) => {
+            <>{k.english}</>
+        })}
         </>
     )
 }

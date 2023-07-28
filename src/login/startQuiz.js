@@ -11,13 +11,13 @@ function StartQuiz({practiceKanji}) {
         let genQuiz = generateQuiz();
         incAnswer(genQuiz.answer);
         setStateArray(genQuiz.quiz);
-        console.log(`statearr ${typeof(stateArray)}`)
+        console.log(`statearr ${Object.values(stateArray)}`)
     },[answer])
     return (
         <>
         <p>Start new quiz {answer || "t"}</p>
         {stateArray.map((k, i) => {
-            <>{i}{findKanji(k).japanese}ww</>
+            <><p>{i}{findKanji(k).japanese}ww</p></>
         })}
         </>
     )

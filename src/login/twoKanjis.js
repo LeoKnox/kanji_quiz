@@ -23,8 +23,8 @@ export function generateQuiz() {
     let randAns = x[Math.floor(Math.random()*x.length-1)];
     console.log(`randAns ${randAns}`);
     console.log(Object.values(x));
-    let y = Object.values(x);
-    console.log(typeof(y));
+    let y = Object.keys(x);
+    console.log(y)
     return (
         {answer:randAns, quiz:x}
     )

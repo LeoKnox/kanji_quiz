@@ -10,7 +10,7 @@ function StartQuiz({practiceKanji}) {
     useEffect(() => {
         let genQuiz = generateQuiz();
         incAnswer(genQuiz.answer);
-        setStateArray(genQuiz.quiz.values());
+        setStateArray(Object.values(genQuiz.quiz));
         console.log(`statearr ${stateArray}`)
     },[answer])
     return (

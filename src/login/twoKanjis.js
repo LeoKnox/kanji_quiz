@@ -21,10 +21,6 @@ export function generateQuiz() {
         .map(({x}) => x.id)
         .slice(0, 4)
     let randAns = x[Math.floor(Math.random()*x.length-1)];
-    console.log(`randAns ${randAns}`);
-    console.log(Object.values(x));
-    let y = Object.keys(x);
-    console.log(y)
     return (
         {answer:randAns, quiz:x}
     )

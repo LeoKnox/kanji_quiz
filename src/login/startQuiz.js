@@ -4,14 +4,12 @@ import {useState, useEffect} from 'react';
 
 function StartQuiz({practiceKanji}) {
     let [answer, incAnswer] = useState(1);
-    let [stateArray, setStateArray] = useState(
-       generateQuiz().quiz
-    )
+    let [stateArray, setStateArray] = useState([])
     useEffect(() => {
         let genQuiz = generateQuiz();
         console.log(`genQuiz ${genQuiz}`);
         incAnswer(genQuiz.answer);
-        setStateArray(Object.values(genQuiz.answer));
+        setStateArray(genQuiz.quiz);
         console.log(`statearr ${stateArray[2]}`)
     },[answer])
     return (

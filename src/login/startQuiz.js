@@ -10,7 +10,7 @@ function StartQuiz({practiceKanji}) {
         console.log(`genQuiz ${JSON.stringify(genQuiz)}`);
         incAnswer(genQuiz.answer);
         setStateArray(genQuiz.quiz);
-        console.log(`statearr ${stateArray[2]}`)
+        console.log(`statearr ${stateArray}`)
     },[])
     return (
         <>

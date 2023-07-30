@@ -7,11 +7,11 @@ function StartQuiz({practiceKanji}) {
     let [stateArray, setStateArray] = useState([])
     useEffect(() => {
         let genQuiz = generateQuiz();
-        console.log(`genQuiz ${genQuiz}`);
+        console.log(`genQuiz ${JSON.stringify(genQuiz)}`);
         incAnswer(genQuiz.answer);
         setStateArray(genQuiz.quiz);
         console.log(`statearr ${stateArray[2]}`)
-    },[answer])
+    },[])
     return (
         <>
         <p>Start new quiz {answer || "t"}</p>

@@ -12,15 +12,15 @@ function StartQuiz({practiceKanji}) {
         setStateArray(genQuiz.quiz);
     },[])
 
-    const confirmAnswer = (event) => {
-        console.log(`confirmed ${event.target.value}`);
+    const confirmAnswer = (x) => {
+        console.log(`confirmed ${x}`);
     }
 
     return (
         <>
         <p>Start new quiz {answer || "t"}</p>
         {stateArray.map((k) => (
-            <p value={k} onClick={confirmAnswer}>{k}{findKanji(k).japanese}</p>
+            <p value={k} onClick={confirmAnswer(k)}>{k}{findKanji(k).japanese}</p>
         ))}
         </>
     )

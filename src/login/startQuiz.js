@@ -20,7 +20,7 @@ function StartQuiz({practiceKanji}) {
         <>
         <p>Start new quiz {answer || "t"}</p>
         {stateArray.map((k) => (
-            <p value={k} onClick={(event) => confirmAnswer(event)}>{k}{findKanji(k).japanese}</p>
+            <p value={k} onClick={confirmAnswer}>{k}{findKanji(k).japanese}</p>
         ))}
         </>
     )

@@ -12,8 +12,8 @@ function StartQuiz({practiceKanji}) {
         setStateArray(genQuiz.quiz);
     },[])
 
-    const confirmAnswer = (e) => {
-        console.log(`confirmed ${e.target.value}`);
+    const confirmAnswer = (event) => {
+        console.log(`confirmed ${event.target.value}`);
     }
 
     return (

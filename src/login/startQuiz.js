@@ -17,6 +17,7 @@ function StartQuiz({practiceKanji}) {
         if ((findKanji(k).english) === answer) {
             console.log("You guessed right!");
             let newK = generateQuiz();
+            console.log(`newK ${JSON.stringify(newK)}`)
             incAnswer(findKanji(newK.answer).english);
             setStateArray(newK.quiz);
         } else {

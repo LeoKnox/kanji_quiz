@@ -21,7 +21,7 @@ export function generateQuiz() {
         .map(({x}) => x.id)
         .slice(0, 4)
     console.log(`allKanji ${JSON.stringify(allKanji)}`);
-    let i = Math.floor(Math.random()*x.length-1);
+    let i = Math.floor(Math.random()*x.length);
     console.log(`i: ${i}`);
     let randAns = x[i];
     return (

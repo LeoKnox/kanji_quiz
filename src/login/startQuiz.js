@@ -12,9 +12,24 @@ function StartQuiz({practiceKanji}) {
         setStateArray(genQuiz.quiz);
     },[])
 
+    /*
     const confirmAnswer = (k) => {
         console.log(`confirmed ${k}`);
         if ((findKanji(k).english) === answer) {
+            console.log("You guessed right!");
+            let newK = generateQuiz();
+            console.log(`newK ${JSON.stringify(newK)}`)
+            incAnswer(findKanji(newK.answer).english);
+            setStateArray(newK.quiz);
+        } else {
+            console.log("wrong");
+        }
+    }
+    */
+
+    const confirmAnswer = (e) => {
+        console.log(`confirmed ${JSON.stringify(e)}`);
+        if (e.target.value === answer) {
             console.log("You guessed right!");
             let newK = generateQuiz();
             console.log(`newK ${JSON.stringify(newK)}`)
@@ -29,7 +44,10 @@ function StartQuiz({practiceKanji}) {
         <>
         <p>Start new quiz {answer || "t"}</p>
         {stateArray.map((k) => (
-            <p value={k} onClick={() => confirmAnswer(k)}>{findKanji(k).japanese}</p>
+            <>
+            <p value={k} onClick={confirmAnswer}>{findKanji(k).japanese}</p>
+        {/* <p value={k} onClick={() => confirmAnswer(k)}>{findKanji(k).japanese}</p> */}
+        </>
         ))}
         </>
     )

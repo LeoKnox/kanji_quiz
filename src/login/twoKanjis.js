@@ -6,6 +6,12 @@ let allKanji = [
     {id: 27, japanese: "akai", english: "red"},
 ];
 
+export function getTotal() {
+    return (
+        allKanji.length
+    )
+}
+
 export function findKanji(kanjiId) {
     let newKanji = allKanji.find(k => k["id"] === kanjiId);
     //HiddenAns(1);

@@ -1,5 +1,5 @@
 //import {findKanji} from './kanjis.js';
-import {findKanji, generateQuiz} from './twoKanjis.js';
+import {getTotal, findKanji, generateQuiz} from './twoKanjis.js';
 import {useState, useEffect} from 'react';
 
 function StartQuiz({practiceKanji}) {
@@ -25,7 +25,7 @@ function StartQuiz({practiceKanji}) {
         } else {
             console.log("wrong");
         }
-        if (goal >= 6) {
+        if (goal  < getTotal()) {
             console.log("LOOP COMPLETE")
             goal = 0;
         }

@@ -5,7 +5,7 @@ import {useState, useEffect} from 'react';
 function StartQuiz({practiceKanji}) {
     let [answer, incAnswer] = useState();
     let [stateArray, setStateArray] = useState([])
-    let kanjis = 0;
+    let [goal, setGoal] = useState(0);
     useEffect(() => {
         let genQuiz = generateQuiz();
         incAnswer(findKanji(genQuiz.answer).english);
@@ -21,14 +21,15 @@ function StartQuiz({practiceKanji}) {
             console.log(`newK ${JSON.stringify(newK)}`)
             incAnswer(findKanji(newK.answer).english);
             setStateArray(newK.quiz);
-            kanjis++;
+            setGoal(goal+1);
         } else {
             console.log("wrong");
         }
-        if (kanjis >= 6) {
+        if (goal >= 6) {
             console.log("LOOP COMPLETE")
-            kanjis = 0;
+            goal = 0;
         }
+        console.log("kanjis" + goal);
     }
 
     return (

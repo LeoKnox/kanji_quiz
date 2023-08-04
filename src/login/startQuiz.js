@@ -25,11 +25,11 @@ function StartQuiz({practiceKanji}) {
         } else {
             console.log("wrong");
         }
-        if (goal  < getTotal()) {
+        if (goal  > getTotal()) {
             console.log("LOOP COMPLETE")
             goal = 0;
         }
-        console.log("kanjis" + goal);
+        console.log("kanjis" + goal + ":" + getTotal());
     }
 
     return (

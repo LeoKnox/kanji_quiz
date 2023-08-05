@@ -4,6 +4,7 @@ import {useState, useEffect} from 'react';
 import NewKanji from './newKanji.js';
 
 function StartQuiz({practiceKanji}) {
+    console.log(`practice kanji ${practiceKanji}`)
     let [answer, incAnswer] = useState();
     let [stateArray, setStateArray] = useState([])
     let [goal, setGoal] = useState(0);

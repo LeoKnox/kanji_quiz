@@ -3,7 +3,7 @@ import {getTotal, findKanji, generateQuiz} from './twoKanjis.js';
 import {useState, useEffect} from 'react';
 import NewKanji from './newKanji.js';
 
-function StartQuiz({practiceKanji, setCurrComponent}) {
+function StartQuiz({practiceKanji}) {
     let [answer, incAnswer] = useState();
     let [stateArray, setStateArray] = useState([])
     let [goal, setGoal] = useState(0);

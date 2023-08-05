@@ -1,6 +1,7 @@
 //import {findKanji} from './kanjis.js';
 import {getTotal, findKanji, generateQuiz} from './twoKanjis.js';
 import {useState, useEffect} from 'react';
+import NewKanji from './newKanji.js';
 
 function StartQuiz({practiceKanji, setCurrComponent}) {
     let [answer, incAnswer] = useState();

@@ -28,7 +28,7 @@ function StartQuiz({practiceKanji, setCurrComponent}) {
         }
         if (goal  > getTotal()) {
             console.log("LOOP COMPLETE")
-            return(setCurrComponent(<NewKanji />));
+            this.setCurrComponent(<NewKanji />);
             goal = 0;
         }
         console.log("kanjis" + goal + ":" + getTotal());

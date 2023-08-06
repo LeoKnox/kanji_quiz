@@ -17,6 +17,7 @@ function StartQuiz({practiceKanji, currComponent}) {
 
     const confirmAnswer = (k) => {
         console.log(`confirmed ${k}`);
+        console.log(`curr comp ${currComponent}`)
         if ((findKanji(k).english) === answer) {
             console.log("You guessed right!");
             let newK = generateQuiz();

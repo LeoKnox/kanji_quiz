@@ -14,10 +14,10 @@ function StartQuiz({practiceKanji, currComponent}) {
         console.log(`answer: {genQuiz.answer}`);
         setStateArray(genQuiz.quiz);
     },[])
+    console.log(`curr comp ${currComponent}`)
 
     const confirmAnswer = (k) => {
         console.log(`confirmed ${k}`);
-        console.log(`curr comp ${currComponent}`)
         if ((findKanji(k).english) === answer) {
             console.log("You guessed right!");
             let newK = generateQuiz();

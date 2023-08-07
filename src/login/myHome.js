@@ -12,7 +12,7 @@ function MyHome() {
     const [testGame, setTestGame] = useState(false);
     const [currComponent, setCurrComponent] = useState(<NewKanji />);
 
-    function changeNewKanji() {
+    const changeNewKanji = () => {
         setCurrComponent(<NewKanji />);
     }
 

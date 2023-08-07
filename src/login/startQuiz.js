@@ -3,7 +3,7 @@ import {getTotal, findKanji, generateQuiz} from './twoKanjis.js';
 import {useState, useEffect} from 'react';
 import NewKanji from './newKanji.js';
 
-function StartQuiz({practiceKanji, setCurrComponent}) {
+function StartQuiz({practiceKanji, changeNewKanji}) {
     console.log(`practice kanji ${practiceKanji}`)
     let [answer, incAnswer] = useState();
     let [stateArray, setStateArray] = useState([])
@@ -14,7 +14,6 @@ function StartQuiz({practiceKanji, setCurrComponent}) {
         console.log(`answer: {genQuiz.answer}`);
         setStateArray(genQuiz.quiz);
     },[])
-    console.log(`curr comp ${setCurrComponent}`)
 
     const confirmAnswer = (k) => {
         console.log(`confirmed ${k}`);
@@ -30,7 +29,7 @@ function StartQuiz({practiceKanji, setCurrComponent}) {
         }
         if (goal  > getTotal()) {
             console.log("LOOP COMPLETE")
-            return(() => setCurrComponent(<NewKanji />));
+            changeNewKanji();
             goal = 0;
         }
         console.log("kanjis" + goal + ":" + getTotal());

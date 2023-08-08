@@ -30,7 +30,7 @@ function StartQuiz({practiceKanji, changeNewKanji}) {
         if (goal  > getTotal()) {
             console.log("LOOP COMPLETE")
             console.log(typeof(changeNewKanji));
-            {changeNewKanji()};
+            changeNewKanji.changeNewKanji();
             goal = 0;
         }
         console.log("kanjis" + goal + ":" + getTotal());

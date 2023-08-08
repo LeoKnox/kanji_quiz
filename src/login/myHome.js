@@ -13,6 +13,7 @@ function MyHome() {
     const [currComponent, setCurrComponent] = useState(<NewKanji />);
 
     function changeNewKanji() {
+        console.log("changenewkanji");
         setCurrComponent(<NewKanji />);
     }
 

@@ -12,11 +12,6 @@ function MyHome() {
     const [testGame, setTestGame] = useState(false);
     const [currComponent, setCurrComponent] = useState(<NewKanji />);
 
-    function changeNewKanji() {
-        console.log("changenewkanji");
-        setCurrComponent(<NewKanji />);
-    }
-
     return (testGame ? <>{ testGame }</> :
         <>
         <p>Welcome {currUser.userName}</p>
@@ -32,6 +27,11 @@ function MyHome() {
         </table>
         </>
     )
+
+    function changeNewKanji() {
+        console.log("changenewkanji");
+        setCurrComponent(<NewKanji />);
+    }
 }
 
 export default MyHome;

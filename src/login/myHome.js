@@ -15,7 +15,7 @@ function MyHome() {
     return (testGame ? <>{ testGame }</> :
         <>
         <p>Welcome {currUser.userName}</p>
-        <SetNav goto="() => setCurrComponent(<NewKanji />)" setCurrComponent={setCurrComponent} />
+        <SetNav goto="() => setCurrComponent(<NewKanji />)" setCurrComponent={setCurrComponent} paramOne={currUser.practiceKanji} />
         <button onClick={() => setCurrComponent(<NewKanji />)} value="NewKanji">Practice</button>
         <button onClick={() => setCurrComponent(<QuizKanji  changeNewKanji={() => setCurrComponent("NewKanji")} practiceKanji={currUser.practiceKanji} />)} value="QuizKanji">Quiz</button>
         {currComponent}

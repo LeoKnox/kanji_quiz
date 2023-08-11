@@ -1,8 +1,9 @@
 import {useState} from 'react';
+import NewKanji from './newKanji.js';
 
 export function SetNav({goto}) {
     return (
-        <h3>Navi! {goto}</h3>
+        <NewKanji />
     )
 }
 

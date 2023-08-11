@@ -11,11 +11,11 @@ function MyHome() {
     })
     const [testGame, setTestGame] = useState(false);
     const [currComponent, setCurrComponent] = useState(<NewKanji />);
+    console.log(`read!: ${JSON.stringify(setCurrComponent)}`);
 
     return (testGame ? <>{ testGame }</> :
         <>
         <p>Welcome {currUser.userName}</p>
-        <SetNav goto="() => setCurrComponent(<NewKanji />)" setCurrComponent={setCurrComponent} paramOne={currUser.practiceKanji} />
         <button onClick={() => setCurrComponent(<NewKanji />)} value="NewKanji">Practice</button>
         <button onClick={() => setCurrComponent(<QuizKanji  changeNewKanji={() => setCurrComponent("NewKanji")} practiceKanji={currUser.practiceKanji} />)} value="QuizKanji">Quiz</button>
         {currComponent}

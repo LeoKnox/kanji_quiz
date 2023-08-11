@@ -1,9 +1,9 @@
 import {useState} from 'react';
 import NewKanji from './newKanji.js';
 
-export function SetNav({goto}) {
+export function SetNav({setCurrComponent}) {
     return (
-        <NewKanji />
+        <button onClick={() => setCurrComponent(<NewKanji />)} value="NewKanji">Pick Me!</button>
     )
 }
 

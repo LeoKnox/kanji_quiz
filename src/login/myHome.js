@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { findKanji } from './kanjis.js';
 import NewKanji from './newKanji.js';
 import QuizKanji from './quizKanji.js';
-import StartQuiz from './startQuiz.js';
+import SetNav from './Nav.js';
 
 function MyHome() {
     const [currUser, setCurrUser] = useState({
@@ -15,6 +15,7 @@ function MyHome() {
     return (testGame ? <>{ testGame }</> :
         <>
         <p>Welcome {currUser.userName}</p>
+        {() => setNav()}
         <button onClick={() => setCurrComponent(<NewKanji />)} value="NewKanji">Practice</button>
         <button onClick={() => setCurrComponent(<QuizKanji  changeNewKanji={() => setCurrComponent("NewKanji")} practiceKanji={currUser.practiceKanji} />)} value="QuizKanji">Quiz</button>
         {currComponent}

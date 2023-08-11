@@ -1,7 +1,9 @@
 import {useState} from 'react';
 
-export function setNav() {
+export function SetNav() {
     return (
         <h3>Navi!</h3>
     )
 }
+
+export default SetNav;

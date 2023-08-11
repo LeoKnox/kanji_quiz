@@ -1,8 +1,8 @@
 import {useState} from 'react';
 
-export function SetNav() {
+export function SetNav({goto}) {
     return (
-        <h3>Navi!</h3>
+        <h3>Navi! {goto}</h3>
     )
 }
 

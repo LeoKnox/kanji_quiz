@@ -13,11 +13,16 @@ function MyHome() {
     const [currComponent, setCurrComponent] = useState(<NewKanji />);
     console.log(`read!: ${setCurrComponent}`);
 
+    function changeNewKanji() {
+        console.log("changenewkanji");
+        setCurrComponent(<NewKanji />);
+    }
+
     return (testGame ? <>{ testGame }</> :
         <>
         <p>Welcome {currUser.userName}</p>
         <button onClick={() => setCurrComponent(<NewKanji />)} value="NewKanji">Practice</button>
-        <button onClick={() => setCurrComponent(<QuizKanji  cn={() => changeNewKanji()} changeNewKanji={() => setCurrComponent} practiceKanji={currUser.practiceKanji} />)} value="QuizKanji">Quiz</button>
+        <button onClick={() => setCurrComponent(<QuizKanji  cn={changeNewKanji} changeNewKanji={() => setCurrComponent} practiceKanji={currUser.practiceKanji} />)} value="QuizKanji">Quiz</button>
         {currComponent}
         <table style={{marginLeft:"auto", marginRight:"auto"}}>
             <tr>
@@ -28,11 +33,6 @@ function MyHome() {
         </table>
         </>
     )
-
-    function changeNewKanji() {
-        console.log("changenewkanji");
-        setCurrComponent(<NewKanji />);
-    }
 }
 
 export default MyHome;

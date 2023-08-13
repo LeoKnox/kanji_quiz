@@ -30,7 +30,7 @@ function StartQuiz({practiceKanji, changeNewKanji, cn}) {
         if (goal  > getTotal()) {
             console.log("LOOP COMPLETE")
             console.log(changeNewKanji);
-            {cn()};
+            cn();
             changeNewKanji("Kanji");
             goal = 0;
         }
@@ -41,7 +41,7 @@ function StartQuiz({practiceKanji, changeNewKanji, cn}) {
         <>
         <p>Start new quiz {answer || "t"}</p>
         {stateArray.map((k) => (
-            <p value={k} onClick={() => confirmAnswer(k)}>{findKanji(k).japanese}</p>
+            <p value={k} onClick={confirmAnswer(k)}>{findKanji(k).japanese}</p>
         ))}
         </>
     )

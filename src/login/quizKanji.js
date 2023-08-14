@@ -2,7 +2,7 @@ import StartQuiz from './startQuiz.js';
 //import {findKanji} from './kanjis.js';
 import {findKanji} from './twoKanjis.js';
 
-function QuizKanji({practiceKanji}) {
+function QuizKanji({practiceKanji, cn}) {
     practiceKanji = practiceKanji
         .map(x => ({ x, sort: Math.random() }))
         .sort((i, j) => i.sort - j.sort)
@@ -12,7 +12,7 @@ function QuizKanji({practiceKanji}) {
     return (
         <>
         <h3>Quiz Kanji</h3>
-        <StartQuiz practiceKanji={practiceKanji} />
+        <StartQuiz practiceKanji={practiceKanji} cn={cn}/>
         </>
     )
 }

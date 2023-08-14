@@ -31,7 +31,6 @@ function StartQuiz({practiceKanji, changeNewKanji, cn}) {
             console.log("LOOP COMPLETE")
             console.log(changeNewKanji);
             cn();
-            changeNewKanji("Kanji");
             goal = 0;
         }
         console.log("kanjis" + goal + ":" + getTotal());

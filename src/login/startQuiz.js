@@ -13,7 +13,7 @@ function StartQuiz({practiceKanji, changeNewKanji, cn}) {
         incAnswer(findKanji(genQuiz.answer).english);
         console.log(`answer: {genQuiz.answer}`);
         setStateArray(genQuiz.quiz);
-    },[])
+    },[goal])
 
     const confirmAnswer = (k) => {
         console.log(`confirmed ${k}`);

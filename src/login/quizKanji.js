@@ -12,7 +12,7 @@ function QuizKanji({practiceKanji, cn}) {
     return (
         <>
         <h3>Quiz Kanji</h3>
-        <StartQuiz practiceKanji={practiceKanji} cn={cn}/>
+        <StartQuiz practiceKanji={practiceKanji} cn={cn()} />
         </>
     )
 }

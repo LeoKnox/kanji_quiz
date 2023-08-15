@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { findKanji } from './kanjis.js';
 import NewKanji from './newKanji.js';
 import QuizKanji from './quizKanji.js';
-import SetNav from './Nav.js';
 
 function MyHome() {
     const [currUser, setCurrUser] = useState({

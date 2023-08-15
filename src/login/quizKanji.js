@@ -7,7 +7,6 @@ function QuizKanji({practiceKanji, cn}) {
         .map(({x}) => x);
     return (
         <>
-        <h3>Quiz Kanji</h3>
         <StartQuiz cn={cn} />
         </>
     )

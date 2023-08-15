@@ -37,7 +37,7 @@ function StartQuiz({cn}) {
         <>
         <p>Start new quiz {answer || "t"}</p>
         {stateArray.map((k) => (
-            <button className="ks_button" value={k} onClick={() => confirmAnswer(k)}>{findKanji(k).japanese}</button>
+            <p><button className="ks_button" value={k} onClick={() => confirmAnswer(k)}>{findKanji(k).japanese}</button></p>
         ))}
         </>
     )

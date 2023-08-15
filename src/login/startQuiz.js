@@ -13,7 +13,7 @@ function StartQuiz({practiceKanji, changeNewKanji, cn}) {
         incAnswer(findKanji(genQuiz.answer).english);
         console.log(`answer: {genQuiz.answer}`);
         setStateArray(genQuiz.quiz);
-    },[goal])
+    },[])
 
     const confirmAnswer = (k) => {
         console.log(`confirmed ${k}`);
@@ -40,7 +40,7 @@ function StartQuiz({practiceKanji, changeNewKanji, cn}) {
         <>
         <p>Start new quiz {answer || "t"}</p>
         {stateArray.map((k) => (
-            <p value={k} onClick={confirmAnswer(k)}>{findKanji(k).japanese}</p>
+            <p value={k} onClick={() => confirmAnswer(k)}>{findKanji(k).japanese}</p>
         ))}
         </>
     )

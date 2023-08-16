@@ -26,7 +26,7 @@ function StartQuiz({cn}) {
         } else {
             console.log("wrong");
         }
-        if (goal  > getTotal()) {
+        if (goal  >= getTotal()) {
             cn();
             goal = 0;
         }

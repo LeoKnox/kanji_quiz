@@ -7,6 +7,7 @@ function StartQuiz({cn}) {
     let [answer, incAnswer] = useState();
     let [stateArray, setStateArray] = useState([])
     let [goal, setGoal] = useState(0);
+    const [error, setError] = useState("");
     useEffect(() => {
         let genQuiz = generateQuiz();
         incAnswer(findKanji(genQuiz.answer).english);
@@ -23,8 +24,10 @@ function StartQuiz({cn}) {
             incAnswer(findKanji(newK.answer).english);
             setStateArray(newK.quiz);
             setGoal(goal+1);
+            setError("");
         } else {
             console.log("wrong");
+            setError("Wrong answer");
         }
         if (goal  >= getTotal()) {
             cn();
@@ -38,6 +41,7 @@ function StartQuiz({cn}) {
         <br/>
         <progress value={goal} max={getTotal()}></progress>
         <p>Answer: {answer || "X"}</p>
+        <p style={{color: "red"}}><b>{error}</b></p>
         {stateArray.map((k) => (
             <p><button className="ks_button" value={k} onClick={() => confirmAnswer(k)}>{findKanji(k).japanese}</button></p>
         ))}

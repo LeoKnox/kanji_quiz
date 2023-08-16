@@ -36,7 +36,6 @@ function StartQuiz({cn}) {
     return (
         <>
         <p>Answer: {answer || "X"}</p>
-        <p>{goal} of {getTotal()}</p>
         <progress value={goal} max={getTotal()}></progress>
         {stateArray.map((k) => (
             <p><button className="ks_button" value={k} onClick={() => confirmAnswer(k)}>{findKanji(k).japanese}</button></p>

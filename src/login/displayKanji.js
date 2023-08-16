@@ -23,7 +23,7 @@ function DisplayKanji({kanjis, allKanji}) {
         <>
         <p>Answer: {poolKanji[answer].english}</p>
         {newComp()}
-        <p><b>{error}</b></p>
+        <p style={{color: "red"}}><b>{error}</b></p>
         </>
     )
 }

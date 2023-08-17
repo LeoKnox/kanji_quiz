@@ -6,7 +6,7 @@ function StartQuiz({cn}) {
     console.log(`practice kanji ${cn}`)
     let [answer, incAnswer] = useState();
     let [stateArray, setStateArray] = useState([])
-    let [goal, setGoal] = useState(0);
+    let [goal, setGoal] = useState(1);
     const [error, setError] = useState("");
     useEffect(() => {
         let genQuiz = generateQuiz();
@@ -31,7 +31,6 @@ function StartQuiz({cn}) {
         }
         if (goal  >= getTotal()) {
             cn();
-            goal = 0;
         }
         console.log("kanjis" + goal + ":" + getTotal());
     }

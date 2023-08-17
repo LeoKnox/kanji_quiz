@@ -11,3 +11,10 @@ button {
     font-weight: bold;
     font-size: 1.3em;
 }
+
+.startQuiz {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    justify-content: space-evenly;
+}

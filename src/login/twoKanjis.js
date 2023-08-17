@@ -5,6 +5,7 @@ let allKanji = [
     {id: 18, japanese: "midori", english: "green"},
     {id: 27, japanese: "akai", english: "red"},
 ];
+let quizCount = 0;
 
 export function getTotal() {
     return (
@@ -26,9 +27,9 @@ export function generateQuiz() {
         .sort((i, j) => i.sort - j.sort)
         .map(({x}) => x.id)
         .slice(0, 4)
-    console.log(`allKanji ${JSON.stringify(allKanji)}`);
+    let r=Math.floor(Math.random()*x.length);
+    console.log(`r: ${r}`)
     let i = Math.floor(Math.random()*x.length);
-    console.log(`i: ${i}`);
     let randAns = x[i];
     return (
         {answer:randAns, quiz:x}

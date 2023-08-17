@@ -4,7 +4,7 @@ button {
 }
 
 .ks_button {
-    width: 8%;
+    width: max-content;
     padding: 1% 0;
     background-color: gold;
     color: darkblue;
@@ -20,5 +20,5 @@ button {
 }
 
 .sqButton {
-    width: max-content;
+    max-width: max-content;
 }

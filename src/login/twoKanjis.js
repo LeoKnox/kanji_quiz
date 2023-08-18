@@ -22,6 +22,8 @@ export function findKanji(kanjiId) {
 }
 
 export function generateQuiz() {
+    let y = allKanji.filter((a, b) => b !== 2);
+    console.log(`y ${JSON.stringify(y)}`);
     let x = allKanji
         .map(x => ({ x, sort: Math.random() }))
         .sort((i, j) => i.sort - j.sort)

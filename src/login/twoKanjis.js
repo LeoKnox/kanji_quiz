@@ -33,6 +33,7 @@ export function generateQuiz() {
     console.log(`r: ${r}`)
     let i = Math.floor(Math.random()*x.length);
     let randAns = x[i];
+    quizCount++;
     return (
         {answer:randAns, quiz:x}
     )

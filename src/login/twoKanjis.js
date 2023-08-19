@@ -22,9 +22,10 @@ export function findKanji(kanjiId) {
 }
 
 export function generateQuiz() {
-    let y = allKanji.filter((a, b) => b !== quizCount);
-    console.log(`y ${JSON.stringify(y)}`);
+    //let y = allKanji.filter((a, b) => b !== quizCount);
+    //console.log(`y ${JSON.stringify(y)}`);
     let x = allKanji
+        .filter((a, b) => b !== quizCount)
         .map(x => ({ x, sort: Math.random() }))
         .sort((i, j) => i.sort - j.sort)
         .map(({x}) => x.id)

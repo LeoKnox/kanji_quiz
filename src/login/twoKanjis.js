@@ -31,7 +31,7 @@ export function generateQuiz() {
         .slice(0, 4)
     let r=Math.floor(Math.random()*x.length);
     console.log(`r: ${r}`)
-    x[r] = allKanji[quizCount];
+    x[r] = allKanji[quizCount].id;
     let i = Math.floor(Math.random()*x.length);
     let randAns = x[i];
     quizCount++;

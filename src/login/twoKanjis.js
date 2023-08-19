@@ -36,6 +36,7 @@ export function generateQuiz() {
     let i = Math.floor(Math.random()*x.length);
     let randAns = x[i];
     quizCount++;
+    console.log(quizCount);
     console.log(`x: ${JSON.stringify(x)}`);
     return (
         {answer:randAns, quiz:x}

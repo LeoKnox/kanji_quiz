@@ -22,7 +22,7 @@ function StartQuiz({cn}) {
         } else {
             setError("Wrong answer");
         }
-        if (goal  >= getTotal()) {
+        if (goal  >= getTotal()-1) {
             cn();
         }
     }

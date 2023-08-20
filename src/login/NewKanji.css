@@ -16,11 +16,11 @@ button {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 40%;
 }
 
 .ksButton {
-    flex: 0 50%;
-    height: 100px;
+    width: 52%;
+    padding-bottom: 52%;
     margin-bottom: 2%;
+    position: relative;
 }

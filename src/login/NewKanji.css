@@ -15,8 +15,10 @@ button {
 .startQuiz {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .sqButton {
     max-width: max-content;
+    flex: 1 0 51%;
 }

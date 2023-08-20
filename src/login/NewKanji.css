@@ -16,9 +16,11 @@ button {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    max-width: 60%
 }
 
 .sqButton {
     max-width: max-content;
-    flex: 1 0 51%;
+    padding: 15px;
+    margin: 10px;
 }

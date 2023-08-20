@@ -28,15 +28,17 @@ function StartQuiz({cn}) {
     }
 
     return (
-        <div className="startQuiz">
+        <>
         <br/>
         <progress value={goal} max={getTotal()}></progress>
         <p>Answer: {answer || "X"}</p>
         <p style={{color: "red"}}><b>{error}</b></p>
+        <div className="startQuiz">
         {stateArray.map((k) => (
             <p className="sqButton"><button className="ks_button" value={k} onClick={() => confirmAnswer(k)}>{findKanji(k).japanese}</button></p>
         ))}
         </div>
+        </>
     )
 }
 

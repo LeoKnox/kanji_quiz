@@ -13,11 +13,14 @@ button {
 }
 
 .startQuiz {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 40%;
 }
 
-.sqButton {
-    grid-column: 1;
+.ksButton {
+    flex: 0 50%;
+    height: 100px;
+    margin-bottom: 2%;
 }

@@ -14,11 +14,10 @@ button {
 
 .startQuiz {
     display: grid;
-    grid-column: 2/4;
+    grid: 5;
     grid-gap: 20px;
 }
 
 .sqButton {
-    display: grid;
-    grid-template-rows: max-content 200px 1fr;
+    grid-column: 1/2;
 }

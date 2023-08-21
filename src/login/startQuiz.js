@@ -35,7 +35,9 @@ function StartQuiz({cn}) {
         <p style={{color: "red"}}><b>{error}</b></p>
         <div className="startQuiz">
         {stateArray.map((k) => (
-            <p className="ksButton"><button className="ks2Button" value={k} onClick={() => confirmAnswer(k)}>{findKanji(k).japanese}</button></p>
+            <div className="ksButton">
+            <p><button value={k} onClick={() => confirmAnswer(k)}>{findKanji(k).japanese}</button></p>
+            </div>
         ))}
         </div>
         </>

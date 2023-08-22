@@ -20,13 +20,8 @@ button {
 }
 
 .ksButton {
-    width: 40%;
-    padding-bottom: 31%;
-    margin-bottom: 4%;
-    position: relative;
+    display: flex;
 }
 
 .ksButton button {
-    width: 100px;
-    height: 40px;
 }

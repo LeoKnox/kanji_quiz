@@ -21,9 +21,10 @@ button {
 
 .ksButton {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     flex: 300px;
+    flex-flow: row wrap;
 }
 
 .ksButton button {

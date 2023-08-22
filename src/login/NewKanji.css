@@ -25,6 +25,7 @@ button {
     flex-wrap: wrap;
     flex: 300px;
     flex-flow: row wrap;
+    flex: 2;
 }
 
 .ksButton button {

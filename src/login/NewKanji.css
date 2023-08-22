@@ -21,11 +21,12 @@ button {
 
 .ksButton {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    flex-flow: row wrap;
-    flex: 2 300px;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .ksButton button {
+    flex: 2 300px;
 }

@@ -22,6 +22,8 @@ button {
 .ksButton {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    flex: 300px;
 }
 
 .ksButton button {

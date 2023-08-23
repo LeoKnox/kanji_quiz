@@ -21,10 +21,8 @@ button {
 
 .ksButton {
     display: flex;
-    justify-items: center;
+    justify-content: center;
 }
 
 .ksButton button {
-    flex-grow: 1;
-    width:30vw;
 }

@@ -20,12 +20,9 @@ button {
 }
 
 .ksButton {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    place-items: center;
 }
 
 .ksButton button {
-    flex-grow: 1;
-    width:30vw;
 }

@@ -21,9 +21,9 @@ button {
 
 .ksButton {
     display: flex;
-    min-height: calc(100vh - 40 vh);
 }
 
 .ksButton button {
-    flex: 1;
+    flex-grow: 1;
+    width:20vw;
 }

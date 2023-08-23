@@ -21,7 +21,7 @@ button {
 
 .ksButton {
     display: flex;
-    justify-content: space-around;
+    justify-items: center;
 }
 
 .ksButton button {

@@ -20,10 +20,10 @@ button {
 }
 
 .ksButton {
-    display: grid;
-    place-items: center;
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
 }
 
 .ksButton button {
-    width:30vw;
 }

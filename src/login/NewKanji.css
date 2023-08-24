@@ -21,9 +21,7 @@ button {
 
 .ksButton {
     display: grid;
-    grid-template-columns: auto auto;
-    padding: 10px;
-    align-items: center;
+    gap: 20px;
 }
 
 .ksButton button {

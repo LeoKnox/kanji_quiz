@@ -20,7 +20,7 @@ button {
 }
 
 .ksButton {
-    display: inline-grid;
+    display: grid;
     grid-template-columns: auto auto;
     padding: 10px;
     align-items: center;

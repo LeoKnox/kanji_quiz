@@ -13,17 +13,13 @@ button {
 }
 
 .startQuiz {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 60%;
-}
-
-.ksButton {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 20px;
+}
+
+.ksButton {
 }
 
 .ksButton button {

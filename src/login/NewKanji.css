@@ -13,14 +13,13 @@ button {
 }
 
 .startQuiz {
-    display: flex;
-    flex-wrap: wrap;
-    width:60%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:10px;
+    width: 60%;
 }
 
 .ksButton {
-    flex-basis: 50%;
-    flex-grow: 1;
 }
 
 .ksBudtton button {

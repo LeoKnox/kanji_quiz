@@ -28,7 +28,7 @@ function StartQuiz({cn}) {
     }
 
     return (
-        <>
+        <div className="sqMain">
         <br/>
         <progress value={goal} max={getTotal()}></progress>
         <p>Answer: {answer || "X"}</p>
@@ -40,7 +40,7 @@ function StartQuiz({cn}) {
             </div>
         ))}
         </div>
-        </>
+        </div>
     )
 }
 

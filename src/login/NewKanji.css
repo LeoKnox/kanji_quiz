@@ -20,7 +20,7 @@ button {
 }
 
 .ksButton {
-    flex: 30%;
+    flex-basis: 50%;
 }
 
 .ksBudtton button {

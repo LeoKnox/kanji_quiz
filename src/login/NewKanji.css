@@ -24,7 +24,8 @@ button {
 }
 
 .ksButton {
-    font: 4em;
+    width: 300px;
+    height: 80px;
 }
 
 .ksBudtton button {

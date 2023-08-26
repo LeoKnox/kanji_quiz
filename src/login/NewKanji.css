@@ -19,7 +19,8 @@ button {
 }
 
 .sqMain {
-    width: 60%;
+    width: 40%;
+    margin: auto;
 }
 
 .ksButton {
@@ -32,5 +33,5 @@ button {
 }
 
 .app {
-    justify-items: center;
+    justify-content: center;
 }

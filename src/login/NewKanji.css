@@ -14,13 +14,13 @@ button {
 
 .startQuiz {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
     width:60%;
 }
 
 .ksButton {
     flex-basis: 50%;
+    flex-grow: 1;
 }
 
 .ksBudtton button {

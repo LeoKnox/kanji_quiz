@@ -27,3 +27,7 @@ button {
     grid-template-rows: repeat(2, 1fr);
     gap: 0px;
 }
+
+.app {
+    justify-items: center;
+}

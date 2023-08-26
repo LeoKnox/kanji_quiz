@@ -15,9 +15,11 @@ button {
 .startQuiz {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .ksButton {
+    flex: 50%;
 }
 
 .ksBudtton button {

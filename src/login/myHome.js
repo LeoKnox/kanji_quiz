@@ -20,8 +20,10 @@ function MyHome() {
     return (testGame ? <>{ testGame }</> :
         <>
         <p>Welcome {currUser.userName}</p>
-        <button onClick={() => setCurrComponent(<NewKanji />)} value="NewKanji">Practice</button>
-        <button onClick={() => setCurrComponent(<QuizKanji  cn={changeNewKanji} changeNewKanji={() => setCurrComponent} practiceKanji={currUser.practiceKanji} />)} value="QuizKanji">Quiz</button>
+        <div className="navBar">
+            <button onClick={() => setCurrComponent(<NewKanji />)} value="NewKanji">Practice</button>
+            <button onClick={() => setCurrComponent(<QuizKanji  cn={changeNewKanji} changeNewKanji={() => setCurrComponent} practiceKanji={currUser.practiceKanji} />)} value="QuizKanji">Quiz</button>
+        </div>
         {currComponent}
         <table style={{marginLeft:"auto", marginRight:"auto"}}>
             <tr>

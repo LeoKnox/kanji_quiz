@@ -32,6 +32,11 @@ button {
 .ksBudtton button {
 }
 
+.navBar {
+    background-color: grey;
+    padding: 5px;
+}
+
 .app {
     justify-content: center;
 }

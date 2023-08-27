@@ -33,10 +33,12 @@ button {
 }
 
 .navBar {
-    display: inline-flex;
-    justify-content: end;
     background-color: grey;
     padding: 5px;
+}
+
+.navBar button {
+    display: inline-block;
 }
 
 .app {

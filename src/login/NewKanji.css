@@ -39,6 +39,7 @@ button {
 
 .navBar button {
     display: flex;
+    flex-direction: row;
     align-content: flex-end;
 }
 

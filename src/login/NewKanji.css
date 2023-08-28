@@ -38,8 +38,8 @@ button {
 }
 
 .navBar button {
-    display: inline-flex;
-    justify-content: left;
+    display: flex;
+    align-content: flex-end;
 }
 
 .app {

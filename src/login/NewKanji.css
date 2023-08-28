@@ -33,14 +33,14 @@ button {
 }
 
 .navBar {
+    display: flex;
+    justify-content: flex-end;
     background-color: grey;
     padding: 5px;
+    margin-left: 5px;
 }
 
 .navBar button {
-    display: flex;
-    flex-direction: row;
-    align-content: flex-end;
 }
 
 .app {

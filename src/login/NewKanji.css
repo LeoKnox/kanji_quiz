@@ -37,7 +37,7 @@ button {
     justify-content: flex-end;
     background-color: grey;
     padding: 5px;
-    margin-left: 5px;
+    gap: 8px;
 }
 
 .navBar button {

@@ -1,4 +1,6 @@
-button {
+button:hover {
+    background-color: blue;
+    color: white;
 }
 
 .ks_button {

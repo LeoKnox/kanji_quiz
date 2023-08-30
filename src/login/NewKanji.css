@@ -30,6 +30,10 @@ button {
     font-size: 1.6em;
 }
 
+.ksButton:hover {
+    background-color: blue;
+}
+
 .ksBudtton button {
 }
 

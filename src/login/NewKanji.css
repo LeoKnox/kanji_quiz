@@ -1,6 +1,4 @@
 button {
-    background-color: purple;
-    color: white;
 }
 
 .ks_button {
@@ -25,6 +23,8 @@ button {
 }
 
 .ksButton {
+    background-color: purple;
+    color: white;
     width: 90%;
     padding: 20px;
     font-size: 1.6em;

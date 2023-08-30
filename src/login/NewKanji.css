@@ -1,12 +1,3 @@
-button {
-    background-color: purple;
-    color: white;
-}
-
-button:hover {
-    background-color: blue;
-}
-
 .ks_button {
     width: max-content;
     padding: 1% 0;
@@ -52,6 +43,12 @@ button:hover {
 }
 
 .navBar button {
+    background-color: purple;
+    color: white;
+}
+
+.navBar button:hover {
+    background-color: blue;
 }
 
 .app {

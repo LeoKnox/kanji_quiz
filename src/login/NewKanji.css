@@ -41,9 +41,10 @@
     background-color: grey;
     padding: 15px;
     gap: 8px;
-    position: fixed;
-    top: 0;
+    position: absolute;
+    top: 0px;
     width: 100%;
+    height: auto;
 }
 
 .navBar button {

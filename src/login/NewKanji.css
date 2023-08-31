@@ -41,7 +41,9 @@
     background-color: grey;
     padding: 15px;
     gap: 8px;
-    overflow: scroll;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 .navBar button {

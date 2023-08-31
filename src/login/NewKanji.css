@@ -41,10 +41,10 @@
     background-color: grey;
     padding: 15px;
     gap: 8px;
-    position: absolute;
+    overflow: hidden;
+    position: fixed;
     top: 0px;
     width: 100%;
-    height: auto;
 }
 
 .navBar button {
@@ -58,4 +58,5 @@
 
 .app {
     justify-content: center;
+    margin-top: 40px;
 }

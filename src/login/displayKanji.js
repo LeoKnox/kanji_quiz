@@ -17,7 +17,7 @@ function DisplayKanji({kanjis, allKanji}) {
     }
     
     function newComp() {
-        return(<>{poolKanji.map(t => (<button className='ksButton' onClick={() => checkAnswer(t.english)}>{t.japanese}</button>))}</>)
+        return(<div className="kanjiPractice">{poolKanji.map(t => (<button className='ksButton' onClick={() => checkAnswer(t.english)}>{t.japanese}</button>))}</div>)
     }
     return (
         <>

@@ -34,7 +34,11 @@
     background-color: blue;
 }
 
-.ksBudtton button {
+.kanjiPractice {
+    background-color: orange;
+    padding-top: 20px;
+    width: 90%;
+    margin: auto;
 }
 
 .navBar {

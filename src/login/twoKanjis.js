@@ -8,6 +8,11 @@ let allKanji = [
 ];
 let quizCount = 0;
 
+export function allMap() {
+    return(
+        <p>all map</p>
+    )
+}
 
 export function getTotal() {
     return (

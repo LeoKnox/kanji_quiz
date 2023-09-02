@@ -3,3 +3,5 @@ function AddKanji() {
         <h3>Add Kanji</h3>
     )
 }
+
+export default AddKanji;

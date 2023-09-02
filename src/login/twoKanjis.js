@@ -10,7 +10,11 @@ let quizCount = 0;
 
 export function allMap() {
     return(
-        <p>all map</p>
+        `
+        <>
+        <p>All map</p>
+        </>
+        `
     )
 }
 

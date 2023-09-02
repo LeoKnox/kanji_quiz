@@ -4,8 +4,10 @@ let allKanji = [
     {id: 9, japanese: "san", english: "three"},
     {id: 18, japanese: "midori", english: "green"},
     {id: 27, japanese: "akai", english: "red"},
+    {id: 28, japanese: "aoi", english: "blue"}
 ];
 let quizCount = 0;
+
 
 export function getTotal() {
     return (

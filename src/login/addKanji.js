@@ -1,10 +1,10 @@
-import { getTotal } from './twoKanjis';
+import { allMap } from './twoKanjis';
 
 function AddKanji() {
     return (
         <>
         <h3>Add Kanji</h3>
-        {getTotal()}
+        {allMap()}
         </>
     )
 }

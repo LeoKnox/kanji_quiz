@@ -10,7 +10,7 @@ let quizCount = 0;
 
 export function allMap(myKanji = [1,3]) {
     return(
-        myKanji.map(m => (
+        allKanji.map(m => (
                 <p>tt {m}</p>
             ))
     )

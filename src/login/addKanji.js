@@ -1,6 +1,6 @@
 import { findKanji } from './twoKanjis';
 
-function AddKanji(myKanji = [1, 3]) {
+function AddKanji({myKanji}) {
     return (
         <>
         <h3>Add Kanji</h3>

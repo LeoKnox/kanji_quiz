@@ -1,7 +1,6 @@
 import { findKanji, allMap } from './twoKanjis';
 
 function AddKanji({myKanji}) {
-    console.log(`addKanji myKanji ${typeof(myKanji)}`)
     return (
         <>
         <h3>Add Kanji</h3>

@@ -10,7 +10,7 @@ let quizCount = 0;
 
 export function allMap() {
     {allKanji.map(m => {
-        return <p>tt {findKanji(m)}</p>
+        return <p>tt {m}</p>
     })}
 }
 

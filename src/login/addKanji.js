@@ -9,7 +9,7 @@ function AddKanji({myKanji}) {
             <p>{findKanji(k).japanese}</p>
         ))}
         */}
-        {allMap}
+        {allMap()}
         </>
     )
 }

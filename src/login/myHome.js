@@ -23,7 +23,7 @@ function MyHome() {
         <div className="navBar">
             <button onClick={() => setCurrComponent(<NewKanji />)} value="NewKanji">Practice</button>
             <button onClick={() => setCurrComponent(<QuizKanji  cn={changeNewKanji} changeNewKanji={() => setCurrComponent} practiceKanji={currUser.practiceKanji} />)} value="QuizKanji">Quiz</button>
-            <button onClick={() => setCurrComponent(<AddKanji  myKanji={[1,3]} />)} value="AddKanji">Add</button>
+            <button onClick={() => setCurrComponent(<AddKanji  myKanji={currUser.practiceKanji} />)} value="AddKanji">Add</button>
         </div>
         <p>Welcome {currUser.userName}</p>
         {currComponent}

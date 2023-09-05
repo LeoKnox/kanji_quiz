@@ -8,8 +8,8 @@ let allKanji = [
 ];
 let quizCount = 0;
 
-export function allMap(myKanji = [1,3]) {
-    {myKanji.map(m => {
+export function allMap() {
+    {allKanji.map(m => {
         return <p>tt {findKanji(m)}</p>
     })}
 }

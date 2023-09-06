@@ -11,7 +11,7 @@ let quizCount = 0;
 export function allMap() {
     {allKanji.map(m => {
         console.log("all kanji count" + m.japanese)
-        return <p>tt {m}</p>
+        return <p>tt {m.japanese}</p>
     })}
 }
 

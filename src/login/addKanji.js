@@ -2,6 +2,7 @@ import { findKanji, allMap, everyKanji } from './twoKanjis';
 
 function AddKanji({myKanji}) {
     let x = everyKanji();
+    console.log(x)
     return (
         <>
         <h3>Add Kanji</h3>
@@ -10,7 +11,7 @@ function AddKanji({myKanji}) {
             <p>{findKanji(k).japanese}</p>
         ))}
         */}
-        {x.map(l => (
+        {x.allKanji.map(l => (
             <p>{findKanji(l).japanese}</p>
         ))}
         </>

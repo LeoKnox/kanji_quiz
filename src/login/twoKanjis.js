@@ -8,6 +8,8 @@ let allKanji = [
 ];
 let quizCount = 0;
 
+export default allKanji;
+
 export function allMap() {
     {allKanji.map(m => {
         console.log("all kanji count" + m.japanese)

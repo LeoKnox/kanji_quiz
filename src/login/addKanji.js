@@ -12,7 +12,7 @@ function AddKanji({myKanji}) {
         ))}
         */}
         {x.allKanji.map(l => (
-            <p>{findKanji(l).japanese}</p>
+            <p>tt {findKanji(l)}</p>
         ))}
         </>
     )

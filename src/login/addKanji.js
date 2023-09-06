@@ -1,4 +1,4 @@
-import { findKanji, allMap } from './twoKanjis';
+import { findKanji, allMap, allKanji } from './twoKanjis';
 
 function AddKanji({myKanji}) {
     return (
@@ -9,7 +9,9 @@ function AddKanji({myKanji}) {
             <p>{findKanji(k).japanese}</p>
         ))}
         */}
-        {allMap()}
+        {allKanji.map(l => (
+            <p>{findKanji(l).japanese}</p>
+        ))}
         </>
     )
 }

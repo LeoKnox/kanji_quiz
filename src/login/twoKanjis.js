@@ -8,7 +8,9 @@ let allKanji = [
 ];
 let quizCount = 0;
 
-export default allKanji;
+export function everyKanji() {
+    return {allKanji}
+}
 
 export function allMap() {
     {allKanji.map(m => {

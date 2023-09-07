@@ -9,7 +9,7 @@ function AddKanji({myKanji}) {
         {myKanji.map(k => (
             <p>{findKanji(k).japanese}</p>
         ))}
-        <table>
+        <table className="addTable">
             <tr>
                 <th>Add</th>
                 <th>Japanese</th>

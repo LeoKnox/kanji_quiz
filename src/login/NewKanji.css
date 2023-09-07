@@ -1,3 +1,7 @@
+.addTable {
+    margin: auto;
+}
+
 .addTable td {
     border: 1px solid blue;
 }

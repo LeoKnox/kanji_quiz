@@ -6,14 +6,21 @@ function AddKanji({myKanji}) {
     return (
         <>
         <h3>Add Kanji</h3>
-        {/*
         {myKanji.map(k => (
             <p>{findKanji(k).japanese}</p>
         ))}
-        */}
-        {x.map(l => (
-            <p>tt {l.japanese}</p>
-        ))}
+        <table>
+            <tr>
+                <th>Japanese</th>
+                <th>English</th>
+            </tr>
+            {x.map(l => (
+                <tr>
+                    <td>{l.japanese}</td>
+                    <td>{l.english}</td>
+                </tr>
+            ))}
+        </table>
         </>
     )
 }

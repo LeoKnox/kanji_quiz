@@ -17,7 +17,7 @@ function AddKanji({myKanji}) {
             </tr>
             {x.map(l => (
                 <tr>
-                    <td><button>Add</button></td>
+                    <td><input type="checkbox" /></td>
                     <td>{l.japanese}</td>
                     <td>{l.english}</td>
                 </tr>

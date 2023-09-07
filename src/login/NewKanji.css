@@ -1,5 +1,5 @@
-.addTable {
-    justify-content: center;
+.addTable td {
+    border: 1px solid blue;
 }
 
 .startQuiz {

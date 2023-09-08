@@ -4,7 +4,8 @@ function AddKanji({myKanji}) {
     let x = everyKanji().allKanji;
     console.log(x)
     function changeKanji() {
-        console.log("change kanji")
+        console.log("change kanji");
+        myKanji.push(18);
     }
 
     return (

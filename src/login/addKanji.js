@@ -8,10 +8,14 @@ function AddKanji({myKanji, pushKanji}) {
         myKanji.push(18);
     }
 
+    function newButton() {
+        pushKanji();
+    }
+
     return (
         <>
         <h3>Add Kanji</h3>
-        <button onClick={pushKanji}>push</button>
+        <button onClick={newButton}>push</button>
         {myKanji.map(k => (
             <p>{findKanji(k).japanese}</p>
         ))}

@@ -18,6 +18,13 @@ function MyHome() {
         setCurrComponent(<NewKanji />);
     }
 
+    function pushKanji(i=27) {
+        setCurrUser({
+            userName: "kuruma car",
+            practiceKanji: [1,3,9]
+        })
+    }
+
     return (testGame ? <>{ testGame }</> :
         <>
         <div className="navBar">

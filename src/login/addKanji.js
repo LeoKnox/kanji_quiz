@@ -11,7 +11,7 @@ function AddKanji({myKanji, pushKanji}) {
     return (
         <>
         <h3>Add Kanji</h3>
-        <button onClick={() => pushKanji()}>push</button>
+        <button onClick={pushKanji(3)}>push</button>
         {myKanji.map(k => (
             <p>{findKanji(k).japanese}</p>
         ))}

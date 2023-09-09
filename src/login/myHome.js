@@ -19,6 +19,7 @@ function MyHome() {
     }
 
     function pushKanji(i=27) {
+        console.log("PUSH")
         setCurrUser({
             userName: "kuruma car",
             practiceKanji: [1,3,9]

@@ -10,6 +10,7 @@ export default function App() {
   const [currComponent, setCurrComponent] = useState("home");
 
   function changeComponent(compName="new") {
+    alert("blue")
     if (compName=="new") {
       alert("red")
       setCurrComponent("new")

@@ -11,10 +11,7 @@ export default function App() {
 
   function changeComponent(compName="new") {
     alert("blue")
-    if (compName=="new") {
-      alert("red")
-      setCurrComponent("new")
-    }
+    setCurrComponent("new "+compName)
   }
 
   return (

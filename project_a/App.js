@@ -18,7 +18,8 @@ export default function App() {
   return (
     <div className="App">
       <h1>Kanji App</h1>
-      {currComponent}
+      <button onClick={changeComponent}>change</button>
+      <p>{currComponent}</p>
     </div>
   );
 }

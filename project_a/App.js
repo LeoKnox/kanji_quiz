@@ -11,7 +11,7 @@ export default function App() {
 
   function changeComponent(compName="new") {
     console.log(compName)
-    setCurrComponent("new "+{compName})
+    setCurrComponent(compName)
     if (compName==="new") {
       alert("gold")
     }
@@ -20,7 +20,7 @@ export default function App() {
   return (
     <div className="App">
       <h1>Kanji App</h1>
-      <button onClick={changeComponent}>change</button>
+      <button onClick={() => changeComponent("gold")}>change</button>
       <p>{currComponent}</p>
     </div>
   );

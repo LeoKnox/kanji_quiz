@@ -12,7 +12,7 @@ export default function App() {
   function changeComponent(compName="new") {
     console.log(compName)
     setCurrComponent(compName)
-    if (compName==="new") {
+    if (compName==="gold") {
       alert("gold")
     }
   }

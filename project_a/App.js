@@ -12,7 +12,8 @@ export default function App() {
   function addKanji() {
     return (
       <form>
-
+        <input type="text" name="kanji" />
+        <input type="text" name="translation" />
       </form>
     )
   }

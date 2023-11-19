@@ -9,11 +9,18 @@ export default function App() {
   ]
   const [currComponent, setCurrComponent] = useState("home");
 
+  function addKanji() {
+    return (
+      <form>
+
+      </form>
+    )
+  }
+
   function changeComponent(compName="new") {
     console.log(compName)
-    setCurrComponent(compName)
     if (compName==="gold") {
-      alert("gold")
+      setCurrComponent(compName)
     }
   }
 
@@ -22,6 +29,9 @@ export default function App() {
       <h1>Kanji App</h1>
       <button onClick={() => changeComponent("gold")}>change</button>
       <p>{currComponent}</p>
+      {kanjiDB.map((K) => (
+        <p>{k.kanji}</p>
+      ))}
     </div>
   );
 }

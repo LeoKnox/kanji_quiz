@@ -14,6 +14,7 @@ export default function App() {
       <form>
         <input type="text" name="kanji" />
         <input type="text" name="translation" />
+        <button type="submit">Add</button>
       </form>
     )
   }

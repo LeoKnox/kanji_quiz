@@ -30,6 +30,7 @@ export default function App() {
       <h1>Kanji App</h1>
       <button onClick={() => changeComponent("gold")}>change</button>
       <p>{currComponent}</p>
+      {addKanji}
       {kanjiDB.map(k => (
         <p>{k.kanji}</p>
       ))}

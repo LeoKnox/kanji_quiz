@@ -12,7 +12,7 @@ export default function App() {
   function AddKanji() {
     function submitKanji(event) {
       event.preventDefault()
-      console.log(event.target.elements.kanji)
+      console.log(event.target.elements.name.kanji)
     }
     return (
       <form onSubmit={submitKanji}>

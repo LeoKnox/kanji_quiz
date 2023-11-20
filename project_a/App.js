@@ -10,8 +10,9 @@ export default function App() {
   const [currComponent, setCurrComponent] = useState("home");
 
   function AddKanji() {
-    function submitKanji() {
-      
+    function submitKanji(event) {
+      event.preventDefault()
+      console.log(event.target.kanji)
     }
     return (
       <form onSubmit={submitKanji}>

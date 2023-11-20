@@ -12,12 +12,17 @@ export default function App() {
   function AddKanji() {
     function submitKanji(event) {
       event.preventDefault()
-      let x = event.target.elements.kanji.value
-      console.log(x)
+      let newId = kanjiDB.length
+      let kanji = event.target.elements.kanji.value
+      let pronounciation = event.target.elements.translation.value
+      let translation = event.target.elements.translation.value
+      console.log(pronounciation)
+      //let newKanji = {kanjiId:newId, kanji:kanji, pronunciation=pronounciation: translation=translation}
     }
     return (
       <form onSubmit={submitKanji}>
         <input type="text" name="kanji" />
+        <input type="text" name="pronounciation" />
         <input type="text" name="translation" />
         <button type="submit">Add</button>
       </form>

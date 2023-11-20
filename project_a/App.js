@@ -12,7 +12,7 @@ export default function App() {
   function AddKanji() {
     function submitKanji(event) {
       event.preventDefault()
-      let x = event.target.elements.name.kanji
+      let x = event.target.elements.kanji.value
       console.log(x)
     }
     return (

@@ -7,6 +7,7 @@ export default function App() {
     {kanjiId: 2, kanji:"赤", pronounciation:"AKAI", translation:"red"},
     {kanjiId: 3, kanji:"犬", pronounciation:"INU", translation:"dog"}
   ]
+  const [userKanji, setUserKanji] = useState(kanjiDB)
   const [currComponent, setCurrComponent] = useState("home");
 
   function AddKanji() {
@@ -45,7 +46,7 @@ export default function App() {
       <button onClick={() => changeComponent("gold")}>change</button>
       <p>{currComponent}</p>
       <AddKanji />
-      {kanjiDB.map(k => (
+      {userKanji.map(k => (
         <p>{k.kanji}</p>
       ))}
     </div>

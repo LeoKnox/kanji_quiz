@@ -48,7 +48,7 @@ export default function App() {
       <p>{currComponent}</p>
       <AddKanji />
       {userKanji.map(k => (
-        <p>{k.kanji}</p>
+        <p>{k.kanjiId}:{k.kanji}:{k.translation}:{k.pronounciation}</p>
       ))}
     </div>
   );

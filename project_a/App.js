@@ -21,7 +21,7 @@ export default function App() {
       let newKanji = {kanjiId:newId, kanji:kanji, pronounciation:pronounciation, translation:translation};
       console.log(newKanji)
       //return kanjiDB.push(newKanji)
-      return setUserKanji(...userKanji, newKanji)
+      setUserKanji(...userKanji, newKanji)
       console.log(kanjiDB)
     }
     return (

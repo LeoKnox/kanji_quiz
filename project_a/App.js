@@ -21,8 +21,8 @@ export default function App() {
       let newKanji = {kanjiId:newId, kanji:kanji, pronounciation:pronounciation, translation:translation};
       console.log(newKanji)
       //return kanjiDB.push(newKanji)
-      setUserKanji(...userKanji, newKanji)
-      console.log(kanjiDB)
+      setUserKanji(...kanjiDB, newKanji)
+      //console.log(typeof())
     }
     return (
       <form onSubmit={submitKanji}>

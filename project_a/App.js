@@ -43,7 +43,7 @@ export default function App() {
       <h1>Kanji App</h1>
       <button onClick={() => changeComponent("gold")}>change</button>
       <p>{currComponent}</p>
-      <AddKanji userKanji={userKanji}/>
+      <AddKanji userKanji={userKanji} setUserKanji={setUserKanji} />
       {userKanji.map(k => (
         <p>{k.kanjiId}:{k.kanji}:{k.translation}:{k.pronounciation}</p>
       ))}

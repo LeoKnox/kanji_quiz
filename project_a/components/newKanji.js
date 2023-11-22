@@ -1,4 +1,4 @@
-function AddKanji() {
+function AddKanji({userKanji}) {
   function submitKanji(event) {
     event.preventDefault()
     let newId = kanjiDB.length+1;

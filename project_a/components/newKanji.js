@@ -18,3 +18,5 @@ function AddKanji({userKanji, setUserKanji}) {
     </form>
   )
 }
+
+export default AddKanji;

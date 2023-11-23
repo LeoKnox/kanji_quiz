@@ -1,6 +1,7 @@
 function AddKanji({userKanji, setUserKanji}) {
   function submitKanji(event) {
     event.preventDefault()
+    console.log(userKanji)
     let newId = userKanji.length+1;
     let kanji = event.target.elements.kanji.value;
     let pronounciation = event.target.elements.translation.value;

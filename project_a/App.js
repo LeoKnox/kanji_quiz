@@ -1,6 +1,6 @@
 import "./styles.css";
 import {useState, createContext, useContext} from 'react';
-//import {AddKanji} from './components/newKanji.js';
+import {AddKanji} from './components/newKanji.js';
 
 export default function App() {
   let kanjiDB = [
@@ -10,7 +10,7 @@ export default function App() {
   ]
   const [userKanji, setUserKanji] = useState(kanjiDB)
   const [currComponent, setCurrComponent] = useState("home");
-
+/*
   function AddKanji() {
     function submitKanji(event) {
       event.preventDefault()
@@ -30,7 +30,7 @@ export default function App() {
       </form>
     )
   }
-
+*/
   function changeComponent(compName="new") {
     console.log(compName)
     if (compName==="gold") {

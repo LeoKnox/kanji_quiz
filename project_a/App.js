@@ -35,7 +35,7 @@ export default function App() {
         <input type="text" name="pronounciation" />
         <input type="text" name="translation" />
         <button type="submit">Add</button>
-        <button type="submit">Edit</button>
+        <button type="submit" onClick="EditKanji">Edit</button>
       </form>
     )
   }

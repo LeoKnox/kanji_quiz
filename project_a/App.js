@@ -11,6 +11,12 @@ export default function App() {
   const [userKanji, setUserKanji] = useState(kanjiDB)
   const [currComponent, setCurrComponent] = useState("home");
 
+  function EditKanji() {
+    return (
+      <input type="text" name="kanji" />
+    )
+  }
+
   function AddKanji() {
     let kanjiRef = useRef();
     function submitKanji(event) {
@@ -29,6 +35,7 @@ export default function App() {
         <input type="text" name="pronounciation" />
         <input type="text" name="translation" />
         <button type="submit">Add</button>
+        <button type="submit">Edit</button>
       </form>
     )
   }

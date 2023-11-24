@@ -1,5 +1,5 @@
 import "./styles.css";
-import {useState, createContext, useContext} from 'react';
+import {useState, useRef, createContext, useContext} from 'react';
 //import {AddKanji} from './components/newKanji.js';
 
 export default function App() {
@@ -15,6 +15,7 @@ export default function App() {
     function submitKanji(event) {
       event.preventDefault()
       let newId = userKanji.length+1;
+      let kanjiRef = useRef()
       let kanji = event.target.elements.kanji.value;
       let pronounciation = event.target.elements.translation.value;
       let translation = event.target.elements.translation.value;
@@ -23,7 +24,7 @@ export default function App() {
     }
     return (
       <form onSubmit={submitKanji}>
-        <input type="text" name="kanji" />
+        <input type="text" name="kanji" ref={kanjiRef} />
         <input type="text" name="pronounciation" />
         <input type="text" name="translation" />
         <button type="submit">Add</button>

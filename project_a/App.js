@@ -21,6 +21,7 @@ export default function App() {
       let translation = event.target.elements.translation.value;
       let newKanji = {kanjiId:newId, kanji:kanji, pronounciation:pronounciation, translation:translation};
       setUserKanji(userKanji => [...userKanji, newKanji])
+      kanjiRef.current.value = ""
     }
     return (
       <form onSubmit={submitKanji}>

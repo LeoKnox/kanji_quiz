@@ -12,10 +12,10 @@ export default function App() {
   const [currComponent, setCurrComponent] = useState("home");
 
   function AddKanji() {
+    let kanjiRef = useRef();
     function submitKanji(event) {
       event.preventDefault()
       let newId = userKanji.length+1;
-      let kanjiRef = useRef()
       let kanji = event.target.elements.kanji.value;
       let pronounciation = event.target.elements.translation.value;
       let translation = event.target.elements.translation.value;

@@ -13,8 +13,11 @@ export default function App() {
 
   function EditKanji() {
     return (
+      <>
       <input type="text" name="kanji" />
-    )
+      <button type="submit">Update</button>
+      </>
+      )
   }
 
   function AddKanji() {

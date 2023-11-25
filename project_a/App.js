@@ -38,7 +38,7 @@ export default function App() {
         <input type="text" name="pronounciation" />
         <input type="text" name="translation" />
         <button type="submit">Add</button>
-        <button type="submit" onClick="EditKanji">Edit</button>
+        <button type="submit" onClick={() => handleSubmit()}>Edit</button>
       </form>
     )
   }
@@ -48,6 +48,10 @@ export default function App() {
     if (compName==="gold") {
       setCurrComponent(compName)
     }
+  }
+
+  function handleSubmit() {
+    setUpdateState()
   }
 
   return (

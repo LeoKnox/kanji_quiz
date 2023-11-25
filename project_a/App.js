@@ -38,7 +38,6 @@ export default function App() {
         <input type="text" name="pronounciation" />
         <input type="text" name="translation" />
         <button type="submit">Add</button>
-        <button type="submit" onClick={() => handleSubmit()}>Edit</button>
       </form>
     )
   }
@@ -50,8 +49,8 @@ export default function App() {
     }
   }
 
-  function handleSubmit() {
-    setUpdateState()
+  function handleSubmit(id) {
+    setUpdateState(id)
   }
 
   return (
@@ -61,8 +60,12 @@ export default function App() {
       <p>{currComponent}</p>
       <AddKanji userKanji={userKanji} setUserKanji={setUserKanji} />
       {userKanji.map(k => (
+        <>
         <p>{k.kanjiId}:{k.kanji}:{k.translation}:{k.pronounciation}</p>
+        <button type="submit" onClick={() => handleSubmit(k.id)}>Edit</button>
+        </>
       ))}
+      
     </div>
   );
 }

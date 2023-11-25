@@ -10,7 +10,7 @@ export default function App() {
   ]
   const [userKanji, setUserKanji] = useState(kanjiDB)
   const [currComponent, setCurrComponent] = useState("home");
-
+  const [updateState, setUpdateState] = useState(-1)
   function EditKanji() {
     return (
       <>

@@ -60,10 +60,12 @@ export default function App() {
       <p>{currComponent}</p>
       <AddKanji userKanji={userKanji} setUserKanji={setUserKanji} />
       {userKanji.map(k => (
+        if (updateState === k.id) {
         <>
         <p>{k.kanjiId}:{k.kanji}:{k.translation}:{k.pronounciation}</p>
         <button type="submit" onClick={() => handleSubmit(k.id)}>Edit</button>
         </>
+        }
       ))}
       
     </div>

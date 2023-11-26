@@ -16,6 +16,7 @@ export default function App() {
     function handleKanji(event) {
       const name=event.target.name
       const value=name.value
+      setUserKanji([...userKanji, value])
     }
     return (
       <>
@@ -67,7 +68,7 @@ export default function App() {
       <AddKanji userKanji={userKanji} setUserKanji={setUserKanji} />
       <form>
       {userKanji.map(k => (
-        updateState === k.kanjiId ? <EditKanji current={k} lists={lists} setLIst={setList} /> :
+        updateState === k.kanjiId ? <EditKanji current={k} lists={userKanji} setLIst={setUserKanji} /> :
         <>
         <p>{k.kanjiId}:{k.kanji}:{k.translation}:{k.pronounciation}</p>
         <button type="submit" onClick={() => handleSubmit(k.kanjiId)}>Edit</button>

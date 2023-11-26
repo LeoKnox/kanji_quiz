@@ -12,6 +12,7 @@ export default function App() {
   const [currComponent, setCurrComponent] = useState("home");
   const [updateState, setUpdateState] = useState(-1)
   function EditKanji({current}) {
+    alert(current)
     return (
       <>
       <input type="text" name="kanji" value={current.kanji} />

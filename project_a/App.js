@@ -60,6 +60,7 @@ export default function App() {
       <button onClick={() => changeComponent("gold")}>change</button>
       <p>{currComponent}</p>
       <AddKanji userKanji={userKanji} setUserKanji={setUserKanji} />
+      <form>
       {userKanji.map(k => (
         updateState === k.kanjiId ? <EditKanji /> :
         <>
@@ -67,6 +68,7 @@ export default function App() {
         <button type="submit" onClick={() => handleSubmit(k.kanjiId)}>Edit</button>
         </>
       ))}
+      </form>
       
     </div>
   );

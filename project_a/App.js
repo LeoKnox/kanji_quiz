@@ -63,7 +63,7 @@ export default function App() {
         updateState === k.id ? <EditKanji /> :
         <>
         <p>{k.kanjiId}:{k.kanji}:{k.translation}:{k.pronounciation}</p>
-        <button type="submit" onClick={() => handleSubmit(k.id)}>Edit</button>
+        <button type="submit" onClick={handleSubmit(k.id)}>Edit</button>
         </>
       ))}
       

@@ -11,10 +11,10 @@ export default function App() {
   const [userKanji, setUserKanji] = useState(kanjiDB)
   const [currComponent, setCurrComponent] = useState("home");
   const [updateState, setUpdateState] = useState(-1)
-  function EditKanji() {
+  function EditKanji({current}) {
     return (
       <>
-      <input type="text" name="kanji" />
+      <input type="text" name="kanji" value={current.kanji} />
       <button type="submit">Update</button>
       </>
       )
@@ -62,7 +62,7 @@ export default function App() {
       <AddKanji userKanji={userKanji} setUserKanji={setUserKanji} />
       <form>
       {userKanji.map(k => (
-        updateState === k.kanjiId ? <EditKanji /> :
+        updateState === k.kanjiId ? <EditKanji curren={k} /> :
         <>
         <p>{k.kanjiId}:{k.kanji}:{k.translation}:{k.pronounciation}</p>
         <button type="submit" onClick={() => handleSubmit(k.kanjiId)}>Edit</button>

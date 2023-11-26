@@ -50,6 +50,7 @@ export default function App() {
   }
 
   function handleSubmit(id) {
+    alert(id)
     setUpdateState(id)
   }
 
@@ -60,10 +61,10 @@ export default function App() {
       <p>{currComponent}</p>
       <AddKanji userKanji={userKanji} setUserKanji={setUserKanji} />
       {userKanji.map(k => (
-        updateState === k.id ? <EditKanji /> :
+        updateState === k.kanjiid ? <EditKanji /> :
         <>
         <p>{k.kanjiId}:{k.kanji}:{k.translation}:{k.pronounciation}</p>
-        <button type="submit" onClick={() => handleSubmit(k.id)}>Edit</button>
+        <button type="submit" onClick={() => handleSubmit(k.kanjiId)}>Edit</button>
         </>
       ))}
       

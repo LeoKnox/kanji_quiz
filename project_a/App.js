@@ -14,10 +14,11 @@ export default function App() {
   function EditKanji({current}) {
     //alert(current)
     function handleKanji(event) {
+      alert(JSON.stringify(current))
       const name=event.target.name
       const value=event.target.value
       userKanji.map((kan) => (
-        kan.id === currrent.id ? [...kan, name:value] : null
+        kan.kanjiId === current.kanjiId ? [...kan, name:value] : null
       ))
       //alert(name+":"+value)
       //setUserKanji([...name, value])

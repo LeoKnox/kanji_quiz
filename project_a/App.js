@@ -15,7 +15,7 @@ export default function App() {
     //alert(current)
     function handleKanji(event) {
       const name=event.target.name
-      const value=name.value
+      const value=event.target.value
       alert(name+":"+value)
       //setUserKanji([...name, value])
     }

@@ -68,7 +68,7 @@ export default function App() {
       <AddKanji userKanji={userKanji} setUserKanji={setUserKanji} />
       <form>
       {userKanji.map(k => (
-        updateState === k.kanjiId ? <EditKanji current={k} lists={userKanji} setLIst={setUserKanji} /> :
+        updateState === k.kanjiId ? <EditKanji current={k} lists={userKanji} setList={setUserKanji} /> :
         <>
         <p>{k.kanjiId}:{k.kanji}:{k.translation}:{k.pronounciation}</p>
         <button type="submit" onClick={() => handleSubmit(k.kanjiId)}>Edit</button>

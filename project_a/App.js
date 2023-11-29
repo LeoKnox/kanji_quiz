@@ -17,7 +17,7 @@ export default function App() {
       //alert(JSON.stringify(current))
       const name=event.target.name
       const value=event.target.value
-      alert(kanjis.value)
+      alert(kanjis[0][name])
       userKanji.map((kan) => (
         kan.kanjiId === current.kanjiId ? [...kanjis, {value}] : kan
       ))

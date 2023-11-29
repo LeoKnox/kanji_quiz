@@ -20,7 +20,7 @@ export default function App() {
       //alert(current.kanjiId)
       kanjis.map((kan) => (
         //kan.kanjiId === current.kanjiId ? alert("map") : alert("miss")
-        kan.kanjiId === current.kanjiId ? [...kan[name], "value"] : kan
+        kan.kanjiId === current.kanjiId ? [...kan["kanji"], "value"] : kan
       ))
       //alert(name+":"+value)
       //setUserKanji([...name, value])

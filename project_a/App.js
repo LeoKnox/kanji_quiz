@@ -22,6 +22,7 @@ export default function App() {
         //kan.kanjiId === current.kanjiId ? alert("map") : alert("miss")
         kan.kanjiId === current.kanjiId ? [kan[name].concat("value")] : kan
       ))
+      setKanjis(kanjis)
       //alert(name+":"+value)
       //setUserKanji([...name, value])
     }

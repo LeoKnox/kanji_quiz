@@ -11,7 +11,7 @@ export default function App() {
   const [userKanji, setUserKanji] = useState(kanjiDB)
   const [currComponent, setCurrComponent] = useState("home");
   const [updateState, setUpdateState] = useState(-1)
-  function EditKanji({current}) {
+  function EditKanji({current, kanjis, setKanjis}) {
     //alert(current)
     function handleKanji(event) {
       //alert(JSON.stringify(current))
@@ -19,7 +19,7 @@ export default function App() {
       const value=event.target.value
       alert(userKanji.name.value)
       userKanji.map((kan) => (
-        kan.kanjiId === current.kanjiId ? [...userKanji, {value}] : kan
+        kan.kanjiId === current.kanjiId ? [...kanjis, {value}] : kan
       ))
       //alert(name+":"+value)
       //setUserKanji([...name, value])
@@ -34,7 +34,7 @@ export default function App() {
 
   function AddKanji() {
     let kanjiRef = useRef();
-    function submitKanji(event, lists, setList) {
+    function submitKanji(event) {
       event.preventDefault()
       let newId = userKanji.length+1;
       let kanji = event.target.elements.kanji.value;
@@ -74,7 +74,7 @@ export default function App() {
       <AddKanji userKanji={userKanji} setUserKanji={setUserKanji} />
       <form>
       {userKanji.map(k => (
-        updateState === k.kanjiId ? <EditKanji current={k} lists={userKanji} setList={setUserKanji} /> :
+        updateState === k.kanjiId ? <EditKanji current={k} kanjis={userKanji} setKanjis={setUserKanji} /> :
         <>
         <p>{k.kanjiId}:{k.kanji}:{k.translation}:{k.pronounciation}</p>
         <button type="submit" onClick={() => handleSubmit(k.kanjiId)}>Edit</button>

@@ -12,21 +12,13 @@ export default function App() {
   const [currComponent, setCurrComponent] = useState("home");
   const [updateState, setUpdateState] = useState(-1)
   function EditKanji({current, kanjis, setKanjis}) {
-    //alert(current)
     function handleKanji(event) {
-      //alert(JSON.stringify(current))
       const name=event.target.name
       const value=event.target.value
-      alert(value)
       const newKanjis = kanjis.map((kan) => (
-        //kan.kanjiId === current.kanjiId ? alert("map") : alert("miss")
         kan.kanjiId === current.kanjiId ? kan[name] = value : kan
       ))
-      console.log(JSON.stringify(kanjis))
-      alert("read")
       setUserKanji(newKanjis)
-      //alert(name+":"+value)
-      //setUserKanji([...name, value])
     }
     return (
       <>

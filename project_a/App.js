@@ -17,10 +17,10 @@ export default function App() {
       //alert(JSON.stringify(current))
       const name=event.target.name
       const value=event.target.value
-      //alert(current.kanjiId)
+      alert(value)
       kanjis.map((kan) => (
         //kan.kanjiId === current.kanjiId ? alert("map") : alert("miss")
-        kan.kanjiId === current.kanjiId ? [...kan[name], value] : kan
+        kan.kanjiId === current.kanjiId ? kan[name] = value : kan
       ))
       setKanjis(kanjis)
       //alert(name+":"+value)

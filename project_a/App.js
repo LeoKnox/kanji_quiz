@@ -18,13 +18,13 @@ export default function App() {
       const name=event.target.name
       const value=event.target.value
       alert(value)
-      kanjis.map((kan) => (
+      const newKanjis = kanjis.map((kan) => (
         //kan.kanjiId === current.kanjiId ? alert("map") : alert("miss")
         kan.kanjiId === current.kanjiId ? kan[name] = value : kan
       ))
       console.log(JSON.stringify(kanjis))
       alert("read")
-      setKanjis(kanjis)
+      setKanjis(newKanjis)
       //alert(name+":"+value)
       //setUserKanji([...name, value])
     }

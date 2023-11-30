@@ -24,7 +24,7 @@ export default function App() {
       ))
       console.log(JSON.stringify(kanjis))
       alert("read")
-      setKanjis(newKanjis)
+      setUserKanji(newKanjis)
       //alert(name+":"+value)
       //setUserKanji([...name, value])
     }

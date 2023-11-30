@@ -22,6 +22,8 @@ export default function App() {
         //kan.kanjiId === current.kanjiId ? alert("map") : alert("miss")
         kan.kanjiId === current.kanjiId ? kan[name] = value : kan
       ))
+      console.log(JSON.stringify(kanjis))
+      alert("read")
       setKanjis(kanjis)
       //alert(name+":"+value)
       //setUserKanji([...name, value])

@@ -18,6 +18,7 @@ export default function App() {
       const newKanjis = kanjis.map((kan) => (
         kan.kanjiId === current.kanjiId ? kan[name] = value : kan
       ))
+      console.log(JSON.stringify(newKanjis))
       setUserKanji(newKanjis)
     }
     return (

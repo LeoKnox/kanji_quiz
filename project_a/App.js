@@ -17,7 +17,7 @@ export default function App() {
       const value=event.target.value
       console.log(field+":"+value);
       const newKanjis = kanjis.map((kan) => (
-        kan.kanjiId === current.kanjiId ? [...kan, field:value] : kan
+        kan.kanjiId === current.kanjiId ? {...kan, field:value} : kan
       ))
       console.log(JSON.stringify(newKanjis))
       setUserKanji(newKanjis)
@@ -37,7 +37,7 @@ export default function App() {
       event.preventDefault()
       let newId = userKanji.length+1;
       let kanji = event.target.elements.kanji.value;
-      let pronounciation = event.target.elements.translation.value;
+      let pronounciation = event.target.elements.pronounciation.value;
       let translation = event.target.elements.translation.value;
       let newKanji = {kanjiId:newId, kanji:kanji, pronounciation:pronounciation, translation:translation};
       setUserKanji(userKanji => [...userKanji, newKanji])

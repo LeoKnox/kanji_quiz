@@ -25,6 +25,7 @@ export default function App() {
     return (
       <>
       <input type="text" onChange={handleKanji} name="kanji" value={current.kanji} />
+      <input type="text" onChange={handleKanji} name="translation" value={current.translation} />
       <button type="submit">Update</button>
       </>
       )

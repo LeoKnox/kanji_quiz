@@ -13,11 +13,11 @@ export default function App() {
   const [updateState, setUpdateState] = useState(-1)
   function EditKanji({current, kanjis, setKanjis}) {
     function handleKanji(event) {
-      const name=event.target.name
+      const field=event.target.name
       const value=event.target.value
-      console.log(name+":"+value);
+      console.log(field+":"+value);
       const newKanjis = kanjis.map((kan) => (
-        kan.kanjiId === current.kanjiId ? {...kan, {name:value} } : kan
+        kan.kanjiId === current.kanjiId ? {...kan, field:value } : kan
       ))
       console.log(JSON.stringify(newKanjis))
       setUserKanji(newKanjis)

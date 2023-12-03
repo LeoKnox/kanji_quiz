@@ -1,47 +1,62 @@
 import "./styles.css";
-import {useState, useRef, createContext, useContext} from 'react';
+import { useState, useRef, createContext, useContext } from "react";
 //import {AddKanji} from './components/newKanji.js';
 
 export default function App() {
   let kanjiDB = [
-    {kanjiId: 1, kanji:"一", pronounciation:"ICHI", translation:"one"},
-    {kanjiId: 2, kanji:"赤", pronounciation:"AKAI", translation:"red"},
-    {kanjiId: 3, kanji:"犬", pronounciation:"INU", translation:"dog"}
-  ]
-  const [userKanji, setUserKanji] = useState(kanjiDB)
+    { kanjiId: 1, kanji: "一", pronounciation: "ICHI", translation: "one" },
+    { kanjiId: 2, kanji: "赤", pronounciation: "AKAI", translation: "red" },
+    { kanjiId: 3, kanji: "犬", pronounciation: "INU", translation: "dog" },
+  ];
+  const [userKanji, setUserKanji] = useState(kanjiDB);
   const [currComponent, setCurrComponent] = useState("home");
-  const [updateState, setUpdateState] = useState(-1)
-  function EditKanji({current, kanjis, setKanjis}) {
+  const [updateState, setUpdateState] = useState(-1);
+  function EditKanji({ current, kanjis, setKanjis }) {
     function handleKanji(event) {
-      const field=event.target.name
-      const value=event.target.value
-      console.log(field+":"+value);
-      const newKanjis = kanjis.map((kan) => (
-        kan.kanjiId === current.kanjiId ? {...kan, field:value} : kan
-      ))
-      console.log(JSON.stringify(newKanjis))
-      setUserKanji(newKanjis)
+      const field = event.target.name;
+      const value = event.target.value;
+      console.log(field + ":" + value);
+      const newKanjis = kanjis.map((kan) =>
+        kan.kanjiId === current.kanjiId ? { ...kan, kan[field] = value } : kan,
+      );
+      console.log(JSON.stringify(newKanjis));
+      setUserKanji(newKanjis);
     }
     return (
       <>
-      <input type="text" onChange={handleKanji} name="kanji" value={current.kanji} />
-      <input type="text" onChange={handleKanji} name="translation" value={current.translation} />
-      <button type="submit">Update</button>
+        <input
+          type="text"
+          onChange={handleKanji}
+          name="kanji"
+          value={current.kanji}
+        />
+        <input
+          type="text"
+          onChange={handleKanji}
+          name="translation"
+          value={current.translation}
+        />
+        <button type="submit">Update</button>
       </>
-      )
+    );
   }
 
   function AddKanji() {
     let kanjiRef = useRef();
     function submitKanji(event) {
-      event.preventDefault()
-      let newId = userKanji.length+1;
+      event.preventDefault();
+      let newId = userKanji.length + 1;
       let kanji = event.target.elements.kanji.value;
       let pronounciation = event.target.elements.pronounciation.value;
       let translation = event.target.elements.translation.value;
-      let newKanji = {kanjiId:newId, kanji:kanji, pronounciation:pronounciation, translation:translation};
-      setUserKanji(userKanji => [...userKanji, newKanji])
-      kanjiRef.current.value = ""
+      let newKanji = {
+        kanjiId: newId,
+        kanji: kanji,
+        pronounciation: pronounciation,
+        translation: translation,
+      };
+      setUserKanji((userKanji) => [...userKanji, newKanji]);
+      kanjiRef.current.value = "";
     }
     return (
       <form onSubmit={submitKanji}>
@@ -50,19 +65,19 @@ export default function App() {
         <input type="text" name="translation" />
         <button type="submit">Add</button>
       </form>
-    )
+    );
   }
 
-  function changeComponent(compName="new") {
-    console.log(compName)
-    if (compName==="gold") {
-      setCurrComponent(compName)
+  function changeComponent(compName = "new") {
+    console.log(compName);
+    if (compName === "gold") {
+      setCurrComponent(compName);
     }
   }
 
   function handleSubmit(id) {
     //alert(id)
-    setUpdateState(id)
+    setUpdateState(id);
   }
 
   return (
@@ -72,15 +87,25 @@ export default function App() {
       <p>{currComponent}</p>
       <AddKanji userKanji={userKanji} setUserKanji={setUserKanji} />
       <form>
-      {userKanji.map(k => (
-        updateState === k.kanjiId ? <EditKanji current={k} kanjis={userKanji} setKanjis={setUserKanji} /> :
-        <>
-        <p>{k.kanjiId}:{k.kanji}:{k.translation}:{k.pronounciation}</p>
-        <button type="submit" onClick={() => handleSubmit(k.kanjiId)}>Edit</button>
-        </>
-      ))}
+        {userKanji.map((k) =>
+          updateState === k.kanjiId ? (
+            <EditKanji
+              current={k}
+              kanjis={userKanji}
+              setKanjis={setUserKanji}
+            />
+          ) : (
+            <>
+              <p>
+                {k.kanjiId}:{k.kanji}:{k.translation}:{k.pronounciation}
+              </p>
+              <button type="submit" onClick={() => handleSubmit(k.kanjiId)}>
+                Edit
+              </button>
+            </>
+          ),
+        )}
       </form>
-      
     </div>
   );
 }

@@ -16,9 +16,9 @@ export default function App() {
       const field = event.target.name;
       const value = event.target.value;
       console.log(field + ":" + value);
-      const newKanjis = (kanjis.map((kan) =>
-        kan.kanjiId === current.kanjiId ? { ...kan, kanji: value } : kan
-      )
+      const newKanjis = kanjis.map((kan) =>
+        kan.kanjiId === current.kanjiId ? { ...kan, kanji: value } : kan,
+      );
       console.log(JSON.stringify(newKanjis));
       setUserKanji(newKanjis);
     }
